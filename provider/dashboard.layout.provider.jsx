@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRouter, usePathname } from "next/navigation";
 import Footer from "@/components/partials/footer";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import ThemeCustomize from "@/components/partials/customizer/theme-customizer";
 import MobileSidebar from "@/components/partials/sidebar/mobile-sidebar";
 import HeaderSearch from "@/components/header-search";
 import { useMounted } from "@/hooks/use-mounted";
@@ -53,6 +54,7 @@ const DashBoardLayoutProvider = ({ children, trans }) => {
           </div>
         </div>
         <Footer trans={trans} />
+        <ThemeCustomize trans={trans} />
       </>
     );
   }
@@ -79,6 +81,7 @@ const DashBoardLayoutProvider = ({ children, trans }) => {
           </div>
         </div>
         <Footer />
+        <ThemeCustomize />
       </>
     );
   }
@@ -112,6 +115,7 @@ const DashBoardLayoutProvider = ({ children, trans }) => {
           </div>
         </div>
         <Footer trans={trans} />
+        <ThemeCustomize trans={trans} />
       </>
     );
   }
@@ -143,6 +147,7 @@ const DashBoardLayoutProvider = ({ children, trans }) => {
         </div>
       </div>
       <Footer handleOpenSearch={() => setOpen(true)} trans={trans} />
+      {isMobile && <ThemeCustomize />}
     </>
   );
 };
