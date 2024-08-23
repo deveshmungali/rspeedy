@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Wordpress Speedy",
   description: null,
-  theme: "violet",
+  theme: "red",
   layout: "vertical",
   // semi-box, horizontal, vertical
   hideSideBar: false,
