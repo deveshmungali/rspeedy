@@ -1,6 +1,7 @@
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ReportsSnapshot from "./components/reports-snapshot";
+import Planreports from "./components/plan-reports";
 import CountryMap from "./components/country-map";
 import UserDeviceReport from "./components/user-device-report";
 import UserStats from "./components/user-stats-chart";
@@ -29,7 +30,7 @@ const DashboardPageView = ({ trans }) => {
           <UsersStat />
         </div>
         <div className="col-span-12 lg:col-span-12">
-          <ReportsSnapshot />
+          <Planreports />
         </div>
       </div>
    

@@ -29,7 +29,7 @@ const newUserSeries = [
     data: [20, 70, 65, 40, 100, 60, 100, 75, 60, 80],
   },
 ];
-const ReportsSnapshot = () => {
+const Planreports = () => {
   const { theme: config, setTheme: setConfig } = useThemeStore();
   const { theme: mode } = useTheme();
   const theme = themes.find((theme) => theme.name === config);
@@ -44,9 +44,9 @@ const ReportsSnapshot = () => {
     const tabsTrigger = [
       {
         value: "all",
-        text: "active subscribers",
+        text: "owners",
         total: "10,234",
-        color: "success",
+        color: "secondary",
       },
       {
         value: "event",
@@ -70,13 +70,25 @@ const ReportsSnapshot = () => {
         value: "all",
         text: "earning",
         total: "10$",
-        color: "success",
+        color: "secondary",
       },
       {
         value: "event",
         text: "total earning",
         total: "300000 $",
         color: "success",
+      },
+      {
+        value: "conversation",
+        text: "monthly subscriptions",
+        total: "1",
+        color: "info",
+      },
+      {
+        value: "newuser",
+        text: "yearly subscriptions",
+        total: "358321",
+        color: "info",
       },
       {
         value: "conversation",
@@ -119,7 +131,7 @@ const ReportsSnapshot = () => {
         <div className="flex items-center gap-2 flex-wrap ">
           <div className="flex-1">
             <div className="text-xl font-semibold text-default-900 whitespace-nowrap">
-              Reports Snapshot
+              Plan Reports
             </div>
             <span className="text-xs text-default-600">
               Demographic properties of your customer
@@ -132,7 +144,7 @@ const ReportsSnapshot = () => {
       </CardHeader>
       <CardContent className="p-1 md:p-5">
         <Tabs defaultValue="all">
-          <TabsList className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 justify-start w-full bg-transparent h-full">
+          <TabsList className="grid grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 justify-start w-full bg-transparent h-full">
             {tabsTrigger.map((item, index) => (
               <TabsTrigger
                 key={`report-trigger-${index}`}
@@ -143,6 +155,7 @@ const ReportsSnapshot = () => {
                     "bg-primary/30 data-[state=active]:bg-primary/30 dark:bg-primary/70": item.color === "primary",
                     "bg-orange-50 data-[state=active]:bg-orange-50 dark:bg-orange-500": item.color === "warning",
                     "bg-green-50 data-[state=active]:bg-green-50 dark:bg-green-500": item.color === "success",
+                    "bg-pink-50 data-[state=active]:bg-pink-50 dark:bg-pink-500 ": item.color === "secondary",
                     "bg-cyan-50 data-[state=active]:bg-cyan-50 dark:bg-cyan-500 ": item.color === "info",
                   }
                 )}
@@ -154,6 +167,7 @@ const ReportsSnapshot = () => {
                       "bg-primary/50  ring-primary/20 dark:bg-primary dark:ring-primary/40": item.color === "primary",
                       "bg-orange-200 ring-orange-100 dark:bg-orange-300 dark:ring-orange-400": item.color === "warning",
                       "bg-green-200 ring-green-100 dark:bg-green-300 dark:ring-green-400": item.color === "success",
+                      "bg-pink-200 ring-pink-100 dark:bg-pink-300 dark:ring-pink-400": item.color === "secondary",
                       "bg-cyan-200 ring-cyan-100 dark:bg-cyan-300 dark:ring-cyan-400": item.color === "info",
                     }
                   )}
@@ -180,4 +194,4 @@ const ReportsSnapshot = () => {
   );
 };
 
-export default ReportsSnapshot;
+export default Planreports;
