@@ -124,7 +124,7 @@ const CreatePasswordPage = () => {
                             Prantik Chakraborty <br />
                             <span className="text-base font-medium text-default-700">
                               {" "}
-                              UI/UX Designer at Codeshaper
+                              UI/UX Designer atWordpress Speddy 
                             </span>
                           </div>
                           <div className="text-lg  text-default-800 mt-4">
@@ -140,7 +140,7 @@ const CreatePasswordPage = () => {
                             Prantik Chakraborty <br />
                             <span className="text-base font-medium text-default-700">
                               {" "}
-                              UI/UX Designer at Codeshaper
+                              UI/UX Designer atWordpress Speddy 
                             </span>
                           </div>
                           <div className="text-lg  text-default-800 mt-4">
@@ -156,7 +156,7 @@ const CreatePasswordPage = () => {
                             Prantik Chakraborty <br />
                             <span className="text-base font-medium text-default-700">
                               {" "}
-                              UI/UX Designer at Codeshaper
+                              UI/UX Designer atWordpress Speddy 
                             </span>
                           </div>
                           <div className="text-lg  text-default-800 mt-4">

@@ -44,14 +44,20 @@ const ReportsSnapshot = () => {
   const tabsTrigger = [
     {
       value: "all",
-      text: "all user",
-      total: "10,234",
+      text: "Active Plans",
+      total: "11",
       color: "primary",
     },
     {
-      value: "event",
-      text: "Event Count",
-      total: "536",
+      value: "all",
+      text: "Inactive Plans",
+      total: "16",
+      color: "primary",
+    },
+    {
+      value: "subscription",
+      text: "Total Subscrptions",
+      total: "7",
       color: "warning",
     },
     {

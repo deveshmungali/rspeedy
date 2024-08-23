@@ -83,16 +83,16 @@ const FooterContent = () => {
   return (
     <div className="block md:flex md:justify-between text-muted-foreground">
       <p className="sm:mb-0 text-xs md:text-sm">
-        COPYRIGHT © {new Date().getFullYear()} DashTail All rights Reserved
+        COPYRIGHT © {new Date().getFullYear()} Wordpress Speddy All rights Reserved
       </p>
       <p className="mb-0 text-xs md:text-sm">
-        Hand-crafted & Made by{" "}
+         Made by{" "}
         <a
           className="text-primary"
           target="__blank"
           href="https://codeshaper.net"
         >
-          Codeshaper
+         Wordpress Speddy 
         </a>
       </p>
     </div>

@@ -51,7 +51,7 @@ const Corporate = () => {
                   <Img src={bgImage.src} alt="email template" className="absolute top-0 left-0 w-full h-full" />
                   <Text className="relative z-30  text-center text-3xl font-bold text-white capitalize px-10">Grow your online business</Text>
                   <Text className="relative z-30 text-center text-base text-white  px-10 my-0">
-                    Codeshaper is a creative agency that helps people to bring their business online.
+                   Wordpress Speddy  is a creative agency that helps people to bring their business online.
                     we also offer various digital marketing, web design, and development services.</Text>
                   <Button className="relative z-30 text-center border  text-white border-white font-medium py-2.5 px-8 mt-7 rounded-full" href="/">
                     CONTACT US

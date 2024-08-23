@@ -37,7 +37,7 @@ export const Welcome = () => (
                   />
                   <Text className="text-3xl text-center font-semibold text-default-900">Hi Sakil Anwar,</Text>
                   <Text className="text-base text-default-700 text-center">
-                    Welcome to CodeShaper, where innovation meets precision.
+                    Welcome toWordpress Speddy , where innovation meets precision.
                     Crafting your digital future with elegant solutions.
                     Let's shape your success together. Evolve, adapt, conquer.
                   </Text>
@@ -49,7 +49,7 @@ export const Welcome = () => (
                   <Text className="text-base text-default-700 text-center">
                     Best,
                     <br />
-                    The Codeshaper team
+                    TheWordpress Speddy  team
                   </Text>
                   <Hr className="border border-default-300 my-5" />
                   <Text className="text-xs leading-6 text-center text-default-700">

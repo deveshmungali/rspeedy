@@ -57,7 +57,7 @@ const Blog = () => {
                     Discover the World
                   </Text>
                   <Text className="relative z-30 text-center text-base text-white  px-10 my-0">
-                    Codeshaper is a creative agency that helps people to bring their business online.
+                   Wordpress Speddy  is a creative agency that helps people to bring their business online.
                     we also offer various digital marketing, web design, and development services.</Text>
                   <Button className="relative z-30 text-center border border-violet-500  bg-violet-500 text-white font-medium py-2.5 px-8 mt-7 rounded-full" href="/">
                     See Photos

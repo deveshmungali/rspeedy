@@ -996,7 +996,7 @@ export const menusConfig = {
           },
           {
             title: "visitors",
-            href: "/ecommerce",
+            href: "/visitors",
             icon: Cart,
           },
         //   {
