@@ -16,7 +16,7 @@ const LogoutFooter = ({ menus }) => {
           <div className=" text-default-700 font-semibold text-sm capitalize mb-0.5 truncate">
             {session?.user?.name}
           </div>
-          <div className=" text-xs text-default-600  truncate">
+          <div className=" text-xs text-default-600  w-[160px] truncate">
             {session?.user?.email}
           </div>
         </div>

@@ -29,6 +29,7 @@ export { default as ChartArea } from "./duel-tone/chart-area.svg";
 export { default as Building } from "./duel-tone/building.svg";
 export { default as Building2 } from "./duel-tone/building-2.svg";
 export { default as Sheild } from "./duel-tone/sheild.svg";
+export { default as WebsiteOwner } from "./duel-tone/WebsiteOwner.svg";
 export { default as Error } from "./duel-tone/error.svg";
 export { default as Diamond } from "./duel-tone/diamond.svg";
 export { default as Expand } from "./duel-tone/expand.svg";

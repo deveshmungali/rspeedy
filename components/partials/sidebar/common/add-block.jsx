@@ -43,10 +43,10 @@ const AddBlock = ({
             />
           </Button>
         </div>
-        <div className="text-sm font-semibold  text-primary-foreground flex items-center gap-2 mt-4">
+        {/* <div className="text-sm font-semibold  text-primary-foreground flex items-center gap-2 mt-4">
           Upgrade Now
           <Icon icon="heroicons:arrow-long-right" className="w-5 h-5" />{" "}
-        </div>
+        </div> */}
       </div>
       <Dialog open={openVideo}>
         <DialogContent size="lg" className="p-0" hiddenCloseIcon>

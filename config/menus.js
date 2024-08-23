@@ -48,22 +48,23 @@ export const menusConfig = {
     {
       title: "Dashboard",
       icon: DashBoard,
+      href: "/dashboard",
       child: [
         {
-          title: "Analytics",
+          title: "Dashboard",
           href: "/dashboard",
           icon: Graph,
         },
-        {
-          title: "Ecommerce",
-          href: "/ecommerce",
-          icon: Cart,
-        },
-        {
-          title: "Project ",
-          href: "/project",
-          icon: ClipBoard,
-        },
+      //   {
+      //     title: "Ecommerce",
+      //     href: "/ecommerce",
+      //     icon: Cart,
+      //   },
+      //   {
+      //     title: "Project ",
+      //     href: "/project",
+      //     icon: ClipBoard,
+      //   },
       ],
     },
     {
@@ -986,22 +987,23 @@ export const menusConfig = {
       {
         title: "Dashboard",
         icon: DashBoard,
+        href: "/dashboard",
         child: [
           {
-            title: "Analytics",
+            title: "Dashboard",
             href: "/dashboard",
             icon: Graph,
           },
-          {
-            title: "Ecommerce",
-            href: "/ecommerce",
-            icon: Cart,
-          },
-          {
-            title: "project ",
-            href: "/project",
-            icon: ClipBoard,
-          },
+        //   {
+        //     title: "Ecommerce",
+        //     href: "/ecommerce",
+        //     icon: Cart,
+        //   },
+        //   {
+        //     title: "project ",
+        //     href: "/project",
+        //     icon: ClipBoard,
+        //   },
         ],
       },
       {
@@ -2033,20 +2035,20 @@ export const menusConfig = {
         isHide: false,
         child: [
           {
-            title: "Analytics",
+            title: "Dashboard",
             href: "/dashboard",
             icon: Graph,
           },
-          {
-            title: "Ecommerce",
-            href: "/ecommerce",
-            icon: Cart,
-          },
-          {
-            title: "Project ",
-            href: "/project",
-            icon: ClipBoard,
-          },
+        //   {
+        //     title: "Ecommerce",
+        //     href: "/ecommerce",
+        //     icon: Cart,
+        //   },
+        //   {
+        //     title: "Project ",
+        //     href: "/project",
+        //     icon: ClipBoard,
+        //   },
         ],
       },
       {
