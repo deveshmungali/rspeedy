@@ -96,9 +96,9 @@ export const demoMenus = [
       },
       {
         title: "Ecommerce",
-        href: "/ecommerce",
+        href: "/",
         icon: Cart,
-        image: ecommercePage,
+        // image: ecommercePage,
       },
       {
         title: "Project ",

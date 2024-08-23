@@ -994,11 +994,11 @@ export const menusConfig = {
             href: "/dashboard",
             icon: Graph,
           },
-        //   {
-        //     title: "Ecommerce",
-        //     href: "/ecommerce",
-        //     icon: Cart,
-        //   },
+          {
+            title: "visitors",
+            href: "/ecommerce",
+            icon: Cart,
+          },
         //   {
         //     title: "project ",
         //     href: "/project",
