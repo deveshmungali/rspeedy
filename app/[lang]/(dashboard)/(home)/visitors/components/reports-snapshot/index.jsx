@@ -49,7 +49,7 @@ const ReportsSnapshot = () => {
       color: "primary",
     },
     {
-      value: "all",
+      value: "inactive",
       text: "Inactive Plans",
       total: "16",
       color: "primary",
@@ -61,8 +61,8 @@ const ReportsSnapshot = () => {
       color: "warning",
     },
     {
-      value: "conversation",
-      text: "conversations",
+      value: "Monthly",
+      text: "Monthly Subscrptions",
       total: "21",
       color: "success",
     },
@@ -80,20 +80,25 @@ const ReportsSnapshot = () => {
       color: primary,
     },
     {
-      value: "event",
+      value: "inactive",
       series: eventCountSeries,
       color: warning,
     },
     {
-      value: "conversation",
+      value: "subscription",
       series: conversationSeries,
       color: success,
+    },
+    {
+      value: "Monthly",
+      series: newUserSeries,
+      color: info,
     },
     {
       value: "newuser",
       series: newUserSeries,
       color: info,
-    },
+    }
   ];
   return (
     <Card>

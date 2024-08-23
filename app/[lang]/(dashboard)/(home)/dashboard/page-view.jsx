@@ -28,9 +28,9 @@ const DashboardPageView = ({ trans }) => {
         <div className="col-span-12 lg:col-span-4">
           <UsersStat />
         </div>
-        <div className="col-span-12 lg:col-span-12">
+        {/* <div className="col-span-12 lg:col-span-12">
           <ReportsSnapshot />
-        </div>
+        </div> */}
       </div>
    
     </div>
