@@ -4,14 +4,6 @@ import { SiteLogo } from "@/components/svg";
 import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Icon } from "@iconify/react";
@@ -162,66 +154,36 @@ const InvoicePreview = () => {
 
               <div className="mt-6 p-5 border border-default-300 rounded-[10px] bg-gray-100">
                   <div className="my-6 border border-default-300 rounded-[10px] bg-gray-200">
-                    <div className="flex flex-col">
-                      <div className="w-1/2"></div>
-                      <div className="w-1/2"></div>
+                    <div className="p-3 flex">
+                      <div className="w-1/2 flex flex-col">
+                        <span> <b>Current View:</b> 0/100 ( 0% ) </span>
+                        <span className="pt-2"> <b>Add More Views:</b>
+                          <input 
+                            type="number" 
+                            className="ml-4 p-2 border border-gray-300 rounded-md" 
+                            placeholder="Enter number of views"
+                          />
+                        </span>
+                        <span> (Don't increment the view count if the goal is only to regenerate the script.) </span>
+                      </div>
+                      <div className="w-1/2 text-end">
+                        <Button className=""> Regenerate Script </Button>
+                      </div>
                     </div>
                   </div>
-                <div className="flex gap-12">
-                  <div className="w-1/2 flex flex-col gap-3">
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Phone No:</span>
-                      <span className="text-base text-s  font-semibold text-primary-900">+91 9313602647</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Company Role:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">owner/Founder</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Website Category:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">Non-ecommerce content website</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Industry Type:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">Software_development_company</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Source:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">Google</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Resend Code:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">3</span>
+
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-white">
+                    <div className="p-3 flex">
+                      <div className="w-1/2 flex flex-col">
+                        <span> <b>Website URL:</b> </span>
+                      </div>
+                      <div className="w-1/2 text-end">
+                        <Link href="https://netmaxin.co" className="flex justify-end gap-2 ">
+                          <span className="font-bold text-primary-600">https://netmaxin.co</span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <hr/>
-                  <div className="w-1/2 flex flex-col gap-3">
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Full Address:</span>
-                      <span className="text-base text-s font-semibold text-primary-900 uppercase">vizag</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">City:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">visakhapatanam</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Country:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">India</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">ZipCode:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">530007</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Industry:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">Business_website</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-base text-s font-semibold text-default-900">Email Status:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">Subscribed</span>
-                    </div>
-                  </div>
-                </div>
               </div>
 
             </CardContent>
