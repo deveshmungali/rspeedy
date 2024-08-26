@@ -29,11 +29,18 @@ const newUserSeries = [
     data: [20, 70, 65, 40, 100, 60, 100, 75, 60, 80],
   },
 ];
+const dataSeries = [
+  {
+    data: [20, 70, 65, 40, 100, 60, 100, 75, 60, 80],
+  },
+];
 const Planreports = () => {
   const { theme: config, setTheme: setConfig } = useThemeStore();
   const { theme: mode } = useTheme();
   const theme = themes.find((theme) => theme.name === config);
   const primary = `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].primary
+    })`;
+  const secondary = `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].secondary
     })`;
   const warning = `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].warning
     })`;
@@ -50,7 +57,7 @@ const Planreports = () => {
       },
       {
         value: "event",
-        text: "Unverified owners",
+        text: "unverified owners",
         total: "536",
         color: "primary",
       },
@@ -67,9 +74,41 @@ const Planreports = () => {
         color: "info",
       },
       {
-        value: "all",
+        value: "secondary",
         text: "paid plans subscribers",
         total: "10$",
+        color: "secondary",
+      },
+    ];
+    const tabsTrigger2 = [
+      {
+        value: "all",
+        text: "Website Data",
+        total: "10",
+        color: "secondary",
+      },
+      {
+        value: "event",
+        text: "unverified owners",
+        total: "36",
+        color: "primary",
+      },
+      {
+        value: "conversation",
+        text: "new sign-up",
+        total: "2112",
+        color: "warning",
+      },
+      {
+        value: "newuser",
+        text: "basic plan subscribers",
+        total: "1121",
+        color: "info",
+      },
+      {
+        value: "secondary",
+        text: "paid plans subscribers",
+        total: "500$",
         color: "secondary",
       },
     ];
@@ -78,6 +117,11 @@ const Planreports = () => {
       value: "all",
       series: allUsersSeries,
       color: primary,
+    },
+    {
+      value: "secondary",
+      series: dataSeries,
+      color: secondary,
     },
     {
       value: "event",
@@ -172,7 +216,7 @@ const Planreports = () => {
       <CardContent className="p-1 md:p-5">
         <Tabs defaultValue="all">
           <TabsList className="grid grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 justify-start w-full bg-transparent h-full">
-            {tabsTrigger.map((item, index) => (
+            {tabsTrigger2.map((item, index) => (
               <TabsTrigger
                 key={`report-trigger-${index}`}
                 value={item.value}

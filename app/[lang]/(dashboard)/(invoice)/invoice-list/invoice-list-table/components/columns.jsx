@@ -37,7 +37,7 @@ export const columns = [
   {
     accessorKey: "id",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="INVOICE ID" />
+      <DataTableColumnHeader column={column} title="WOWNERS ID" />
     ),
     cell: ({ row }) => <div className="w-[80px]">{row.getValue("id")}</div>,
     enableSorting: true,

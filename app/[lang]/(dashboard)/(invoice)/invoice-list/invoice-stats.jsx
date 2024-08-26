@@ -3,11 +3,11 @@ import { Docs, DocsCheck, DocsArrow, Spam } from "@/components/svg";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
 import AreaChart from "./area-chart"
-const InvoiceStats = () => {
+const WownerStats = () => {
   const data = [
     {
       id: 1,
-      title: "Total Invoices Amount",
+      title: "Total Wowners Amount",
       amount: "427.98",
       percentage: "3.25",
       icon: <Docs className="w-4 h-4 text-primary-foreground" />,
@@ -21,7 +21,7 @@ const InvoiceStats = () => {
     },
     {
       id: 2,
-      title: "Total Paid Invoices",
+      title: "Total Paid Wowners",
       amount: "165.21",
       percentage: "8.2",
       icon: <DocsCheck className="w-4 h-4 text-primary-foreground" />,
@@ -35,7 +35,7 @@ const InvoiceStats = () => {
     },
     {
       id: 3,
-      title: "Pending Invoices",
+      title: "Pending Wowners",
       amount: "42",
       percentage: "8.2",
       icon: <DocsArrow className="w-4 h-4 text-warning" />,
@@ -49,7 +49,7 @@ const InvoiceStats = () => {
     },
     {
       id: 4,
-      title: "Overdue Invoices",
+      title: "Overdue Wowners",
       amount: "280.03",
       percentage: "8.2",
       icon: <Spam className="w-4 h-4 text-destructive" />,
@@ -67,7 +67,7 @@ const InvoiceStats = () => {
       {
         data.map((item, index) => (
           <div
-            key={`invoice-stats-${index}`}
+            key={`wowners-stats-${index}`}
             className={cn("rounded-sm p-4 w-full", {
               "bg-primary-50": item.color === "primary",
               "bg-green-50": item.color === "success",
@@ -130,4 +130,4 @@ const InvoiceStats = () => {
   );
 };
 
-export default InvoiceStats;
+export default WownerStats;
