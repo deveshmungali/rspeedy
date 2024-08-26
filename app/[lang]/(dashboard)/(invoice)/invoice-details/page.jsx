@@ -176,11 +176,102 @@ const InvoicePreview = () => {
                     <div className="p-3 flex">
                       <div className="w-1/2 flex flex-col">
                         <span> <b>Website URL:</b> </span>
+                        <span className="mt-4"> Platform </span>
                       </div>
-                      <div className="w-1/2 text-end">
+                      <div className="w-1/2 text-end flex flex-col">
                         <Link href="https://netmaxin.co" className="flex justify-end gap-2 ">
                           <span className="font-bold text-primary-600">https://netmaxin.co</span>
                         </Link>
+                        <span className="mt-4"> Wix </span>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="p-3 flex gap-12">
+                      <div className="w-1/2 flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-white">
+                    <div className="p-3 flex">
+                      <div className="w-1/2 flex flex-col">
+                        <span> <b>Second Url</b> </span>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col">
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="p-3 flex gap-12">
+                      <div className="w-1/2 flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-white">
+                    <div className="p-3 flex">
+                      <div className="w-1/2 flex flex-col">
+                        <span> <b>Third Url</b> </span>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col">
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="p-3 flex gap-12">
+                      <div className="w-1/2 flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
                       </div>
                     </div>
                   </div>
