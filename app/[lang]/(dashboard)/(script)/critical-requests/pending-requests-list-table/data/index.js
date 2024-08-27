@@ -21,7 +21,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -44,7 +44,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -67,7 +67,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -90,7 +90,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -113,7 +113,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -136,7 +136,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -159,7 +159,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -182,7 +182,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -205,7 +205,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -228,7 +228,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -251,7 +251,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -274,7 +274,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -297,7 +297,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -320,7 +320,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -343,7 +343,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -366,7 +366,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -389,7 +389,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -412,7 +412,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -435,7 +435,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -458,7 +458,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -481,7 +481,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -504,7 +504,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -527,7 +527,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -550,7 +550,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -573,7 +573,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -596,7 +596,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -619,7 +619,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -642,7 +642,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -665,7 +665,7 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   },
   {
     id: "#3458782",
@@ -688,6 +688,6 @@ export const data = [
       date: "20-02-2024",
       time: "Tuesday, 6:53 PM"
     },
-    status: "Pending",
+    status: "Critical",
   }
 ];

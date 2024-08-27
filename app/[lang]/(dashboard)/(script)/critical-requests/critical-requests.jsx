@@ -3,11 +3,11 @@ import { Docs, DocsCheck, DocsArrow, Spam } from "@/components/svg";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
 import AreaChart from "./area-chart"
-const RequestsStats = () => {
+const CriticalStats = () => {
   const data = [
     {
       id: 1,
-      title: "Total Pending Requests",
+      title: "Total Critical Requests",
       amount: "428",
       percentage: "3.25",
       icon: <Docs className="w-4 h-4 text-primary-foreground" />,
@@ -21,7 +21,7 @@ const RequestsStats = () => {
     },
     {
       id: 2,
-      title: "Completed Requests",
+      title: "Critical Requests Completed",
       amount: "165",
       percentage: "8.2",
       icon: <DocsCheck className="w-4 h-4 text-primary-foreground" />,
@@ -35,7 +35,7 @@ const RequestsStats = () => {
     },
     {
       id: 3,
-      title: "Average Requests per Day",
+      title: "Average Critical Requests",
       amount: "42",
       percentage: "8.2",
       icon: <DocsArrow className="w-4 h-4 text-warning" />,
@@ -130,4 +130,4 @@ const RequestsStats = () => {
   );
 };
 
-export default RequestsStats;
+export default CriticalStats;
