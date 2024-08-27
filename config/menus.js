@@ -1054,6 +1054,11 @@ export const menusConfig = {
             href: "/critical-requests",
             icon: Flag,
           },
+          {
+            title: "Deleted Customers",
+            href: "/deleted-customers",
+            icon: Flag,
+          },
           // {
           //   title: "chat",
           //   icon: Messages,
