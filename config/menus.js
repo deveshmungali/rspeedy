@@ -1013,23 +1013,25 @@ export const menusConfig = {
         icon: Application,
         child: [
           {
-            title: "Website Owners",
+            title: "Add Website Owners",
+            href: "/create-invoice",
             icon: Files,
-            nested: [
-              {
-                title: "Add Website Owners",
-                href: "/create-invoice",
-              },
-              {
-                title: "Website Owners Details",
-                href: "/invoice-details",
-              },
-              {
-                title: "Website Owners List",
-                href: "/invoice-list",
-              },
-            ],
-          },  
+          },
+          {
+            title: "Website Owners Details",
+            href: "/invoice-details",
+            icon: Files,
+          },
+          {
+            title: "Website Owners List",
+            href: "/invoice-list",
+            icon: Files,
+          },
+          {
+            title: "Unverified Owners",
+            href: "/unverified-owners",
+            icon: Files,
+          },
           // {
           //   title: "chat",
           //   icon: Messages,
