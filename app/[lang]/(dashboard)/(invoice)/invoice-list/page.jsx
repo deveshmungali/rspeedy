@@ -13,11 +13,11 @@ const InvoiceListPage = () => {
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
         <BreadcrumbItem>Utility</BreadcrumbItem>
-        <BreadcrumbItem>Wowner List</BreadcrumbItem>
+        <BreadcrumbItem>Website Owner List</BreadcrumbItem>
       </Breadcrumbs>
       <Card className="mt-6">
         <CardHeader className="flex-row items-center border-none mb-0">
-          <CardTitle className="flex-1 text-xl font-medium text-default-900">Wowner Overview</CardTitle>
+          <CardTitle className="flex-1 text-xl font-medium text-default-900">Website Owner Overview</CardTitle>
           <Button
             className="flex-none border-default-300 text-default-600 h-9 text-xs font-medium"
             variant="outline"

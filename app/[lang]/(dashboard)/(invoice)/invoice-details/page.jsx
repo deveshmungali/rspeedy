@@ -89,10 +89,10 @@ const InvoicePreview = () => {
               </div>
               <div className="mt-6 border border-default-300 rounded-[10px] bg-gray-100">
                 <div className="p-5 flex gap-12 border-b border-gray-500 justify-between">
-                  <span className="text-base text-m font-semibold text-default-900">#93034</span>
-                  <Link className="text-m font-semibold text-default-900"
-                        href="mailto:rishabh@makkpress.com">
-                          rishabh@makkpress.com
+                  <span className="text-base text-m font-semibold text-default-900 text-primary">#93034</span>
+                  <Link className="text-m font-semibold text-default-900 text-primary capitalize"
+                        href="https://aromaticgardenessence.com">
+                          aromaticgardenessence.com
                   </Link>
                 </div>
                 <div className="p-5 flex gap-12">
