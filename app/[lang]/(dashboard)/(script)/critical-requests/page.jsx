@@ -6,7 +6,7 @@ import { Breadcrumbs, BreadcrumbItem } from "@/components/ui/breadcrumbs";
 import { Icon } from "@iconify/react";
 import PromotionalCard from "./promotional-card"
 import CriticalStats from "./critical-requests"
-import CriticalListTable from "./pending-requests-list-table"
+import CriticalListTable from "./critical-requests-list-table"
 const InvoiceListPage = () => {
   return (
     <Fragment>
