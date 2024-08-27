@@ -3,12 +3,12 @@ import { Docs, DocsCheck, DocsArrow, Spam } from "@/components/svg";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
 import AreaChart from "./area-chart"
-const WebsiteownerStats = () => {
+const RequestsStats = () => {
   const data = [
     {
       id: 1,
-      title: "Website Owner Total Amount",
-      amount: "427.98",
+      title: "Total Pending Requests",
+      amount: "428",
       percentage: "3.25",
       icon: <Docs className="w-4 h-4 text-primary-foreground" />,
       isUp: true,
@@ -21,8 +21,8 @@ const WebsiteownerStats = () => {
     },
     {
       id: 2,
-      title: "Total Paid Website Owner",
-      amount: "165.21",
+      title: "Completed Requests",
+      amount: "165",
       percentage: "8.2",
       icon: <DocsCheck className="w-4 h-4 text-primary-foreground" />,
       isUp: true,
@@ -35,7 +35,7 @@ const WebsiteownerStats = () => {
     },
     {
       id: 3,
-      title: "Pending Website Owners",
+      title: "Average Requests per Day",
       amount: "42",
       percentage: "8.2",
       icon: <DocsArrow className="w-4 h-4 text-warning" />,
@@ -49,8 +49,8 @@ const WebsiteownerStats = () => {
     },
     {
       id: 4,
-      title: "Overdue Website Owners",
-      amount: "280.03",
+      title: "Passed Due Requests",
+      amount: "280",
       percentage: "8.2",
       icon: <Spam className="w-4 h-4 text-destructive" />,
       isUp: false,
@@ -95,8 +95,8 @@ const WebsiteownerStats = () => {
                     "text-orange-600": item.color === "warning",
                     "text-red-600": item.color === "destructive"
                   })}>
-                    <span className="text-sm font-medium absolute top-0 left-0">$</span>
-                    <span className="text-2xl font-semibold pl-2.5">{item.amount}k</span>
+                    {/* <span className="text-sm font-medium absolute top-0 left-0">$</span> */}
+                    <span className="text-2xl font-semibold pl-2.5">{item.amount}</span>
                   </div>
                 </div>
                 <div className="mt-1.5">
@@ -130,4 +130,4 @@ const WebsiteownerStats = () => {
   );
 };
 
-export default WebsiteownerStats;
+export default RequestsStats;

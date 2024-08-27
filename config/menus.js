@@ -40,6 +40,7 @@ import {
   Diamond,
   Heroicon,
   LucideIcon,
+  List,
   CustomIcon,
   BubbleChart,
   Mail,
@@ -1031,6 +1032,27 @@ export const menusConfig = {
             title: "Unverified Owners",
             href: "/unverified-owners",
             icon: Files,
+          },
+        ],
+      },
+      {
+        title: "Script Installation Request",
+        icon: Book,
+        child: [
+          {
+            title: "Pending Requests",
+            href: "/pending-requests",
+            icon: List,
+          },
+          {
+            title: "Completed Requests",
+            href: "/invoice-details",
+            icon: ListFill,
+          },
+          {
+            title: "Critical Requests",
+            href: "/invoice-details",
+            icon: Flag,
           },
           // {
           //   title: "chat",

@@ -3,11 +3,11 @@ import { Docs, DocsCheck, DocsArrow, Spam } from "@/components/svg";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
 import AreaChart from "./area-chart"
-const WownerStats = () => {
+const UnverifiedStats = () => {
   const data = [
     {
       id: 1,
-      title: "Total Wowners Amount",
+      title: "Unverified Owner Total Amount",
       amount: "427.98",
       percentage: "3.25",
       icon: <Docs className="w-4 h-4 text-primary-foreground" />,
@@ -21,7 +21,7 @@ const WownerStats = () => {
     },
     {
       id: 2,
-      title: "Total Paid Wowners",
+      title: "Total Paid Unverified Owner",
       amount: "165.21",
       percentage: "8.2",
       icon: <DocsCheck className="w-4 h-4 text-primary-foreground" />,
@@ -35,7 +35,7 @@ const WownerStats = () => {
     },
     {
       id: 3,
-      title: "Pending Wowners",
+      title: "Pending Unverified Owner",
       amount: "42",
       percentage: "8.2",
       icon: <DocsArrow className="w-4 h-4 text-warning" />,
@@ -49,7 +49,7 @@ const WownerStats = () => {
     },
     {
       id: 4,
-      title: "Overdue Wowners",
+      title: "Overdue Unverified Owner",
       amount: "280.03",
       percentage: "8.2",
       icon: <Spam className="w-4 h-4 text-destructive" />,
@@ -130,4 +130,4 @@ const WownerStats = () => {
   );
 };
 
-export default WownerStats;
+export default UnverifiedStats;

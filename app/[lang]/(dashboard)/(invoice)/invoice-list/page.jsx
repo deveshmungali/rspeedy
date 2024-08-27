@@ -5,8 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@/components/ui/breadcrumbs";
 import { Icon } from "@iconify/react";
 import PromotionalCard from "./promotional-card"
-import WownerStats from "./invoice-stats"
-import WownerListTable from "./invoice-list-table"
+import WebsiteownerStats from "./invoice-stats"
+import VerifiedOwnerListTable from "./invoice-list-table"
 const InvoiceListPage = () => {
   return (
     <Fragment>
@@ -29,13 +29,13 @@ const InvoiceListPage = () => {
         <CardContent className="pt-0 px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
             <PromotionalCard />
-            <WownerStats />
+            <WebsiteownerStats />
           </div>
         </CardContent>
       </Card>
       <Card className="mt-6">
         <CardContent className="p-0">
-          <WownerListTable />
+          <VerifiedOwnerListTable />
         </CardContent>
       </Card>
     </Fragment>

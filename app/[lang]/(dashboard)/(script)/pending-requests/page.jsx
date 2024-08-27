@@ -5,19 +5,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@/components/ui/breadcrumbs";
 import { Icon } from "@iconify/react";
 import PromotionalCard from "./promotional-card"
-import UnverifiedStats from "./invoice-stats"
-import UnverifiedOwnerListTable from "./invoice-list-table"
+import RequestsStats from "./pending-requests"
+import VerifiedOwnerListTable from "./pending-requests-list-table"
 const InvoiceListPage = () => {
   return (
     <Fragment>
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
         <BreadcrumbItem>Utility</BreadcrumbItem>
-        <BreadcrumbItem> Unverified Owners </BreadcrumbItem>
+        <BreadcrumbItem>Pending Requests</BreadcrumbItem>
       </Breadcrumbs>
       <Card className="mt-6">
         <CardHeader className="flex-row items-center border-none mb-0">
-          <CardTitle className="flex-1 text-xl font-medium text-default-900">Unverified Owners</CardTitle>
+          <CardTitle className="flex-1 text-xl font-medium text-default-900">Pending Requests Overview</CardTitle>
           <Button
             className="flex-none border-default-300 text-default-600 h-9 text-xs font-medium"
             variant="outline"
@@ -27,15 +27,15 @@ const InvoiceListPage = () => {
             </Button>
         </CardHeader>
         <CardContent className="pt-0 px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
-            <PromotionalCard />
-            <UnverifiedStats />
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
+            {/* <PromotionalCard /> */}
+            <RequestsStats />
           </div>
         </CardContent>
       </Card>
       <Card className="mt-6">
         <CardContent className="p-0">
-          <UnverifiedOwnerListTable />
+          <VerifiedOwnerListTable />
         </CardContent>
       </Card>
     </Fragment>
