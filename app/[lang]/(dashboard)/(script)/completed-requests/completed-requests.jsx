@@ -3,7 +3,7 @@ import { Docs, DocsCheck, DocsArrow, Spam } from "@/components/svg";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
 import AreaChart from "./area-chart"
-const RequestsStats = () => {
+const CompletedStats = () => {
   const data = [
     {
       id: 1,
@@ -130,4 +130,4 @@ const RequestsStats = () => {
   );
 };
 
-export default RequestsStats;
+export default CompletedStats;

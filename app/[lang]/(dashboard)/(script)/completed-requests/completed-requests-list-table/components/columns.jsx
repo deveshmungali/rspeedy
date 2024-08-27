@@ -106,13 +106,23 @@ export const columns = [
     ),
   },
   {
+    accessorKey: "completed_details",
+    header: "Completed Date",
+    cell: ({ row }) => (
+      <div className="flex flex-col justify-start">
+          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.completed_details.date} </span>
+          <span className=" text-xs text-default-500 whitespace-nowrap"> {row?.original?.completed_details.time} </span>
+      </div>
+    ),
+  },
+  {
     accessorKey: "status",
     header: "Status",
     cell: ({ row }) => (
       <Badge
         className="py-3 px-8 rounded capitalize whitespace-nowrap"
         variant="soft"
-        color={row.getValue("status") === "confirmed" ? "success" : row.getValue("status") === "closed" ? "warning" : ""}
+        color={row.getValue("status") === "Completed" ? "success" : row.getValue("status") === "closed" ? "warning" : ""}
       >
         {row.getValue("status")}
       </Badge>

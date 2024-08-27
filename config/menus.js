@@ -988,7 +988,7 @@ export const menusConfig = {
   sidebarNav: {
     modern: [
       {
-        title: "Dashboard",
+        title: "Home",
         icon: DashBoard,
         href: "/dashboard",
         child: [
