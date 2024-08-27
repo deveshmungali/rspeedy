@@ -1046,12 +1046,12 @@ export const menusConfig = {
           },
           {
             title: "Completed Requests",
-            href: "/invoice-details",
+            href: "/completed-requests",
             icon: ListFill,
           },
           {
             title: "Critical Requests",
-            href: "/invoice-details",
+            href: "/critical-requests",
             icon: Flag,
           },
           // {
