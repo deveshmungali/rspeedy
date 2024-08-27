@@ -45,7 +45,7 @@ export const columns = [
   },
   {
     accessorKey: "customer",
-    header: "Customer Detail",
+    header: "Manager Details",
     cell: ({ row }) => (
       <div className="flex gap-2 items-center">
         <Avatar className=" rounded-full">
@@ -62,7 +62,7 @@ export const columns = [
   },
   {
     accessorKey: "url",
-    header: "Website",
+    header: "Website URL's",
     cell: ({ row }) => (
       <div className="flex gap-2 justify-center">
         <div className="flex flex-col">
@@ -76,33 +76,8 @@ export const columns = [
     ),
   },
   {
-    accessorKey: "installation",
-    header: "Feedback / Views / Steps",
-    cell: ({ row }) => (
-      <div className="flex gap-2 justify-center">
-        <div className="flex items-center gap-2">
-          <Button className="bg-primary-600 flex gap-2">
-            Views
-          </Button>
-          <span className=" text-m font-medium text-default-600 whitespace-nowrap"> {row?.original?.installation.views} / {row?.original?.installation.steps} </span> 
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "sent_code",
-    header: "Sent Code",
-    cell: ({ row }) => (
-      <div className="flex gap-2 justify-center">
-        <div className="flex flex-col">
-          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.sent_code} </span>
-        </div>
-      </div>
-    ),
-  },
-  {
     accessorKey: "type",
-    header: "Customer Type",
+    header: "Request Type",
     cell: ({ row }) => (
       <div className="flex gap-2 justify-start">
         <div className="flex flex-col">
@@ -112,24 +87,21 @@ export const columns = [
     ),
   },
   {
-    accessorKey: "plan_type",
-    header: "Plan Type",
+    accessorKey: "plan_name",
+    header: "Plan Name",
     cell: ({ row }) => (
       <div className="flex gap-2 justify-start">
-        <Button className="bg-primary-600 flex gap-2">
-          <span className=" text-sm font-medium text-white whitespace-nowrap"> {row?.original?.plan_type.free} Free </span> / 
-          <span className=" text-xs text-white whitespace-nowrap"> {row?.original?.plan_type.paid} Paid </span>
-        </Button>
+          <span className=" text-sm font-medium whitespace-nowrap"> {row?.original?.plan_name} </span>
       </div>
     ),
   },
   {
-    accessorKey: "details",
-    header: "Created At",
+    accessorKey: "req_details",
+    header: "Request Date",
     cell: ({ row }) => (
       <div className="flex flex-col justify-start">
-          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.details.date} </span>
-          <span className=" text-xs text-default-500 whitespace-nowrap"> {row?.original?.details.time} </span>
+          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.req_details.date} </span>
+          <span className=" text-xs text-default-500 whitespace-nowrap"> {row?.original?.req_details.time} </span>
       </div>
     ),
   },
@@ -138,24 +110,11 @@ export const columns = [
     header: "Status",
     cell: ({ row }) => (
       <Badge
-        className="rounded capitalize whitespace-nowrap"
+        className="py-3 px-8 rounded capitalize whitespace-nowrap"
         variant="soft"
         color={row.getValue("status") === "confirmed" ? "success" : row.getValue("status") === "closed" ? "warning" : ""}
       >
         {row.getValue("status")}
-      </Badge>
-    ),
-  },
-  {
-    accessorKey: "paymentStatus",
-    header: "Payment Status",
-    cell: ({ row }) => (
-      <Badge
-        className="capitalize whitespace-nowrap"
-        variant="soft"
-        color={row.getValue("paymentStatus") === "paid" ? "success" : row.getValue("paymentStatus") === "pending" ? "warning" : ""}
-      >
-        {row.getValue("paymentStatus")}
       </Badge>
     ),
   },
@@ -178,12 +137,6 @@ export const columns = [
           className="h-9 w-9 rounded bg-default-100 dark:bg-default-200 text-default-500 hover:text-primary-foreground"
         >
           <Icon icon="heroicons:pencil-square" className="w-5 h-5" />
-        </Button>
-        <Button
-          size="icon"
-          className="h-9 w-9 rounded bg-default-100 dark:bg-default-200 text-default-500 hover:text-primary-foreground"
-          >
-          <Icon icon="heroicons:user-20-solid" className="w-5 h-5" />
         </Button>
         <Button
           size="icon"

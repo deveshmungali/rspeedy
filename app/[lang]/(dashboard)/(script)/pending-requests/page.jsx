@@ -6,13 +6,13 @@ import { Breadcrumbs, BreadcrumbItem } from "@/components/ui/breadcrumbs";
 import { Icon } from "@iconify/react";
 import PromotionalCard from "./promotional-card"
 import RequestsStats from "./pending-requests"
-import VerifiedOwnerListTable from "./pending-requests-list-table"
+import PendingListTable from "./pending-requests-list-table"
 const InvoiceListPage = () => {
   return (
     <Fragment>
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
-        <BreadcrumbItem>Utility</BreadcrumbItem>
+        <BreadcrumbItem>Script Installation Requests</BreadcrumbItem>
         <BreadcrumbItem>Pending Requests</BreadcrumbItem>
       </Breadcrumbs>
       <Card className="mt-6">
@@ -35,7 +35,7 @@ const InvoiceListPage = () => {
       </Card>
       <Card className="mt-6">
         <CardContent className="p-0">
-          <VerifiedOwnerListTable />
+          <PendingListTable />
         </CardContent>
       </Card>
     </Fragment>
