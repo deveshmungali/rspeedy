@@ -82,7 +82,7 @@ const InvoicePreview = () => {
                     </div>
                     <div>
                       <span className="mr-12 text-base font-semibold text-default-900">Due Date:</span>
-                      <span className="text-base font-medium text-default-600">2024-03-18</span>
+                      <span className="text-base font-medium text-default-600">March 18, 2024 10:45</span>
                     </div>
                   </div>
                 </div>
@@ -99,11 +99,14 @@ const InvoicePreview = () => {
                   <div className="w-1/2 flex flex-col gap-3">
                     <div className="flex justify-between">
                       <span className="text-base text-s font-semibold text-default-900">Phone No:</span>
-                      <span className="text-base text-s  font-semibold text-primary-900">+91 9313602647</span>
+                      <Link className="text-base text-m font-semibold text-default-900 text-primary-900"
+                        href="tel: +91 9313602647">
+                          +91 9313602647
+                      </Link>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-base text-s font-semibold text-default-900">Company Role:</span>
-                      <span className="text-base text-s font-semibold text-primary-900">owner/Founder</span>
+                      <span className="text-base text-s font-semibold text-primary-900">Owner/Founder</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-base text-s font-semibold text-default-900">Website Category:</span>
@@ -179,8 +182,8 @@ const InvoicePreview = () => {
                         <span className="mt-4"> Platform </span>
                       </div>
                       <div className="w-1/2 text-end flex flex-col">
-                        <Link href="https://netmaxin.co" className="flex justify-end gap-2 ">
-                          <span className="font-bold text-primary-600">https://netmaxin.co</span>
+                        <Link href="https://aromaticgardenessence.com" className="flex justify-end gap-2 ">
+                          <span className="font-bold text-primary-600">https://aromaticgardenessence.com</span>
                         </Link>
                         <span className="mt-4"> Wix </span>
                       </div>
@@ -216,6 +219,9 @@ const InvoicePreview = () => {
                         <span> <b>Second Url</b> </span>
                       </div>
                       <div className="w-1/2 text-end flex flex-col">
+                        <Link href="https://aromaticgardenessence.com/collections/age-all-products" className="flex justify-end gap-2 ">
+                          <span className="font-bold text-primary-600">https://aromaticgardenessence.com/collections/age-all-products</span>
+                        </Link>
                       </div>
                     </div>
                     <hr />
@@ -249,6 +255,9 @@ const InvoicePreview = () => {
                         <span> <b>Third Url</b> </span>
                       </div>
                       <div className="w-1/2 text-end flex flex-col">
+                        <Link href="https://aromaticgardenessence.com/collections/offers" className="flex justify-end gap-2 ">
+                          <span className="font-bold text-primary-600">https://aromaticgardenessence.com/collections/offers</span>
+                        </Link>
                       </div>
                     </div>
                     <hr />
@@ -271,6 +280,43 @@ const InvoicePreview = () => {
                         <div className="flex justify-between">
                           <span> <b>Mobile Speed New</b> </span>
                           <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-white">
+                    <div className="p-3 flex gap-12">
+                      <div className="w-1/2 flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Script Installed</b> </span>
+                          <span> <b>No</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Plan Name</b> </span>
+                          <span> <b>Basic Plan</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Subscription Id</b> </span>
+                          <span> <b>4219</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Subscription Status</b> </span>
+                          <span> <b>Active</b> </span>
+                        </div>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Plan Id</b> </span>
+                          <span> <b>30</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Plan Type</b> </span>
+                          <span> <b>Subscription</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Last Update</b> </span>
+                          <span> <b>August 27, 2024 05:03</b> </span>
                         </div>
                       </div>
                     </div>
