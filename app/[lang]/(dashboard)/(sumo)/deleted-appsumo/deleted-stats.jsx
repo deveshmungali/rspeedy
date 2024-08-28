@@ -3,7 +3,7 @@ import { Docs, DocsCheck, DocsArrow, Spam } from "@/components/svg";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
 import AreaChart from "./area-chart"
-const DeletedownerStats = () => {
+const DeletedSumoStats = () => {
   const data = [
     {
       id: 1,
@@ -129,4 +129,4 @@ const DeletedownerStats = () => {
   );
 };
 
-export default DeletedownerStats;
+export default DeletedSumoStats;

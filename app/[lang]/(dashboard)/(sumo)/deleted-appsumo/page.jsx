@@ -5,19 +5,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@/components/ui/breadcrumbs";
 import { Icon } from "@iconify/react";
 import PromotionalCard from "./promotional-card"
-import DeletedownerStats from "./deleted-stats"
-import DeletedOwnerListTable from "./deleted-customers-list-table"
+import DeletedSumoStats from "./deleted-stats"
+import DeletedSumoListTable from "./deleted-appcodes-list-table"
 const InvoiceListPage = () => {
   return (
     <Fragment>
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
-        <BreadcrumbItem>Script Installation Requests</BreadcrumbItem>
+        <BreadcrumbItem>App Sumo</BreadcrumbItem>
         <BreadcrumbItem>Deleted Customers</BreadcrumbItem>
       </Breadcrumbs>
       <Card className="mt-6">
         <CardHeader className="flex-row items-center border-none mb-0">
-          <CardTitle className="flex-1 text-xl font-medium text-default-900">Deleted Customers Overview</CardTitle>
+          <CardTitle className="flex-1 text-xl font-medium text-default-900">Deleted App Sumo Customers Overview</CardTitle>
           <Button
             className="flex-none border-default-300 text-default-600 h-9 text-xs font-medium"
             variant="outline"
@@ -29,13 +29,13 @@ const InvoiceListPage = () => {
         <CardContent className="pt-0 px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
             {/* <PromotionalCard /> */}
-            <DeletedownerStats />
+            <DeletedSumoStats />
           </div>
         </CardContent>
       </Card>
       <Card className="mt-6">
         <CardContent className="p-0">
-          <DeletedOwnerListTable />
+          <DeletedSumoListTable />
         </CardContent>
       </Card>
     </Fragment>

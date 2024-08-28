@@ -1,5 +1,5 @@
 "use client";
-import { Plus, X } from "lucide-react";
+import { Plus, ArrowDownCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { statuses } from "../data/data";
@@ -71,6 +71,13 @@ export function DataTableToolbar({ table }) {
           <Link href="/create-invoice">
             <Plus className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
             Create Sumo Codes 
+          </Link>
+        </Button>
+
+        <Button asChild>
+          <Link href="">
+            <ArrowDownCircle className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
+            Download CSV 
           </Link>
         </Button>
       </div>

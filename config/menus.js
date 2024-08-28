@@ -1124,7 +1124,7 @@ export const menusConfig = {
           },
           {
             title: "Deleted Customers",
-            href: "/deleted-customers",
+            href: "/deleted-appsumo",
             icon: Flag,
           }
         ],

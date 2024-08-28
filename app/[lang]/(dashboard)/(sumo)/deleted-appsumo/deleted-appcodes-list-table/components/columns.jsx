@@ -64,7 +64,7 @@ export const columns = [
     accessorKey: "url",
     header: "Website",
     cell: ({ row }) => (
-      <div className="flex gap-2 justify-center">
+      <div className="flex gap-2 justify-left">
         <div className="flex flex-col">
           <Link className=" text-sm font-medium text-default-600 whitespace-nowrap" 
             href={row?.original?.url.main} target="_blank">
@@ -76,50 +76,13 @@ export const columns = [
     ),
   },
   {
-    accessorKey: "installation",
-    header: "Feedback / Views / Steps",
+    accessorKey: "codes",
+    header: "Sumo Code",
     cell: ({ row }) => (
-      <div className="flex gap-2 justify-center">
-        <div className="flex items-center gap-2">
-          <Button className="bg-primary-600 flex gap-2">
-            Views
-          </Button>
-          <span className=" text-m font-medium text-default-600 whitespace-nowrap"> {row?.original?.installation.views} / {row?.original?.installation.steps} </span> 
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "sent_code",
-    header: "Sent Code",
-    cell: ({ row }) => (
-      <div className="flex gap-2 justify-center">
+      <div className="flex gap-2 justify-left">
         <div className="flex flex-col">
-          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.sent_code} </span>
+          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.codes} </span>
         </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "type",
-    header: "Customer Type",
-    cell: ({ row }) => (
-      <div className="flex gap-2 justify-start">
-        <div className="flex flex-col">
-          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.type} </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "plan_type",
-    header: "Plan Type",
-    cell: ({ row }) => (
-      <div className="flex gap-2 justify-start">
-        <Button className="bg-primary-600 flex gap-2">
-          <span className=" text-sm font-medium text-white whitespace-nowrap"> {row?.original?.plan_type.free} Free </span> / 
-          <span className=" text-xs text-white whitespace-nowrap"> {row?.original?.plan_type.paid} Paid </span>
-        </Button>
       </div>
     ),
   },
