@@ -12,12 +12,12 @@ const InvoiceListPage = () => {
     <Fragment>
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
-        <BreadcrumbItem>Utility</BreadcrumbItem>
-        <BreadcrumbItem>Website Owner List</BreadcrumbItem>
+        <BreadcrumbItem>Script Installation Requests</BreadcrumbItem>
+        <BreadcrumbItem>Deleted Customers</BreadcrumbItem>
       </Breadcrumbs>
       <Card className="mt-6">
         <CardHeader className="flex-row items-center border-none mb-0">
-          <CardTitle className="flex-1 text-xl font-medium text-default-900">Website Owner Overview</CardTitle>
+          <CardTitle className="flex-1 text-xl font-medium text-default-900">Deleted Customers Overview</CardTitle>
           <Button
             className="flex-none border-default-300 text-default-600 h-9 text-xs font-medium"
             variant="outline"
