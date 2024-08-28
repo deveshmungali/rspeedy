@@ -33,13 +33,13 @@ const InvoicePage = () => {
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
         <BreadcrumbItem>Utility</BreadcrumbItem>
-        <BreadcrumbItem>Create Invoice</BreadcrumbItem>
+        <BreadcrumbItem>Create Wowners</BreadcrumbItem>
       </Breadcrumbs>
       <div className="invoice-wrapper mt-6 ">
         <div className="grid grid-cols-12 gap-6">
           <Card className="col-span-12 xl:col-span-8 ">
             <CardHeader className="sm:flex-row sm:items-center gap-3">
-              <div className="flex-1 text-xl font-medium text-default-700 whitespace-nowrap">Create Invoice</div>
+              <div className="flex-1 text-xl font-medium text-default-700 whitespace-nowrap">Create Wowners</div>
               <div className="flex-none flex items-center gap-4">
                 <Button>Save As PDF <Icon icon="heroicons:document-text" className="w-5 h-5 ltr:ml-2 rtl:mr-2" /></Button>
                 <Button className="border-default-300 group" size="icon" variant="outline" >
@@ -54,12 +54,12 @@ const InvoicePage = () => {
               <div className="flex flex-wrap gap-4">
                 <div className="flex-1 min-w-[250px]">
                   <div className="w-full md:w-[248px] space-y-2">
-                    <Input type="text" placeholder="Invoice Name" size="lg" />
-                    <Input type="text" placeholder="Invoice ID" size="lg" />
+                    <Input type="text" placeholder="Wowners Name" size="lg" />
+                    <Input type="text" placeholder="Wowners ID" size="lg" />
                     <div className="relative">
                       <Flatpickr
                         className="w-full border border-default-300 bg-background text-default-500  focus:outline-none h-10 rounded-md px-2 placeholder:text-default-500"
-                        placeholder="Invoice Date"
+                        placeholder="Wowners Date"
                       />
                       <Icon icon="heroicons:calendar-days" className="w-5 h-5 absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 text-default-400" />
                     </div>
@@ -344,7 +344,7 @@ const InvoicePage = () => {
                   <Input type="number" id="cardNumber" placeholder="Enter Card Number" />
                 </div>
                 <Alert color="warning" variant="soft" className="mt-6 border border-orange-300">
-                  <AlertDescription>Please make sure to pay the invoice bill within 20 to 30 days before it expires.</AlertDescription>
+                  <AlertDescription>Please make sure to pay the wowner bill within 20 to 30 days before it expires.</AlertDescription>
                 </Alert>
               </CardContent>
             </Card>

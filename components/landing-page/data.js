@@ -62,7 +62,7 @@ import formElementselect from "@/public/images/landing-page/Form Elements - Sele
 import formElementswitch from "@/public/images/landing-page/Form Elements - Switch.jpg";
 import pageCommingSoon from "@/public/images/landing-page/comming-soon.jpg";
 import pageError403 from "@/public/images/landing-page/Pages - Error 403.jpg";
-import pageInvoice from "@/public/images/landing-page/Pages - Invoice.jpg";
+import pageinvoice from "@/public/images/landing-page/Pages - invoice.jpg";
 import pageSignIn1 from "@/public/images/landing-page/Pages - Sign In 1.jpg";
 import pageSignUp2 from "@/public/images/landing-page/Pages - Sign Up 2.jpg";
 import tableData from "@/public/images/landing-page/Table - Data Table.jpg";
@@ -301,9 +301,9 @@ export const demoMenus = [
         image: pageCommingSoon,
       },
       {
-        title: "Invoice Details",
+        title: "invoice Details",
         href: "/invoice-details",
-        image: pageInvoice,
+        image: pageinvoice,
       },
       {
         showAll: true,

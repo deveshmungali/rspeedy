@@ -28,7 +28,7 @@ const columns = [
 
   {
     accessorKey: "invoice",
-    header: "Invoice",
+    header: "invoice",
     cell: ({ row }) => (
       <span>{row.getValue("invoice")}</span>
     ),

@@ -1,3 +1,4 @@
+
 import {
   Application,
   Chart,
@@ -40,6 +41,7 @@ import {
   Heroicon,
   LucideIcon,
   CustomIcon,
+  BubbleChart,
   Mail,
 } from "@/components/svg";
 
@@ -535,7 +537,7 @@ export const menusConfig = {
               href: "/utility/maintinance",
             },
             {
-              title: "create Invoice",
+              title: "create invoice",
               href: "/create-invoice",
             },
             {
@@ -998,7 +1000,7 @@ export const menusConfig = {
             title: "visitors",
             href: "/visitors",
             icon: Cart,
-          },
+          }
         //   {
         //     title: "project ",
         //     href: "/project",
@@ -1007,51 +1009,74 @@ export const menusConfig = {
         ],
       },
       {
-        title: "Application",
+        title: "Website Owners",
         icon: Application,
         child: [
           {
-            title: "chat",
-            icon: Messages,
-            href: "/chat",
-          },
-          {
-            title: "email",
-            icon: Envelope,
-            href: "/email",
-          },
-          {
-            title: "kanban",
-            icon: Monitor,
-            href: "/kanban",
-          },
-          {
-            title: "task",
-            icon: ListFill,
-            href: "/task",
-          },
-          {
-            title: "calendar",
-            icon: Calendar,
-            href: "/calendar",
-          },
-
-          {
-            title: "project",
-            icon: ClipBoard,
+            title: "Website Owners",
+            icon: Files,
             nested: [
               {
-                title: "project List",
-                icon: ClipBoard,
-                href: "/projects",
+                title: "Add Website Owners",
+                href: "/create-invoice",
               },
               {
-                title: "project Details",
-                icon: ClipBoard,
-                href: "/projects/1/overview",
+                title: "Website Owners Details",
+                href: "/invoice-details",
+              },
+              {
+                title: "Website Owners List",
+                href: "/invoice-list",
               },
             ],
-          },
+          },  
+          // {
+          //   title: "chat",
+          //   icon: Messages,
+          //   href: "/chat",
+          // },
+          // {
+          //   title: "email",
+          //   icon: Envelope,
+          //   href: "/email",
+          // },
+          // {
+          //   title: "kanban",
+          //   icon: Monitor,
+          //   href: "/kanban",
+          // },
+          // {
+          //   title: "task",
+          //   icon: ListFill,
+          //   href: "/task",
+          // },
+          // {
+          //   title: "calendar",
+          //   icon: Calendar,
+          //   href: "/calendar",
+          // },
+
+          // {
+          //   title: "project",
+          //   icon: ClipBoard,
+          //   nested: [
+          //     {
+          //       title: "project List",
+          //       icon: ClipBoard,
+          //       href: "/projects",
+          //     },
+          //     {
+          //       title: "project Details",
+          //       icon: ClipBoard,
+          //       href: "/projects/1/overview",
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: "Data table",
+          //   icon: BubbleChart,
+          //   href: "/chat",
+          // },
         ],
       },
       {
@@ -1520,19 +1545,19 @@ export const menusConfig = {
             ],
           },
           {
-            title: "Invoice",
+            title: "Wowners",
             icon: Files,
             nested: [
               {
-                title: "Create Invoice",
+                title: "Add Website Owners",
                 href: "/create-invoice",
               },
               {
-                title: "Invoice Details",
+                title: "Website Owners Details",
                 href: "/invoice-details",
               },
               {
-                title: "Invoice List",
+                title: "Website Owners List",
                 href: "/invoice-list",
               },
             ],
@@ -2238,21 +2263,21 @@ export const menusConfig = {
         ],
       },
       {
-        title: "Invoice",
+        title: "invoice",
         icon: Files,
         href: "#",
         isHide: false,
         child: [
           {
-            title: "Create Invoice",
+            title: "Create invoice",
             href: "/create-invoice",
           },
           {
-            title: "Invoice Details",
+            title: "invoice Details",
             href: "/invoice-details",
           },
           {
-            title: "Invoice List",
+            title: "invoice List",
             href: "/invoice-list",
           },
         ],

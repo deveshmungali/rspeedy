@@ -3,7 +3,7 @@ import { columns } from "./components/columns";
 import { DataTable } from "./components/data-table";
 import { data } from "./data";
 
-export default function InvoiceListTable() {
+export default function WownerListTable() {
   return (
     <Fragment>
       <DataTable data={data} columns={columns} />

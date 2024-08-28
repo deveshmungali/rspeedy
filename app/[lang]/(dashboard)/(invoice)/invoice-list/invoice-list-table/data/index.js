@@ -6,434 +6,1052 @@ export const data = [
     label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
     status: "confirmed",
-    paymentStatus: "pending"
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3457878",
-    status: "backlog",
+    id: "#3458782",
+    status: "in progress",
     label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "pending"
-  },
-  {
-    id: "#3457839",
-    status: "todo",
-    label: "bug",
-    priority: "high",
-    customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
-      avatar: avatar1
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
     status: "confirmed",
-    paymentStatus: "paid"
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3455562",
-    status: "backlog",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458686",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458688",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458689",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458690",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458691",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458692",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458693",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458694",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458695",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458696",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458697",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458698",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#3458699",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586100",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586101",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586102",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586103",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586104",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586105",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586106",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586107",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586108",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586109",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586110",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
   {
-    id: "#34586111",
-    status: "canceled",
-    label: "feature",
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
     priority: "medium",
     customer: {
-      name: "Jams Wattsons",
-      email: "jams.wattsons@gmail.com",
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
       avatar: avatar1
     },
-    date: "20-02-2024 ,Tuesday, 6:53 PM",
-    amount: "996.20",
-    status: "closed",
-    paymentStatus: "paid"
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
   },
-
+  {
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
+    priority: "medium",
+    customer: {
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
+      avatar: avatar1
+    },
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
+  },
+  {
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
+    priority: "medium",
+    customer: {
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
+      avatar: avatar1
+    },
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
+  },
+  {
+    id: "#3458782",
+    status: "in progress",
+    label: "documentation",
+    priority: "medium",
+    customer: {
+      name: "Rishabh Saxena",
+      email: "rishabh@makkpress.com",
+      number: "+91 9313602647",
+      avatar: avatar1
+    },
+    installation: {
+      feedback: "",
+      views: "0",
+      steps: "3",
+    },
+    sent_code: "1",
+    type: "Normal Process",
+    plan_type: {
+      free: "0",
+      paid: "0"
+    },
+    url: {
+      main: "https://top3danimation.com/being_fast",
+      other: ""
+    },
+    details:{
+      date: "20-02-2024",
+      time: "Tuesday, 6:53 PM"
+    },
+    amount: "1096.20",
+    status: "confirmed",
+    paymentStatus: "confirmed"
+  }
 ];

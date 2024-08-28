@@ -4,14 +4,6 @@ import { SiteLogo } from "@/components/svg";
 import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Icon } from "@iconify/react";
@@ -58,138 +50,286 @@ const InvoicePreview = () => {
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
         <BreadcrumbItem>Utility</BreadcrumbItem>
-        <BreadcrumbItem>Invoice Details</BreadcrumbItem>
+        <BreadcrumbItem>Owner Details</BreadcrumbItem>
       </Breadcrumbs>
       <div className="grid grid-cols-12 gap-6 mt-6">
         <div className="col-span-12 ">
-          <Card>
+          <Card className="rounded-[20px]">
             <CardContent>
+
               <div className="flex gap-6 flex-col md:flex-row pt-8">
                 <div className="flex-1">
-                  <Link href="#">
+                  <Link href="#" className="flex items-center gap-2">
                     <SiteLogo className="w-10 h-10 text-primary mb-2.5" />
-                    <span className="text-3xl font-bold text-primary-600">DashTail</span>
+                    <span className="text-3xl font-bold text-primary-600">WordpressSpeedy</span>
                   </Link>
-                  <div className="mt-5">
-                    <div className="text-lg font-semibold text-default-900">Billing To:</div>
-                    <div className="text-lg font-medium text-default-800 mt-1">Prantik Chakraborty</div>
-                    <div className="text-base text-default-600 mt-3">
-                      4th floor <br />
-                      Road 29,<br />
-                      House 395<br />
-                      Mohakhali DOHS, 1206
-                    </div>
+                  <div className="mt-12">
+                    <span className="mr-12 text-base font-semibold text-default-900">Registration Date:</span>
+                    <span className="text-base font-medium text-default-600">August 26, 2024 08:52</span>
                   </div>
                 </div>
                 <div className="flex-none md:text-end">
-                  <div className="text-4xl font-semibold text-default-900">Invoice #</div>
-                  <div className="mt-1.5 text-xl font-medium text-default-600">993652</div>
-                  <div className="mt-4 text-base text-default-600">
-                    Thomas shelby <br />
-                    Shelby Company Limited <br />
-                    Small Heath <br />
-                    B10 0HF, UK
-                  </div>
+                  <div className="text-4xl font-semibold text-default-900">Rishabh Saxena</div>
+                  <Link className="mt-1.5 text-xl font-medium text-primary-700 text-default-600 underline"
+                        href="mailto:rishabh@makkpress.com">
+                          rishabh@makkpress.com
+                  </Link>
+
+                  {/* <div className="mt-1.5 text-sm font-medium text-default-600"># 993652</div> */}
+
                   <div className="mt-8">
                     <div className="mb-2.5">
-                      <span className="mr-12 text-base font-semibold text-default-900">Invoice Date:</span>
-                      <span className="text-base font-medium text-default-600">2024-03-15</span>
                     </div>
                     <div>
                       <span className="mr-12 text-base font-semibold text-default-900">Due Date:</span>
-                      <span className="text-base font-medium text-default-600">2024-03-18</span>
+                      <span className="text-base font-medium text-default-600">March 18, 2024 10:45</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-6 border border-default-300 rounded-md">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      {
-                        columns.map(column => (
-                          <TableHead key={`invoice-table-${column.key}`} className="text-default-600 ltr:last:text-right rtl:last:text-left">
-                            {column.label}
-                          </TableHead>
-                        ))
-                      }
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody className="[&_tr:last-child]:border-1">
-                    {data.map((item, index) => (
-                      <TableRow key={`invoice-description-${index}`} >
-                        <TableCell className="text-sm font-medium text-default-600 max-w-[200px] truncate">
-                          {item.description}
-                        </TableCell>
-                        <TableCell className="text-sm font-medium text-default-600">{item.quantity} pcs</TableCell>
-                        <TableCell className="text-sm font-medium text-default-600 whitespace-nowrap">{item.rate} usd</TableCell>
-                        <TableCell className="ltr:text-right rtl:text-left text-sm font-medium text-default-600">${item.amount}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-                <div className="mt-2 flex justify-end  p-6">
-                  <div>
-                    {
-                      [
-                        {
-                          label: "Sub Total",
-                          amount: "2146.00"
-                        },
-                        {
-                          label: "Coupon Discount",
-                          amount: "34.36"
-                        },
-                        {
-                          label: "TAX(%)",
-                          amount: "0.82"
-                        },
-                        {
-                          label: "Shipping",
-                          amount: "14.12"
-                        },
-                        {
-                          label: "Due till date",
-                          amount: "0.00"
-                        },
-                        {
-                          label: "total",
-                          amount: "2019.22"
-                        },
-                        {
-                          label: "amount paid",
-                          amount: "1000.00"
-                        },
-                        {
-                          label: "Balance Due",
-                          amount: "1019.22"
-                        },
-                      ].map((item, index) => (
-                        <div key={`invoice-item-${index}`} className="mb-3 text-end flex justify-end">
-                          <span className="text-sm font-medium text-default-600 ">{item.label}:</span>
-                          <span className="text-sm font-medium text-default-600  text-end w-[100px] md:w-[160px] block">${item.amount}</span>
-                        </div>
-                      ))
-                    }
+              <div className="mt-6 border border-default-300 rounded-[10px] bg-gray-100">
+                <div className="p-5 flex gap-12 border-b border-gray-500 justify-between">
+                  <span className="text-base text-m font-semibold text-default-900 text-primary">#93034</span>
+                  <Link className="text-m font-semibold text-default-900 text-primary capitalize"
+                        href="https://aromaticgardenessence.com">
+                          aromaticgardenessence.com
+                  </Link>
+                </div>
+                <div className="p-5 flex gap-12">
+                  <div className="w-1/2 flex flex-col gap-3">
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Phone No:</span>
+                      <Link className="text-base text-m font-semibold text-default-900 text-primary-900"
+                        href="tel: +91 9313602647">
+                          +91 9313602647
+                      </Link>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Company Role:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">Owner/Founder</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Website Category:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">Non-ecommerce content website</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Industry Type:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">Software_development_company</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Source:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">Google</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Resend Code:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">3</span>
+                    </div>
+                  </div>
+                  <hr/>
+                  <div className="w-1/2 flex flex-col gap-3">
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Full Address:</span>
+                      <span className="text-base text-s font-semibold text-primary-900 uppercase">vizag</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">City:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">visakhapatanam</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Country:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">India</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">ZipCode:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">530007</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Industry:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">Business_website</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-base text-s font-semibold text-default-900">Email Status:</span>
+                      <span className="text-base text-s font-semibold text-primary-900">Subscribed</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="text-base font-medium text-default-600 mt-6">Note:</div>
-              <div className="text-sm text-default-800">It was great doing business with you.</div>
-              <div className="mt-3.5 text-base font-medium text-default-600">Terms & Conditions:</div>
-              <div className="text-sm text-default-800 mt-1">Please pay within 15 days from the date of invoice, overdue interest @ 14% will be charged on delayed payments & Please quote invoice number when remitting funds.</div>
-              <div className="mt-6 text-lg font-semibold text-default-900">Thank You!</div>
-              <div className="mt-1 text-sm text-default-800">If you have any questions concerning this invoice, use the following contact information:</div>
-              <div className="text-xs text-default-800 mt-2">dashtail@best.com</div>
-              <div className="text-xs text-default-800 mt-1">+880 624279888</div>
-              <div className="mt-8 text-xs text-default-800">© 2024 DashTail</div>
+
+              <div className="mt-6 p-5 border border-default-300 rounded-[10px] bg-gray-100">
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-gray-200">
+                    <div className="p-3 flex">
+                      <div className="w-1/2 flex flex-col">
+                        <span> <b>Current View:</b> 0/100 ( 0% ) </span>
+                        <span className="pt-2"> <b>Add More Views:</b>
+                          <input 
+                            type="number" 
+                            className="ml-4 p-2 border border-gray-300 rounded-md" 
+                            placeholder="Enter number of views"
+                          />
+                        </span>
+                        <span> (Don't increment the view count if the goal is only to regenerate the script.) </span>
+                      </div>
+                      <div className="w-1/2 text-end">
+                        <Button className=""> Regenerate Script </Button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-white">
+                    <div className="p-3 flex">
+                      <div className="w-1/2 flex flex-col">
+                        <span> <b>Website URL:</b> </span>
+                        <span className="mt-4"> Platform </span>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col">
+                        <Link href="https://aromaticgardenessence.com" className="flex justify-end gap-2 ">
+                          <span className="font-bold text-primary-600">https://aromaticgardenessence.com</span>
+                        </Link>
+                        <span className="mt-4"> Wix </span>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="p-3 flex gap-12">
+                      <div className="w-1/2 flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-white">
+                    <div className="p-3 flex">
+                      <div className="w-1/2 flex flex-col">
+                        <span> <b>Second Url</b> </span>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col">
+                        <Link href="https://aromaticgardenessence.com/collections/age-all-products" className="flex justify-end gap-2 ">
+                          <span className="font-bold text-primary-600">https://aromaticgardenessence.com/collections/age-all-products</span>
+                        </Link>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="p-3 flex gap-12">
+                      <div className="w-1/2 flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-white">
+                    <div className="p-3 flex">
+                      <div className="w-1/2 flex flex-col">
+                        <span> <b>Third Url</b> </span>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col">
+                        <Link href="https://aromaticgardenessence.com/collections/offers" className="flex justify-end gap-2 ">
+                          <span className="font-bold text-primary-600">https://aromaticgardenessence.com/collections/offers</span>
+                        </Link>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="p-3 flex gap-12">
+                      <div className="w-1/2 flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed Old</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Desktop Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Mobile Speed New</b> </span>
+                          <span> <b>0/100</b> </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="my-6 border border-default-300 rounded-[10px] bg-white">
+                    <div className="p-3 flex gap-12">
+                      <div className="w-1/2 flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Script Installed</b> </span>
+                          <span> <b>No</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Plan Name</b> </span>
+                          <span> <b>Basic Plan</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Subscription Id</b> </span>
+                          <span> <b>4219</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Subscription Status</b> </span>
+                          <span> <b>Active</b> </span>
+                        </div>
+                      </div>
+                      <div className="w-1/2 text-end flex flex-col gap-5">
+                        <div className="flex justify-between">
+                          <span> <b>Plan Id</b> </span>
+                          <span> <b>30</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Plan Type</b> </span>
+                          <span> <b>Subscription</b> </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span> <b>Last Update</b> </span>
+                          <span> <b>August 27, 2024 05:03</b> </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
             </CardContent>
           </Card>
           <div className="mt-8 flex gap-4 justify-end">
             <Button asChild variant="outline" className="text-xs font-semibold text-primary-500">
               <Link href="#">
                 <Download className="w-3.5 h-3.5 ltr:mr-1.5 rtl:ml-1.5" />
-                <span>Invoice PDF</span>
+                <span>Download PDF</span>
               </Link>
             </Button>
             <Button className="text-xs font-semibold ">

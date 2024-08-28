@@ -177,7 +177,7 @@ const ProjectHeader = ({ project }) => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-[196px]" align="end">
-              <DropdownMenuItem>Create Invoice</DropdownMenuItem>
+              <DropdownMenuItem>Create invoice</DropdownMenuItem>
               <DropdownMenuItem>Report</DropdownMenuItem>
               <DropdownMenuItem>Share</DropdownMenuItem>
               <DropdownMenuItem>Settings</DropdownMenuItem>
