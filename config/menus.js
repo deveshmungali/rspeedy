@@ -1013,25 +1013,30 @@ export const menusConfig = {
         title: "Website Owners",
         icon: Application,
         child: [
-          {
-            title: "Add Website Owners",
-            href: "/create-invoice",
-            icon: Files,
-          },
-          {
-            title: "Website Owners Details",
-            href: "/invoice-details",
-            icon: Files,
-          },
+          // {
+          //   title: "Website Owners Details",
+          //   href: "/invoice-details",
+          //   icon: Files,
+          // },
           {
             title: "Website Owners List",
             href: "/invoice-list",
             icon: Files,
           },
           {
+            title: "Add Website Owners",
+            href: "/create-invoice",
+            icon: Files,
+          },
+          {
             title: "Unverified Owners",
             href: "/unverified-owners",
             icon: Files,
+          },
+          {
+            title: "Deleted Owners",
+            href: "/deleted-owners",
+            icon: Flag,
           },
         ],
       },
@@ -1045,20 +1050,20 @@ export const menusConfig = {
             icon: List,
           },
           {
-            title: "Completed Requests",
-            href: "/completed-requests",
-            icon: ListFill,
-          },
-          {
             title: "Critical Requests",
             href: "/critical-requests",
             icon: Flag,
           },
           {
-            title: "Deleted Customers",
-            href: "/deleted-customers",
-            icon: Flag,
+            title: "Completed Requests",
+            href: "/completed-requests",
+            icon: ListFill,
           },
+          // {
+          //   title: "Deleted Customers",
+          //   href: "/deleted-customers",
+          //   icon: Flag,
+          // },
           // {
           //   title: "chat",
           //   icon: Messages,
@@ -1100,12 +1105,28 @@ export const menusConfig = {
           //       href: "/projects/1/overview",
           //     },
           //   ],
-          // },
-          // {
-          //   title: "Data table",
-          //   icon: BubbleChart,
-          //   href: "/chat",
-          // },
+          // }
+        ],
+      },
+      {
+        title: "App Sumo",
+        icon: Components,
+        child: [
+          {
+            title: "Website Owners",
+            href: "/website-owners",
+            icon: List,
+          },
+          {
+            title: "Codes",
+            href: "/sumo-codes",
+            icon: MenuBar,
+          },
+          {
+            title: "Deleted Customers",
+            href: "/deleted-customers",
+            icon: Flag,
+          }
         ],
       },
       {
