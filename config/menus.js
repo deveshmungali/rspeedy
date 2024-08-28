@@ -42,7 +42,7 @@ import {
   LucideIcon,
   List,
   CustomIcon,
-  BubbleChart,
+  User,
   Mail,
 } from "@/components/svg";
 
@@ -1126,6 +1126,32 @@ export const menusConfig = {
             title: "Deleted Customers",
             href: "/deleted-appsumo",
             icon: Flag,
+          }
+        ],
+      },
+      {
+        title: "Staff",
+        icon: User,
+        child: [
+          {
+            title: "Staff Lists",
+            href: "/staff",
+            icon: List,
+          },
+          {
+            title: "Roles",
+            href: "",
+            icon: Graph,
+          },
+          {
+            title: "Permissions",
+            href: "",
+            icon: Note3,
+          },
+          {
+            title: "Activity Log",
+            href: "",
+            icon: MenuBar,
           }
         ],
       },
