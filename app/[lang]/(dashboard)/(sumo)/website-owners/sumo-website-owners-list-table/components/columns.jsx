@@ -96,7 +96,7 @@ export const columns = [
       <Badge
         className="py-3 px-8 rounded capitalize whitespace-nowrap"
         variant="soft"
-        color={row.getValue("status") === "Completed" ? "success" : row.getValue("status") === "closed" ? "warning" : ""}
+        color={row.getValue("status") === "Working" ? "success" : row.getValue("status") === "Exhausted" ? "warning" : ""}
       >
         {row.getValue("status")}
       </Badge>

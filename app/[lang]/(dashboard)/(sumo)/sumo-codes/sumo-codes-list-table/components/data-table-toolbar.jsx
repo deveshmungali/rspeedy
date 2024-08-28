@@ -36,7 +36,7 @@ export function DataTableToolbar({ table }) {
         </div>
         <div className="relative">
           <Input
-            placeholder="Search Critical Requests..."
+            placeholder="Search App Sumo Code..."
             value={table.getColumn("id")?.getFilterValue() ?? ""}
             onChange={(event) =>
               table.getColumn("id")?.setFilterValue(event.target.value)
@@ -70,7 +70,7 @@ export function DataTableToolbar({ table }) {
         <Button asChild>
           <Link href="/create-invoice">
             <Plus className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
-            Create Critical Requests 
+            Create Sumo Codes 
           </Link>
         </Button>
       </div>

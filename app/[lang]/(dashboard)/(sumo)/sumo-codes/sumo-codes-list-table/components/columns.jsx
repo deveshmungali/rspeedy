@@ -64,7 +64,7 @@ export const columns = [
     accessorKey: "url",
     header: "Website URL's",
     cell: ({ row }) => (
-      <div className="flex gap-2 justify-center">
+      <div className="flex gap-2 justify-left">
         <div className="flex flex-col">
           <Link className=" text-sm font-medium text-default-600 whitespace-nowrap" 
             href={row?.original?.url.main} target="_blank">
@@ -76,28 +76,17 @@ export const columns = [
     ),
   },
   {
-    accessorKey: "type",
-    header: "Request Type",
+    accessorKey: "codes",
+    header: "App Sumo Codes",
     cell: ({ row }) => (
-      <div className="flex gap-2 justify-start">
-        <div className="flex flex-col">
-          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.type} </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "plan_name",
-    header: "Plan Name",
-    cell: ({ row }) => (
-      <div className="flex gap-2 justify-start">
-          <span className=" text-sm font-medium whitespace-nowrap"> {row?.original?.plan_name} </span>
+      <div className="flex flex-col justify-start">
+          <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.codes} </span>
       </div>
     ),
   },
   {
     accessorKey: "req_details",
-    header: "Request Date",
+    header: "Date",
     cell: ({ row }) => (
       <div className="flex flex-col justify-start">
           <span className=" text-sm font-medium text-default-600 whitespace-nowrap"> {row?.original?.req_details.date} </span>
@@ -107,12 +96,12 @@ export const columns = [
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: "Code Used",
     cell: ({ row }) => (
       <Badge
         className="py-3 px-8 rounded capitalize whitespace-nowrap"
         variant="soft"
-        color={row.getValue("status") === "confirmed" ? "success" : row.getValue("status") === "Critical" ? "warning" : ""}
+        color={row.getValue("status") === "Yes" ? "success" : row.getValue("status") === "No" ? "destructive" : ""}
       >
         {row.getValue("status")}
       </Badge>
