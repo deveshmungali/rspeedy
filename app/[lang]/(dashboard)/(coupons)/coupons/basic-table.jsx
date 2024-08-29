@@ -62,32 +62,108 @@ const columns = [
     enableHiding: false,
   },
   {
-    accessorKey: "user",
+    accessorKey: "coupon",
     header: "Coupon Name",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex space-x-3  rtl:space-x-reverse items-center">
           <span className=" text-sm   text-card-foreground whitespace-nowrap">
-            {row?.original?.user.name}
+            {row?.original?.coupon.name}
           </span>
         </div>
       </div>
     ),
   },
   {
-    accessorKey: "email",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Email
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
-    cell: ({ row }) => <div className="lowercase whitespace-nowrap">{row.getValue("email")}</div>,
+    accessorKey: "code",
+    header: "Coupon Code",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm   text-card-foreground whitespace-nowrap">
+            {row?.original?.code}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "category",
+    header: "Category",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm   text-card-foreground whitespace-nowrap">
+            {row?.original?.category}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "location",
+    header: "Location",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm   text-card-foreground whitespace-nowrap">
+            {row?.original?.location}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "stripe",
+    header: "Stripe Id",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm   text-card-foreground whitespace-nowrap">
+            {row?.original?.stripe}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "type",
+    header: "Discount Type",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm text-card-foreground whitespace-nowrap capitalize">
+            {row?.original?.type}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "amount",
+    header: "Discount Amount",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm   text-card-foreground whitespace-nowrap">
+            {row?.original?.amount}% Off
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "duration",
+    header: "Duration",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm   text-card-foreground whitespace-nowrap">
+            {row?.original?.duration} Months
+          </span>
+        </div>
+      </div>
+    ),
   },
   {
     accessorKey: "status",
@@ -105,22 +181,6 @@ const columns = [
         {row.getValue("status")}
       </Badge>
     ),
-  },
-
-  {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
-
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
-
-      return <div className="text-right font-medium">{formatted}</div>;
-    },
   },
   {
     id: "actions",
