@@ -1145,15 +1145,25 @@ export const menusConfig = {
           },
           {
             title: "Permissions",
-            href: "",
+            href: "/permission",
             icon: Note3,
           },
           {
             title: "Activity Log",
-            href: "",
+            href: "/activity",
             icon: MenuBar,
           }
         ],
+      },
+      {
+        title: "Coupons",
+        icon: Note3,
+        child: [
+          {
+            title: "Coupons",
+            href: "/coupons",
+          },
+        ]
       },
       {
         title: "Components",
