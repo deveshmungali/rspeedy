@@ -1140,7 +1140,7 @@ export const menusConfig = {
           },
           {
             title: "Roles",
-            href: "",
+            href: "/role",
             icon: Graph,
           },
           {
