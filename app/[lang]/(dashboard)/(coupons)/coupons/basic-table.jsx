@@ -1,6 +1,9 @@
 "use client";
 import * as React from "react";
 
+import { CircularProgress} from "@/components/ui/progress";
+import { Switch } from "@/components/ui/switch";
+
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 import {
   flexRender,
@@ -32,6 +35,17 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import Link from "next/link";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { data } from "./data";
@@ -39,6 +53,7 @@ import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
 
 const columns = [
+
   {
     id: "select",
     header: ({ table }) => (
@@ -88,34 +103,8 @@ const columns = [
     ),
   },
   {
-    accessorKey: "category",
-    header: "Category",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex space-x-3  rtl:space-x-reverse items-center">
-          <span className=" text-sm   text-card-foreground whitespace-nowrap">
-            {row?.original?.category}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "location",
-    header: "Location",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex space-x-3  rtl:space-x-reverse items-center">
-          <span className=" text-sm   text-card-foreground whitespace-nowrap">
-            {row?.original?.location}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
     accessorKey: "stripe",
-    header: "Stripe Id",
+    header: "Stripe ID",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex space-x-3  rtl:space-x-reverse items-center">
@@ -127,26 +116,13 @@ const columns = [
     ),
   },
   {
-    accessorKey: "type",
-    header: "Discount Type",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex space-x-3  rtl:space-x-reverse items-center">
-          <span className=" text-sm text-card-foreground whitespace-nowrap capitalize">
-            {row?.original?.type}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
     accessorKey: "amount",
-    header: "Discount Amount",
+    header: "Discount",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex space-x-3  rtl:space-x-reverse items-center">
           <span className=" text-sm   text-card-foreground whitespace-nowrap">
-            {row?.original?.amount}% Off
+            {row?.original?.amount}
           </span>
         </div>
       </div>
@@ -166,20 +142,71 @@ const columns = [
     ),
   },
   {
+    accessorKey: "uses",
+    header: "Used",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex flex-col space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm   text-card-foreground whitespace-nowrap">
+            <CircularProgress value={(row?.original?.uses.used / row?.original?.uses.total) * 100} showValue size="sm" />
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
     accessorKey: "status",
     header: "Status",
     cell: ({ row }) => (
       <Badge
         variant="soft"
         color={
-          (row.getValue("status") === "failed" && "destructive") ||
-          (row.getValue("status") === "success" && "success") ||
-          (row.getValue("status") === "processing" && "info")
+          (row.getValue("status") === "Yes" && "destructive") ||
+          (row.getValue("status") === "No" && "success")
         }
         className=" capitalize"
       >
         {row.getValue("status")}
       </Badge>
+    ),
+  },
+  {
+    accessorKey: "enabled",
+    header: "Enabled",
+    cell: ({ row }) => (
+      <Switch defaultChecked={row.original.enabled === "true"} />
+    ),
+  },
+  {
+    accessorKey: "start",
+    header: "Start Date",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex flex-col rtl:space-x-reverse text-left">
+          <span className=" text-sm text-card-foreground whitespace-nowrap">
+            {row.original.start.date}
+          </span>
+          <span className=" text-xs text-card-foreground whitespace-nowrap">
+            {row.original.start.time}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "end",
+    header: "Expiry Date",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex flex-col rtl:space-x-reverse text-left">
+          <span className=" text-sm text-card-foreground whitespace-nowrap">
+            {row.original.end.date}
+          </span>
+          <span className=" text-xs text-card-foreground whitespace-nowrap">
+            {row.original.end.time}
+          </span>
+        </div>
+      </div>
     ),
   },
   {
@@ -192,6 +219,107 @@ const columns = [
       return (
         <div className=" text-end">
           <div className="flex gap-3 items-center justify-end">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button type="button">Details</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className="text-base font-medium">
+                    Your Details Here are Safe with Us
+                  </DialogTitle>
+                </DialogHeader>
+                <Tabs defaultValue="link" className="w-full">
+                  <TabsList className=" bg-transparent p-0 border-b-2 w-full rounded-none justify-start">
+                  <TabsTrigger
+                      className="capitalize  data-[state=active]:shadow-none pl-0  data-[state=active]:bg-transparent data-[state=active]:text-primary transition duration-150 
+                      before:transition-all before:duration-150 relative before:absolute before:left-1/2 before:-bottom-[2px] before:h-[2px] before:-translate-x-1/2 before:w-0 data-[state=active]:before:bg-primary data-[state=active]:before:w-full"
+                      value="link"
+                    >
+                      Details
+                    </TabsTrigger>
+
+                    <TabsTrigger
+                      className="capitalize  data-[state=active]:shadow-none pl-0  data-[state=active]:bg-transparent data-[state=active]:text-primary transition duration-150
+                      before:transition-all before:duration-150 relative before:absolute before:left-1/2 before:-bottom-[2px] before:h-[2px] before:-translate-x-1/2 before:w-0 data-[state=active]:before:bg-primary data-[state=active]:before:w-full"
+                      value="code"
+                    >
+                      Coupon Code
+                    </TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="code">
+                    <h2 className="my-6 text-sm font-medium text-default-700 ">
+                      Your Code is safe with us here and we will never leave your code alone.
+                    </h2>
+                    <div className="flex justify-between py-3 border-t border-b">
+                      <span className="font-medium"> Coupon Name: </span>
+                      <span> RyanDiscountSuperPlan </span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b">
+                      <span className="font-medium"> Discount: </span>
+                      <span> {row.original.amount} </span>
+                    </div>
+                    <div className="flex justify-between py-3">
+                      <span className="font-medium"> Duration: </span>
+                      <span> {row.original.duration} Months </span>
+                    </div>
+                    <div className="flex flex-row gap-2 mb-2 items-center justify-between border-t border-b">
+                      <span className="font-medium"> Coupon Code: </span>
+                      <div className="flex gap-1 items-center">
+                        <Input
+                          type="text"
+                          placeholder= {`#${row.original.details.code}`}
+                          // value= {row.original.details.code}
+                        />
+                        <Button type="button">Copy</Button>
+                      </div>
+                    </div>
+                  </TabsContent>
+
+                  <TabsContent value="link">
+                    <h2 className="my-6 text-sm font-medium text-default-900 ">
+                      Start using your modals components by coping the web address
+                      below
+                    </h2>
+                    <div className="flex justify-between py-3 border-t border-b">
+                      <span className="font-medium"> Coupon Name: </span>
+                      <span> {row.original.coupon.name} </span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b">
+                      <span className="font-medium"> Stripe ID: </span>
+                      <span> {row.original.stripe} </span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b">
+                      <span className="font-medium"> Category: </span>
+                      <span> {row.original.category} </span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b">
+                      <span className="font-medium"> Location: </span>
+                      <span> {row.original.location} </span>
+                    </div>
+                    <div className="flex justify-between py-3 border-b">
+                      <span className="font-medium"> Applies To: </span>
+                      <span> {row.original.applies} </span>
+                    </div>
+                    
+                    <div className="flex justify-between items-center py-3 border-b">
+                      <span className="font-medium"> Start Date: </span>
+                      <div className="flex flex-col">
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.start.date} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.start.time} </span>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center py-3 border-b">
+                      <span className="font-medium"> End  Date: </span>
+                      <div className="flex flex-col">
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.end.date} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.end.time} </span>
+                      </div>
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </DialogContent>
+            </Dialog>
             <Button
               size="icon"
               className="h-9 w-9 rounded bg-default-100 dark:bg-default-200 text-default-500 hover:text-primary-foreground"
@@ -205,7 +333,7 @@ const columns = [
               <Icon icon="heroicons:trash" className="w-5 h-5" />
             </Button>
 
-            <DropdownMenu>
+            {/* <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="h-8 w-8 p-0">
                   <span className="sr-only">Open menu</span>
@@ -223,7 +351,7 @@ const columns = [
                 <DropdownMenuItem>View customer</DropdownMenuItem>
                 <DropdownMenuItem>View payment details</DropdownMenuItem>
               </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu> */}
           </div>
         </div>
       );

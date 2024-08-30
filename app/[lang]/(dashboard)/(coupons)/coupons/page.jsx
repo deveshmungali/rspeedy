@@ -17,9 +17,12 @@ const DataTablePage = () => {
           <CardTitle>
             Basic
             </CardTitle>
-          <div>
+          <div className="flex gap-1">
             <Button>
               <Plus className="h-4 w-4 ltr:mr-1 rtl:ml-1" /> Create Coupons
+            </Button>
+            <Button>
+               Export
             </Button>
           </div>
         </CardHeader>

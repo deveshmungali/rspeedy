@@ -4,16 +4,31 @@ export const data = [
   {
     id: "m5gr84i9",
     coupon: {
-      name: "Lindsay Walton",
+      name: "RyanDiscountSuperPlan",
     },
-    code: "RyanDiscountSuperPlan",
+    code: "A********1",
     category: "",
     location: "India",
     stripe: "p6CHoIkN",
-    type: "percentage",
-    amount: "50",
+    amount: "50% Off",
     duration: "12",
-    status: "success",
+    uses: {
+      total: "1",
+      used: "0",
+    },
+    status: "No",
+    enabled: "true",
+    applies: "Super Plan (year)",
+    start: {
+      date: "24-08-2024",
+      time: "05:30 AM",
+    },
+    end: {
+      date: "25-09-2024",
+      time: "6:30 AM",
+    },
+    details: {
+      code: "A1FFE98B81"
+    }
   },
 ];
-
