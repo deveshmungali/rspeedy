@@ -5,17 +5,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import {Button} from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-
 const Settings = () => {
   const[getStartesd , setGetStartesd] = React.useState(false)
 
@@ -52,7 +41,8 @@ const Settings = () => {
           <div className="flex gap-5 mt-5">
 
             {/* Basic Plan */}
-          <div className="w-1/4 flex flex-col gap-5 bg-white bg-opacity-50 backdrop-blur-lg rounded-xl px-5 py-10 justify-between">
+          <div className="w-1/4 flex flex-col gap-5 bg-white bg-opacity-50 backdrop-blur-lg rounded-xl px-5 py-10 justify-between relative">
+          <div className="bgimg absolute bg-red-500 px-10 top-[-25px] text-white translate-y-2/4 translate-x-1/3 py-1 rounded-full"> Forever Free Plan </div>
             <div className="flex flex-col gap-5" >
               <div>
                 <div className="flex justify-between">
@@ -122,7 +112,8 @@ const Settings = () => {
           </div>
 
           {/* Booster Plan */}
-          <div className="w-1/4 flex flex-col gap-5 bg-white bg-opacity-50 backdrop-blur-lg rounded-xl px-5 py-10 justify-between">
+          <div className="w-1/4 flex flex-col gap-5 bg-white bg-opacity-50 backdrop-blur-lg rounded-xl px-5 py-10 justify-between relative">
+          <div className="bgimg absolute bg-green-500 px-10 top-[-25px] text-white translate-y-2/4 translate-x-1/2 py-1 rounded-full"> Best Seller </div>
             <div className="flex flex-col gap-5" >
               <div>
                 <div className="flex justify-between">

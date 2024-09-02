@@ -45,6 +45,8 @@ import {
   CustomIcon,
   User,
   Mail,
+  Authentication,
+  UserSign,
 } from "@/components/svg";
 
 export const menusConfig = {
@@ -1168,7 +1170,7 @@ export const menusConfig = {
       },
       {
         title: "Script Id Info",
-        icon: Note3,
+        icon: Authentication,
         child: [
           {
             title: "Script Id",
@@ -1178,28 +1180,28 @@ export const menusConfig = {
       },
       {
         title: "Email",
-        icon: Note3,
+        icon: Envelope,
         child: [
           {
             title: "Email Templates",
             href: "/email-templates",
-            icon: Note3,
+            icon: Envelope,
           },
           {
             title: "Send Email",
             href: "/send-email",
-            icon: Note3,
+            icon: Envelope,
           },
           {
             title: "Newsletter Templates",
             href: "/newsletter",
-            icon: Note3,
+            icon: Envelope,
           },
         ]
       },
       {
         title: "Enquiry Form",
-        icon: Note3,
+        icon: ClipBoard,
         child: [
           {
             title: "Enquiry Form",
@@ -1209,7 +1211,7 @@ export const menusConfig = {
       },
       {
         title: "Feedbacks",
-        icon: Note3,
+        icon: UserSign,
         child: [
           {
             title: "Feedbacks",
@@ -1219,48 +1221,48 @@ export const menusConfig = {
       },
       {
         title: "Tester",
-        icon: Note3,
+        icon: Pointer,
         child: [
           {
             title: "Makkpress Testers",
             href: "/makkpress-testers",
-            icon: Note3,
+            icon: Pointer,
           },
           {
             title: "Installation Requests",
             href: "/install-requests",
-            icon: Note3,
+            icon: Pointer,
           },
         ]
       },
       {
         title: "Reports",
-        icon: Note3,
+        icon: ClipBoard2,
         child: [
           {
             title: "Payments",
             href: "/payments",
-            icon: Note3,
+            icon: ClipBoard2,
           },
           {
             title: "Registrations",
             href: "/registrations",
-            icon: Note3,
+            icon: ClipBoard2,
           },
           {
             title: "Cancellations",
             href: "/cancellations",
-            icon: Note3,
+            icon: ClipBoard2,
           },
           {
             title: "Refunds",
             href: "/refunds",
-            icon: Note3,
+            icon: ClipBoard2,
           },
           {
             title: "User URL Search Log",
             href: "/logs",
-            icon: Note3,
+            icon: ClipBoard2,
           },
         ]
       },

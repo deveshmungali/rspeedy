@@ -334,27 +334,6 @@ const Mail = ({
                         },
                       ]}
                     />
-                    <Separator />
-                    {!isCollapsed && (
-                      <div
-                        className={cn(
-                          "mt-4 mb-2 text-xs font-medium text-default-800 uppercase mx-4",
-                          {
-                            "mx-1": isCollapsed,
-                          }
-                        )}
-                      >
-                        Chat
-                      </div>
-                    )}
-                    {contacts?.contacts?.map((contact, i) => (
-                      <ContactList
-                        key={`contact-id-${i}`}
-                        contact={contact}
-                        handleOpenChatBox={handleOpenChatBox}
-                        isCollapsed={isCollapsed}
-                      />
-                    ))}
                   </CardContent>
                 </Card>
               </ResizablePanel>

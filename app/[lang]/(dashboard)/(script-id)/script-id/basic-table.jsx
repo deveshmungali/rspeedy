@@ -20,9 +20,6 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
@@ -42,11 +39,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Link from "next/link";
-import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { data } from "./data";
 import { Icon } from "@iconify/react";
@@ -388,7 +382,7 @@ export function ScriptTable() {
     <>
       <div className="flex items-center flex-wrap gap-2 px-4 pb-6">
         <Input
-          placeholder="Filter emails..."
+          placeholder="Filter Script Id's..."
           value={table.getColumn("email")?.getFilterValue() || ""}
           onChange={(event) =>
             table.getColumn("email")?.setFilterValue(event.target.value)

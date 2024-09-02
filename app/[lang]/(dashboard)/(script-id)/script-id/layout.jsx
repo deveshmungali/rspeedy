@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Coupons",
+  title: "Script ID",
 };
 
 const Layout = ({ children }) => {
