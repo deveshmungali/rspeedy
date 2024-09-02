@@ -34,18 +34,15 @@ const RegPage = () => {
                   />
                 </Button>
 
-                <div className="text-4xl leading-[50px] 2xl:text-6xl 2xl:leading-[72px] font-semibold mt-2.5">
-                  <span className="text-default-600 dark:text-default-300 ">
-                    Unlock <br />
-                    Your Project <br />
+                <div className="text-2xl leading-[50px] 2xl:text-3xl 2xl:leading-[40px] font-semibold mt-2.5">
+                  <span className=" ">
+                  "Supercharge Your Website: Fast, Efficient, and Profitable"<br />
+                     <br />
                   </span>
-                  <span className="text-default-900 dark:text-default-50">
-                    Performance
-                  </span>
+                  
                 </div>
-                <div className="mt-5 2xl:mt-8 text-default-900 dark:text-default-200  text-2xl font-medium">
-                  You will never know everything. <br />
-                  But you will know more...
+                <div className=" text-2xl leading-[50px] 2xl:text-xl 2xl:leading-[30px] font-semibold mt-2.5">
+               <span className="text-default-600 dark:text-default-300"> Experience seamless performance, higher SEO rankings, and boosted conversions with a     <br />  website optimized for speed on both mobile and desktop.</span>
                 </div>
               </div>
             </div>

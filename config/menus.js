@@ -1489,6 +1489,10 @@ export const menusConfig = {
             title: "Password Create 05",
             href: "/auth/create-password5",
           },
+          {
+            title: "Customization flow",
+            href: "/customization/customization-flow",
+          },
         ],
       },
       {
