@@ -1,17 +1,18 @@
 "use client"
 import Image from "next/image";
 import lightImage from "@/public/images/error/light-401.png"
-import darkImage from "@/public/images/error/dark-401.png"
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@iconify/react";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select";
 import Link from "next/link";
 import {
     Stepper,
@@ -20,8 +21,11 @@ import {
     // StepDescription,
   } from "@/components/ui/steps";
 import { useTheme } from "next-themes";
+import { useState } from "react";
 const CustomizationPage = () => {
   const { theme } = useTheme();
+  const[showsteps , setShowsteps]  = useState(false);
+  const[showExtra , setShowExtra]  = useState(false);
   const steps = ["First Step", "Second Step"];
   return (
     <div className='min-h-screen  overflow-y-auto flex justify-center items-center p-5'>
@@ -47,34 +51,133 @@ const CustomizationPage = () => {
       </div>
        
        </div>
-       
-      <div className="requirement-form bg-white mt-5 w-[800px] pt-[20px] pb-[20px] pr-[20px] pl-[20px]  rounded-xl mt-20">
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button className="w-[100%] flex justify-between items-center ">
-          Select Country
-            <Icon icon="heroicons:chevron-down" className=" h-5 w-5 ml-2 " />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-[99%]" align="start">
-          <DropdownMenuLabel>Select Country</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+       { !showsteps && (<div className="requirement-form bg-white mt-5 w-[800px] pt-[20px] pb-[20px] pr-[20px] pl-[20px]  rounded-xl mt-20">
+      <div className="new-form-title text-center mb-2 flex gap-2 items-center">
+      <div className="selc-dropdown w-[50%] text-left">
+      <Label htmlFor="sub1" className="mb-3">
+        Select Country
+      </Label>
+      <Select className="w-[50%]">
+      <SelectTrigger>
+        <SelectValue placeholder="Select a subject" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="english">English</SelectItem>
+        <SelectItem value="mathmatics">Mathmatics</SelectItem>
+        <SelectItem value="physics">Physics</SelectItem>
+        <SelectItem value="chemistry">Chemistry</SelectItem>
+        <SelectItem value="biology">Biology</SelectItem>
+      </SelectContent>
+    </Select>
+    </div>
+    <div className="selc-dropdown w-[50%] text-left">
+    <Label htmlFor="sub1" className="mb-3">
+        Industry Type:
+      </Label>
+    <Select className="w-[50%]">
+      <SelectTrigger>
+        <SelectValue placeholder="Select a subject" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="english">English</SelectItem>
+        <SelectItem value="mathmatics">Mathmatics</SelectItem>
+        <SelectItem value="physics">Physics</SelectItem>
+        <SelectItem value="chemistry">Chemistry</SelectItem>
+        <SelectItem value="biology">Biology</SelectItem>
+      </SelectContent>
+    </Select>
+    </div>
       </div>
-        <div className="mt-16 text-center">
-          <div className="text-2xl md:text-4xl lg:text-5xl font-semibold text-default-900">You are not Authorized</div>
-          <div className="mt-3 text-default-600 text-sm md:text-base">
-            You are missing the required rights to be able to access <br /> this page
-          </div>
-          <Button asChild className="mt-9  md:min-w-[300px]" size="lg">
-            <Link href="/dashboard">Go to Homepage</Link>
-          </Button>
+      <div className="tectoverOptions mt-[20px]">
+        <div className="formOption">
+            <p className="mt-[20px] text-lg font-semibold">Which of The Following describes you/your company?</p>
+            <div className="optionList mt-[20px] flex flex-wrap items-center gap-[20px]">
+            <Checkbox radius="xl" color="success" id="circle_1">Ecommerce & retail website</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_2">B2B Website</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_3" >Agency</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_4" >Consultant / Freelancer</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_5" >Lead Generation website</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_7" >Non-ecommerce content website</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_7" >Directories /Portals/Blogs</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_7" >Company / Enterprise</Checkbox>
+            </div>
         </div>
+        <div className="formOption">
+            <p className="mt-[20px] text-lg font-semibold">What is your Role in your company?</p>
+            <div className="optionList mt-[20px] flex flex-wrap items-center gap-[20px]">
+            <Checkbox radius="xl" color="success" id="circle_1">Owner/Founder</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_2">Developer</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_3" >Marketing</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_7" >Other</Checkbox>
+            </div>
+        </div>
+       
+
+  
+    <div className="form-btns flex gap-[20px] justify-end">
+    <Button asChild className="mt-9 md:min-w-[150px]" size="lg" onClick={() => setShowsteps(true)}>
+    <a>Next</a>
+  </Button>
+    </div>
+      </div>
+      </div>)}
+    
+    { showsteps && (<div className="requirement-form2 bg-white mt-5 w-[800px] pt-[20px] pb-[20px] pr-[20px] pl-[20px]  rounded-xl mt-20">
+  
+      <div className="tectoverOptions mt-[20px]">
+        <div className="formOption">
+            <p className="mt-[20px] text-lg font-semibold">What is your website platforms</p>
+            <div className="optionList mt-[20px] flex flex-wrap items-center gap-[20px]">
+            <Checkbox radius="xl" color="success" id="circle_1">Woocommerce</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_2">Elementor</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_3" >Contact Form 7</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_4" >Wp Bakery Builder</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_5" >NitroPack</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_7" >Custom Plugins</Checkbox>
+            <Checkbox 
+  radius="xl" 
+  color="success" 
+  id="circle_7" 
+  value={showExtra}
+//   checked={showExtra} 
+  onChange={() => setShowExtra(!showExtra)}
+>
+  Other
+</Checkbox>
+
+
+            </div>
+        </div>
+        { (<div><div className="formOption mt-[20px] mb-[10px] text-lg font-semibold">Other</div>
+            <Input type="text" placeholder="other platform" /></div>)}
+        <div className="formOption mt-[20px] mb-[10px] text-lg font-semibold">Add Website URL</div>
+        <Input type="text" placeholder="Website Url" />
+
+    <div className="detaildropdown">
+    <p className="mt-[20px] text-lg font-semibold">How did you find Website Speedy?</p>
+    <Select className="w-[100%]">
+      <SelectTrigger>
+        <SelectValue placeholder="Select a subject" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="english">English</SelectItem>
+        <SelectItem value="mathmatics">Mathmatics</SelectItem>
+        <SelectItem value="physics">Physics</SelectItem>
+        <SelectItem value="chemistry">Chemistry</SelectItem>
+        <SelectItem value="biology">Biology</SelectItem>
+      </SelectContent>
+    </Select>
+    </div>
+    <div className="form-btns flex gap-[20px] justify-end">
+    <Button asChild className="mt-9 md:min-w-[150px]" size="lg" onClick={() => setShowsteps(!showsteps)}>
+    <a>Previous</a>
+  </Button>
+          <Button asChild className="mt-9  md:min-w-[150px]" size="lg">
+            <Link href="/dashboard">Submit</Link>
+          </Button>
+    </div>
+      </div>    
+      </div>)}
       </div>
     </div>
   );
