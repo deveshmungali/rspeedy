@@ -45,6 +45,7 @@ import {
   CustomIcon,
   User,
   Mail,
+  Authentication,
 } from "@/components/svg";
 
 export const menusConfig = {
@@ -1168,7 +1169,7 @@ export const menusConfig = {
       },
       {
         title: "Script Id Info",
-        icon: Note3,
+        icon: Authentication,
         child: [
           {
             title: "Script Id",
@@ -1178,22 +1179,22 @@ export const menusConfig = {
       },
       {
         title: "Email",
-        icon: Note3,
+        icon: Envelope,
         child: [
           {
             title: "Email Templates",
             href: "/email-templates",
-            icon: Note3,
+            icon: Envelope,
           },
           {
             title: "Send Email",
             href: "/send-email",
-            icon: Note3,
+            icon: Envelope,
           },
           {
             title: "Newsletter Templates",
             href: "/newsletter",
-            icon: Note3,
+            icon: Envelope,
           },
         ]
       },
