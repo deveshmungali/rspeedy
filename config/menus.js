@@ -1293,6 +1293,32 @@ export const menusConfig = {
         ]
       },
       {
+        title: "Supports",
+        icon: Pointer,
+        child: [
+          {
+            title: "Live Chats",
+            href: "/live-chats",
+            icon: Pointer,
+          },
+          {
+            title: "All Tickets",
+            href: "/all-tickets",
+            icon: Pointer,
+          },
+          {
+            title: "Resolved tickets",
+            href: "/resolved-tickets",
+            icon: Pointer,
+          },
+          {
+            title: "Pending Tickets",
+            href: "/pending-tickets",
+            icon: Pointer,
+          },
+        ]
+      },
+      {
         title: "Settings",
         icon: Settings,
         child: [
