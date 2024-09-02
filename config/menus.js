@@ -1210,6 +1210,32 @@ export const menusConfig = {
         ]
       },
       {
+        title: "Enquiry",
+        icon: ClipBoard,
+        child: [
+          {
+            title: "Live Chat",
+            href: "/live-chat",
+            icon: Envelope,
+          },
+          {
+            title: "All Tickets",
+            href: "/all-ticket",
+            icon: Envelope,
+          },
+          {
+            title: "Resolved Ticket",
+            href: "/resolved-ticket",
+            icon: Envelope,
+          },
+          {
+            title: "Pending Ticket",
+            href: "/pending-ticket",
+            icon: Envelope,
+          },
+        ]
+      },
+      {
         title: "Feedbacks",
         icon: UserSign,
         child: [
