@@ -29,11 +29,11 @@ const PersonalDetails = () => {
         <div className="grid grid-cols-12 md:gap-x-12 gap-y-5">
           <div className="col-span-12 md:col-span-6">
             <Label htmlFor="firstName" className="mb-2">First Name</Label>
-            <Input id="firstName" />
+            <Input id="firstName" placeholder="Rishabh" />
           </div>
           <div className="col-span-12 md:col-span-6">
             <Label htmlFor="lastName" className="mb-2">Last Name</Label>
-            <Input id="lastName" />
+            <Input id="lastName" placeholder="Saxena" />
           </div>
           <div className="col-span-12 md:col-span-6">
             <Label htmlFor="phoneNumber" className="mb-2">Phone Number</Label>
