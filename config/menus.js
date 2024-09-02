@@ -46,6 +46,7 @@ import {
   User,
   Mail,
   Authentication,
+  UserSign,
 } from "@/components/svg";
 
 export const menusConfig = {
@@ -1200,7 +1201,7 @@ export const menusConfig = {
       },
       {
         title: "Enquiry Form",
-        icon: Note3,
+        icon: ClipBoard,
         child: [
           {
             title: "Enquiry Form",
@@ -1210,7 +1211,7 @@ export const menusConfig = {
       },
       {
         title: "Feedbacks",
-        icon: Note3,
+        icon: UserSign,
         child: [
           {
             title: "Feedbacks",
@@ -1220,48 +1221,48 @@ export const menusConfig = {
       },
       {
         title: "Tester",
-        icon: Note3,
+        icon: Pointer,
         child: [
           {
             title: "Makkpress Testers",
             href: "/makkpress-testers",
-            icon: Note3,
+            icon: Pointer,
           },
           {
             title: "Installation Requests",
             href: "/install-requests",
-            icon: Note3,
+            icon: Pointer,
           },
         ]
       },
       {
         title: "Reports",
-        icon: Note3,
+        icon: ClipBoard2,
         child: [
           {
             title: "Payments",
             href: "/payments",
-            icon: Note3,
+            icon: ClipBoard2,
           },
           {
             title: "Registrations",
             href: "/registrations",
-            icon: Note3,
+            icon: ClipBoard2,
           },
           {
             title: "Cancellations",
             href: "/cancellations",
-            icon: Note3,
+            icon: ClipBoard2,
           },
           {
             title: "Refunds",
             href: "/refunds",
-            icon: Note3,
+            icon: ClipBoard2,
           },
           {
             title: "User URL Search Log",
             href: "/logs",
-            icon: Note3,
+            icon: ClipBoard2,
           },
         ]
       },
@@ -1489,6 +1490,10 @@ export const menusConfig = {
           {
             title: "Password Create 05",
             href: "/auth/create-password5",
+          },
+          {
+            title: "Customization flow",
+            href: "/customization/customization-flow",
           },
         ],
       },
