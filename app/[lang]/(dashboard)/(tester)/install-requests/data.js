@@ -2,7 +2,7 @@ export const users = [
   {
     id: 1,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -21,7 +21,7 @@ export const users = [
   {
     id: 2,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -40,7 +40,7 @@ export const users = [
   {
     id: 3,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -59,7 +59,7 @@ export const users = [
   {
     id: 4,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -78,7 +78,7 @@ export const users = [
   {
     id: 5,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -97,7 +97,7 @@ export const users = [
   {
     id: 6,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -116,7 +116,7 @@ export const users = [
   {
     id: 7,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -135,7 +135,7 @@ export const users = [
   {
     id: 8,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -154,7 +154,7 @@ export const users = [
   {
     id: 9,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
@@ -173,7 +173,7 @@ export const users = [
   {
     id: 10,
 
-    avatar: "/images/avatar/avatar-9.jpg",
+    avatar: "/images/avatar/avatar-13.jpg",
     name: "Akash makkpress",
     email: "fafir98528@mfunza.com",
     url: "https://amerdental.com",
