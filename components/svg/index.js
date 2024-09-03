@@ -90,6 +90,11 @@ export { default as Moon } from "./duel-tone/moon.svg";
 export { default as Device } from "./duel-tone/device.svg";
 export { default as BubbleChart } from "./duel-tone/bubble-chart.svg";
 export { default as LiveChat } from "./duel-tone/live-chat.svg";
+export { default as UserLog } from "./duel-tone/logs.svg";
+export { default as Refund } from "./duel-tone/refund.svg";
+export { default as Cancellation } from "./duel-tone/cancellation.svg";
+export { default as Payment } from "./duel-tone/payment.svg";
+export { default as Register } from "./duel-tone/registration.svg";
 
 // sidebar icon
 export { default as FolderTree } from "./home/foldertree.svg";

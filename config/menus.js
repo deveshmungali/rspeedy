@@ -34,7 +34,7 @@ import {
   MenuBar,
   Icons,
   ChartArea,
-  Building,
+  UserLog,
   BubbleChart,
   LiveChat,
   Sheild,
@@ -48,6 +48,10 @@ import {
   Mail,
   Authentication,
   UserSign,
+  Refund,
+  Cancellation,
+  Payment,
+  Register,
 } from "@/components/svg";
 
 export const menusConfig = {
@@ -1164,6 +1168,47 @@ export const menusConfig = {
         ]
       },
       {
+        title: "Feedbacks",
+        icon: UserSign,
+        child: [
+          {
+            title: "Feedbacks",
+            href: "/feedback",
+          },
+        ]
+      },
+      {
+        title: "Reports",
+        icon: ClipBoard2,
+        child: [
+          {
+            title: "Payments",
+            href: "/payments",
+            icon: Payment,
+          },
+          {
+            title: "Registrations",
+            href: "/registrations",
+            icon: Register,
+          },
+          {
+            title: "Cancellations",
+            href: "/cancellations",
+            icon: Cancellation,
+          },
+          {
+            title: "Refunds",
+            href: "/refunds",
+            icon: Refund,
+          },
+          {
+            title: "User URL Search Log",
+            href: "/logs",
+            icon: UserLog,
+          },
+        ]
+      },
+      {
         title: "Support",
         icon: BubbleChart,
         child: [
@@ -1190,16 +1235,6 @@ export const menusConfig = {
         ]
       },
       {
-        title: "Feedbacks",
-        icon: UserSign,
-        child: [
-          {
-            title: "Feedbacks",
-            href: "/feedback",
-          },
-        ]
-      },
-      {
         title: "Tester",
         icon: Pointer,
         child: [
@@ -1212,37 +1247,6 @@ export const menusConfig = {
             title: "Installation Requests",
             href: "/install-requests",
             icon: Pointer,
-          },
-        ]
-      },
-      {
-        title: "Reports",
-        icon: ClipBoard2,
-        child: [
-          {
-            title: "Payments",
-            href: "/payments",
-            icon: ClipBoard2,
-          },
-          {
-            title: "Registrations",
-            href: "/registrations",
-            icon: ClipBoard2,
-          },
-          {
-            title: "Cancellations",
-            href: "/cancellations",
-            icon: ClipBoard2,
-          },
-          {
-            title: "Refunds",
-            href: "/refunds",
-            icon: ClipBoard2,
-          },
-          {
-            title: "User URL Search Log",
-            href: "/logs",
-            icon: ClipBoard2,
           },
         ]
       },
