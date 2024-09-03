@@ -70,22 +70,6 @@ const columns = [
     enableHiding: false,
   },
   {
-    accessorKey: "today",
-    header: "Date",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex flex-col rtl:space-x-reverse text-left">
-          <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.today.date}
-          </span>
-          <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.today.time}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
     accessorKey: "",
     header: "Detail",
     cell: ({ row }) => (
@@ -102,6 +86,19 @@ const columns = [
     ),
   },
   {
+    accessorKey: "amount",
+    header: "Amount to be Paid",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm Capitalize text-card-foreground whitespace-nowrap">
+            {row?.original?.amount}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
     accessorKey: "payment",
     header: "Payment",
     cell: ({ row }) => (
@@ -109,19 +106,6 @@ const columns = [
         <div className="flex space-x-3  rtl:space-x-reverse items-center">
           <span className=" text-sm Capitalize text-card-foreground whitespace-nowrap">
             {row?.original?.payment.type}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "amount",
-    header: "Paid Amount",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex space-x-3  rtl:space-x-reverse items-center">
-          <span className=" text-sm Capitalize text-card-foreground whitespace-nowrap">
-            {row?.original?.amount}
           </span>
         </div>
       </div>
@@ -144,32 +128,16 @@ const columns = [
     ),
   },
   {
-    accessorKey: "start",
-    header: "Start Date",
+    accessorKey: "settled",
+    header: "Settled At",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex flex-col rtl:space-x-reverse text-left">
           <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.start.date}
+            {row.original.settled.date}
           </span>
           <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.start.time}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "end",
-    header: "Expiry Date",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex flex-col rtl:space-x-reverse text-left">
-          <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.end.date}
-          </span>
-          <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.end.time}
+            {row.original.settled.time}
           </span>
         </div>
       </div>
@@ -241,17 +209,10 @@ const columns = [
                     </div>
                     
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> Start Date: </span>
+                      <span className="font-medium"> Settled At: </span>
                       <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.start.date} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.start.time} </span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> End Date: </span>
-                      <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.end.date} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.end.time} </span>
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.settled.date} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.settled.time} </span>
                       </div>
                     </div>
                   </TabsContent>

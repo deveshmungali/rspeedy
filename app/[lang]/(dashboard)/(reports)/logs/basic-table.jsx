@@ -41,6 +41,13 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 import { data } from "./data";
 import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
@@ -86,91 +93,91 @@ const columns = [
     ),
   },
   {
+    accessorKey: "url",
+    header: "URL",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex flex-col rtl:space-x-reverse text-left">
+          <span className=" text-sm text-card-foreground whitespace-nowrap">
+            {row.original.url}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
     accessorKey: "",
-    header: "Detail",
+    header: "Country",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex flex-col rtl:space-x-reverse text-left">
           <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.name}
+            {row.original.country}
           </span>
           <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.email}
+            {row.original.city}
           </span>
         </div>
       </div>
     ),
   },
   {
-    accessorKey: "payment",
-    header: "Payment",
+    accessorKey: "",
+    header: "Cords",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex flex-col rtl:space-x-reverse text-left">
+          <span className=" text-sm text-card-foreground whitespace-nowrap">
+            {row.original.cords.latitude} , {row.original.cords.longitude}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "zone",
+    header: "Time Zone",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex space-x-3  rtl:space-x-reverse items-center">
           <span className=" text-sm Capitalize text-card-foreground whitespace-nowrap">
-            {row?.original?.payment.type}
+            {row?.original?.zone}
           </span>
         </div>
       </div>
     ),
   },
   {
-    accessorKey: "amount",
-    header: "Paid Amount",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex space-x-3  rtl:space-x-reverse items-center">
-          <span className=" text-sm Capitalize text-card-foreground whitespace-nowrap">
-            {row?.original?.amount}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "payement",
-    header: "Payment Date",
+    accessorKey: "ip",
+    header: "IP Address (IPV6)",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex flex-col rtl:space-x-reverse text-left">
           <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.payment.date}
-          </span>
-          <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.payment.time}
+            {row.original.ip}
           </span>
         </div>
       </div>
     ),
   },
   {
-    accessorKey: "start",
-    header: "Start Date",
+    accessorKey: "source",
+    header: "Source",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex flex-col rtl:space-x-reverse text-left">
-          <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.start.date}
-          </span>
-          <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.start.time}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "end",
-    header: "Expiry Date",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex flex-col rtl:space-x-reverse text-left">
-          <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.end.date}
-          </span>
-          <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.end.time}
-          </span>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button type="button" color="secondary">
+                  <Icon icon="heroicons:square-2-stack" className="w-5 h-5" />
+                </Button>
+            </TooltipTrigger>
+            <TooltipContent color="primary" side="bottom">
+              <p>{row.original.source}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
         </div>
       </div>
     ),
@@ -212,7 +219,7 @@ const columns = [
                   </TabsList>
 
                   <TabsContent value="link">
-                    <h2 className="my-6 text-sm font-medium text-default-900 ">
+                    {/* <h2 className="my-6 text-sm font-medium text-default-900 ">
                       Start using your modals components by coping the web address
                       below
                     </h2>
@@ -248,22 +255,16 @@ const columns = [
                       </div>
                     </div>
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> End Date: </span>
+                      <span className="font-medium"> End  Date: </span>
                       <div className="flex flex-col">
                         <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.end.date} </span>
                         <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.end.time} </span>
                       </div>
-                    </div>
+                    </div> */}
                   </TabsContent>
                 </Tabs>
               </DialogContent>
             </Dialog>
-            <Button
-              size="icon"
-              className="h-9 w-9 rounded bg-default-100 dark:bg-default-200 text-default-500 hover:text-primary-foreground"
-            >
-              <Icon icon="heroicons:rocket-launch" className="w-5 h-5" />
-            </Button>
             <Button
               size="icon"
               className="h-9 w-9 rounded bg-default-100 dark:bg-default-200 text-default-500 hover:text-primary-foreground"

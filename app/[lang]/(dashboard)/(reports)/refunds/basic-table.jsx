@@ -116,7 +116,7 @@ const columns = [
   },
   {
     accessorKey: "amount",
-    header: "Paid Amount",
+    header: "Refunded Amount",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex space-x-3  rtl:space-x-reverse items-center">
@@ -144,32 +144,16 @@ const columns = [
     ),
   },
   {
-    accessorKey: "start",
-    header: "Start Date",
+    accessorKey: "settled",
+    header: "Payment Settled At",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex flex-col rtl:space-x-reverse text-left">
           <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.start.date}
+            {row.original.settled.date}
           </span>
           <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.start.time}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "end",
-    header: "Expiry Date",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex flex-col rtl:space-x-reverse text-left">
-          <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.end.date}
-          </span>
-          <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.end.time}
+            {row.original.settled.time}
           </span>
         </div>
       </div>
@@ -236,22 +220,15 @@ const columns = [
                       </div>
                     </div>
                     <div className="flex justify-between py-3 border-b">
-                      <span className="font-medium"> Amount: </span>
+                      <span className="font-medium"> Refunded Amount: </span>
                       <span> {row.original.amount} </span>
                     </div>
                     
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> Start Date: </span>
+                      <span className="font-medium"> Settled Date: </span>
                       <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.start.date} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.start.time} </span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> End Date: </span>
-                      <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.end.date} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.end.time} </span>
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.settled.date} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.settled.time} </span>
                       </div>
                     </div>
                   </TabsContent>
