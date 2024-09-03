@@ -53,7 +53,9 @@ import {
   Mail,
   UserSign,
   Web,
-  Mail2
+  Mail2,
+  BubbleChart,
+  LiveChat,
 } from "@/components/svg";
 
 const icons = [
@@ -64,6 +66,14 @@ const icons = [
   {
     name: "Application",
     icon: Application,
+  },
+  {
+    name: "Support",
+    icon: BubbleChart,
+  },
+  {
+    name: "LiveChat",
+    icon: LiveChat,
   },
   {
     name: "Authentication",

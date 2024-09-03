@@ -89,6 +89,7 @@ export { default as Sun } from "./duel-tone/sun.svg";
 export { default as Moon } from "./duel-tone/moon.svg";
 export { default as Device } from "./duel-tone/device.svg";
 export { default as BubbleChart } from "./duel-tone/bubble-chart.svg";
+export { default as LiveChat } from "./duel-tone/live-chat.svg";
 
 // sidebar icon
 export { default as FolderTree } from "./home/foldertree.svg";

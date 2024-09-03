@@ -35,7 +35,8 @@ import {
   Icons,
   ChartArea,
   Building,
-  Building2,
+  BubbleChart,
+  LiveChat,
   Sheild,
   Error,
   Diamond,
@@ -1062,53 +1063,6 @@ export const menusConfig = {
             href: "/completed-requests",
             icon: ListFill,
           },
-          // {
-          //   title: "Deleted Customers",
-          //   href: "/deleted-customers",
-          //   icon: Flag,
-          // },
-          // {
-          //   title: "chat",
-          //   icon: Messages,
-          //   href: "/chat",
-          // },
-          // {
-          //   title: "email",
-          //   icon: Envelope,
-          //   href: "/email",
-          // },
-          // {
-          //   title: "kanban",
-          //   icon: Monitor,
-          //   href: "/kanban",
-          // },
-          // {
-          //   title: "task",
-          //   icon: ListFill,
-          //   href: "/task",
-          // },
-          // {
-          //   title: "calendar",
-          //   icon: Calendar,
-          //   href: "/calendar",
-          // },
-
-          // {
-          //   title: "project",
-          //   icon: ClipBoard,
-          //   nested: [
-          //     {
-          //       title: "project List",
-          //       icon: ClipBoard,
-          //       href: "/projects",
-          //     },
-          //     {
-          //       title: "project Details",
-          //       icon: ClipBoard,
-          //       href: "/projects/1/overview",
-          //     },
-          //   ],
-          // }
         ],
       },
       {
@@ -1210,13 +1164,13 @@ export const menusConfig = {
         ]
       },
       {
-        title: "Enquiry",
-        icon: ClipBoard,
+        title: "Support",
+        icon: BubbleChart,
         child: [
           {
             title: "Live Chat",
             href: "/live-chat",
-            icon: Envelope,
+            icon: LiveChat,
           },
           {
             title: "All Tickets",
