@@ -5,9 +5,14 @@ export const data = [
       date: "September 03, 2024",
       time: "10:42 AM",
     },
+
+    name: "Rishabh",
+    email: "rishabh@gmail.com",
+
     url: "https://www.grouchy-bartender.com/cocktails/admiral-schley-high-ball",
     country: "Denmark",
     city: "Risskov",
+    
     cords: {
       latitude: "56.1951",
       longitude: "10.232",

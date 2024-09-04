@@ -200,7 +200,7 @@ const columns = [
                 </Button>
 
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="md:max-w-[720px] ">
                 <DialogHeader>
                   <DialogTitle className="text-base font-medium">
                     Your Details Here are Safe with Us
@@ -214,15 +214,21 @@ const columns = [
                       value="link"
                     >
                       Details
-                      <Icon icon="heroicons:eye" className="w-5 h-5" />
                     </TabsTrigger>
                   </TabsList>
 
                   <TabsContent value="link">
-                    {/* <h2 className="my-6 text-sm font-medium text-default-900 ">
+                    <h2 className="my-6 text-sm font-medium text-default-900 ">
                       Start using your modals components by coping the web address
                       below
                     </h2>
+                    <div className="flex justify-between items-center py-3 border-b">
+                      <span className="font-medium"> Registered Date: </span>
+                      <div className="flex flex-col">
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.today.date} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.today.time} </span>
+                      </div>
+                    </div>
                     <div className="flex justify-between py-3 border-t border-b">
                       <span className="font-medium"> Name: </span>
                       <span> {row.original.name} </span>
@@ -232,35 +238,38 @@ const columns = [
                       <span> {row.original.email} </span>
                     </div>
                     <div className="flex justify-between py-3 border-b">
-                      <span className="font-medium"> Payment: </span>
-                      <span> {row.original.payment.type} </span>
+                      <span className="font-medium"> URL: </span>
+                      <span> {row.original.url} </span>
                     </div>
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> Payment Date: </span>
+                      <span className="font-medium"> Country: </span>
                       <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.payment.date} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.payment.time} </span>
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.country} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.city} </span>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center py-3 border-b">
+                      <span className="font-medium"> Cords: </span>
+                      <div className="flex flex-col">
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.cords.latitude},{row.original.cords.longitude} </span>
                       </div>
                     </div>
                     <div className="flex justify-between py-3 border-b">
-                      <span className="font-medium"> Amount: </span>
-                      <span> {row.original.amount} </span>
+                      <span className="font-medium"> Zone: </span>
+                      <span> {row.original.zone} </span>
                     </div>
-                    
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> Start Date: </span>
+                      <span className="font-medium"> IP Address (IPV6): </span>
                       <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.start.date} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.start.time} </span>
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.ip} </span>
                       </div>
                     </div>
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> End  Date: </span>
+                      <span className="font-medium"> Source: </span>
                       <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.end.date} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.end.time} </span>
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.source} </span>
                       </div>
-                    </div> */}
+                    </div>
                   </TabsContent>
                 </Tabs>
               </DialogContent>
