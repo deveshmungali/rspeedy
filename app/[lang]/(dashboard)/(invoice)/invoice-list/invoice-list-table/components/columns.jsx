@@ -180,10 +180,13 @@ export const columns = [
           <Icon icon="heroicons:pencil-square" className="w-5 h-5" />
         </Button>
         <Button
+          asChild
           size="icon"
           className="h-9 w-9 rounded bg-default-100 dark:bg-default-200 text-default-500 hover:text-primary-foreground"
-          >
-          <Icon icon="heroicons:user-20-solid" className="w-5 h-5" />
+        >
+          <Link href="/login" target="_blank">
+            <Icon icon="heroicons:user-20-solid" className="w-5 h-5" />
+          </Link>
         </Button>
         <Button
           size="icon"
