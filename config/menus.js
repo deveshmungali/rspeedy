@@ -1266,7 +1266,7 @@ export const menusConfig = {
           },
           {
             title: "Website SEO",
-            href: "/website-sEO",
+            href: "/website-seo",
             icon: Note3,
           },
           {

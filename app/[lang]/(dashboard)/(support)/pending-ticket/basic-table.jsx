@@ -41,13 +41,6 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
 import { data } from "./data";
 import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
@@ -93,91 +86,91 @@ const columns = [
     ),
   },
   {
-    accessorKey: "url",
-    header: "URL",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex flex-col rtl:space-x-reverse text-left">
-          <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.url}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
     accessorKey: "",
-    header: "Country",
+    header: "Detail",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex flex-col rtl:space-x-reverse text-left">
           <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.country}
+            {row.original.name}
           </span>
           <span className=" text-xs text-card-foreground whitespace-nowrap">
-            {row.original.city}
+            {row.original.email}
           </span>
         </div>
       </div>
     ),
   },
   {
-    accessorKey: "",
-    header: "Cords",
-    cell: ({ row }) => (
-      <div className="  font-medium  text-card-foreground/80">
-        <div className="flex flex-col rtl:space-x-reverse text-left">
-          <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.cords.latitude} , {row.original.cords.longitude}
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "zone",
-    header: "Time Zone",
+    accessorKey: "payment",
+    header: "Payment",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex space-x-3  rtl:space-x-reverse items-center">
           <span className=" text-sm Capitalize text-card-foreground whitespace-nowrap">
-            {row?.original?.zone}
+            {row?.original?.payment.type}
           </span>
         </div>
       </div>
     ),
   },
   {
-    accessorKey: "ip",
-    header: "IP Address (IPV6)",
+    accessorKey: "amount",
+    header: "Paid Amount",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex space-x-3  rtl:space-x-reverse items-center">
+          <span className=" text-sm Capitalize text-card-foreground whitespace-nowrap">
+            {row?.original?.amount}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "payement",
+    header: "Payment Date",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex flex-col rtl:space-x-reverse text-left">
           <span className=" text-sm text-card-foreground whitespace-nowrap">
-            {row.original.ip}
+            {row.original.payment.date}
+          </span>
+          <span className=" text-xs text-card-foreground whitespace-nowrap">
+            {row.original.payment.time}
           </span>
         </div>
       </div>
     ),
   },
   {
-    accessorKey: "source",
-    header: "Source",
+    accessorKey: "start",
+    header: "Start Date",
     cell: ({ row }) => (
       <div className="  font-medium  text-card-foreground/80">
         <div className="flex flex-col rtl:space-x-reverse text-left">
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button type="button" color="secondary">
-                  <Icon icon="heroicons:square-2-stack" className="w-5 h-5" />
-                </Button>
-            </TooltipTrigger>
-            <TooltipContent color="primary" side="bottom">
-              <p>{row.original.source}</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+          <span className=" text-sm text-card-foreground whitespace-nowrap">
+            {row.original.start.date}
+          </span>
+          <span className=" text-xs text-card-foreground whitespace-nowrap">
+            {row.original.start.time}
+          </span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    accessorKey: "end",
+    header: "Expiry Date",
+    cell: ({ row }) => (
+      <div className="  font-medium  text-card-foreground/80">
+        <div className="flex flex-col rtl:space-x-reverse text-left">
+          <span className=" text-sm text-card-foreground whitespace-nowrap">
+            {row.original.end.date}
+          </span>
+          <span className=" text-xs text-card-foreground whitespace-nowrap">
+            {row.original.end.time}
+          </span>
         </div>
       </div>
     ),
@@ -200,7 +193,7 @@ const columns = [
                 </Button>
 
               </DialogTrigger>
-              <DialogContent className="md:max-w-[720px] ">
+              <DialogContent>
                 <DialogHeader>
                   <DialogTitle className="text-base font-medium">
                     Your Details Here are Safe with Us
@@ -214,6 +207,7 @@ const columns = [
                       value="link"
                     >
                       Details
+                      <Icon icon="heroicons:eye" className="w-5 h-5" />
                     </TabsTrigger>
                   </TabsList>
 
@@ -222,13 +216,6 @@ const columns = [
                       Start using your modals components by coping the web address
                       below
                     </h2>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> Registered Date: </span>
-                      <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.today.date} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.today.time} </span>
-                      </div>
-                    </div>
                     <div className="flex justify-between py-3 border-t border-b">
                       <span className="font-medium"> Name: </span>
                       <span> {row.original.name} </span>
@@ -238,42 +225,45 @@ const columns = [
                       <span> {row.original.email} </span>
                     </div>
                     <div className="flex justify-between py-3 border-b">
-                      <span className="font-medium"> URL: </span>
-                      <span> {row.original.url} </span>
+                      <span className="font-medium"> Payment: </span>
+                      <span> {row.original.payment.type} </span>
                     </div>
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> Country: </span>
+                      <span className="font-medium"> Payment Date: </span>
                       <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.country} </span>
-                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.city} </span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> Cords: </span>
-                      <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.cords.latitude},{row.original.cords.longitude} </span>
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.payment.date} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.payment.time} </span>
                       </div>
                     </div>
                     <div className="flex justify-between py-3 border-b">
-                      <span className="font-medium"> Zone: </span>
-                      <span> {row.original.zone} </span>
+                      <span className="font-medium"> Amount: </span>
+                      <span> {row.original.amount} </span>
                     </div>
+                    
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> IP Address (IPV6): </span>
+                      <span className="font-medium"> Start Date: </span>
                       <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.ip} </span>
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.start.date} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.start.time} </span>
                       </div>
                     </div>
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="font-medium"> Source: </span>
+                      <span className="font-medium"> End  Date: </span>
                       <div className="flex flex-col">
-                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.source} </span>
+                        <span className="text-sm text-card-foreground whitespace-nowrap"> {row.original.end.date} </span>
+                        <span className="text-xs text-card-foreground whitespace-nowrap"> {row.original.end.time} </span>
                       </div>
                     </div>
                   </TabsContent>
                 </Tabs>
               </DialogContent>
             </Dialog>
+            <Button
+              size="icon"
+              className="h-9 w-9 rounded bg-default-100 dark:bg-default-200 text-default-500 hover:text-primary-foreground"
+            >
+              <Icon icon="heroicons:rocket-launch" className="w-5 h-5" />
+            </Button>
             <Button
               size="icon"
               className="h-9 w-9 rounded bg-default-100 dark:bg-default-200 text-default-500 hover:text-primary-foreground"

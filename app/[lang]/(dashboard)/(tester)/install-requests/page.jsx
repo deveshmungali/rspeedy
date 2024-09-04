@@ -6,7 +6,7 @@ import ColumnSticky from "./column-sticky";
 const TailwindUiTable = () => {
   return (
     <div className=" space-y-6">
-      <Card title="Feedback">
+      <Card title="Installation Requests">
         <ColumnSticky />
       </Card>
     </div>
