@@ -19,7 +19,7 @@ const Settings = () => {
     <div className="flex gap-6 mt-5">
       <div className="w-2/3">
 
-        <Card className="bg-transparent" title="Saved Payment Options">
+        <Card title="Saved Payment Options" className="rounded-xl">
           <Carousel className="w-full max-w-3xl	mx-auto"
             plugins={[
               Autoplay({
@@ -31,7 +31,7 @@ const Settings = () => {
             }}
             orientation="horizontal"
           >
-            <CarouselContent className="rish">
+            <CarouselContent>
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem className=" w-full" key={index}>
                   <div className="p-1">
