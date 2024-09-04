@@ -2,7 +2,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { Icon } from "@iconify/react";
-import { Button } from "@/components/ui/button";
 const Blank = ({ mblChatHandler }) => {
   const isLg = useMediaQuery("(max-width: 1024px)");
   return (
