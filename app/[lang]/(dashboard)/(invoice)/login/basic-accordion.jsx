@@ -8,12 +8,13 @@ import {
 const BasicAccordion = () => {
   return (
     <Accordion type="single" collapsible className="w-full border-b rounded-md">
+      
       {/* FAQ Item 1 with Nested Dropdown */}
       <AccordionItem value="item-1">
         <AccordionTrigger className="text-black font-semibold py-2">
           How To Compare Updated Speed With Old Speed
         </AccordionTrigger>
-        <AccordionContent className="bg-white border-t border-gray-200 px-4 py-2">
+        <AccordionContent className="bg-white border-t border-gray-200 p-1">
           <Accordion type="single" collapsible>
             <AccordionItem value="subitem-1">
               <AccordionTrigger className="text-black text-sm py-1 px-2">

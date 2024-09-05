@@ -15,7 +15,7 @@ const FormGrid = () => {
             <SelectTrigger>
               <SelectValue placeholder="Select Country" />
             </SelectTrigger>
-            <SelectContent className="max-h-48 overflow-y-auto"> {/* Add max height and overflow */}
+            <SelectContent className="max-h-48 overflow-y-auto">
             <SelectItem value="+93">Afghanistan +93</SelectItem>
               <SelectItem value="+355">Albania +355</SelectItem>
               <SelectItem value="+213">Algeria +213</SelectItem>
@@ -85,11 +85,11 @@ const FormGrid = () => {
           <Input type="date" id="suitableTime" />
         </div>
         <div className="col-span-2 flex gap-4">
-          <div className="flex flex-col">
+          <div className="flex w-1/2 flex-col">
             <Label htmlFor="fromTime" className="text-base font-normal">From:</Label>
             <Input type="time" id="fromTime" />
           </div>
-          <div className="flex flex-col">
+          <div className="flex w-1/2 flex-col">
             <Label htmlFor="toTime" className="text-base font-normal">To:</Label>
             <Input type="time" id="toTime" />
           </div>
