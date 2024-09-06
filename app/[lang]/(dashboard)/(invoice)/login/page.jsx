@@ -2,14 +2,7 @@
 
 import { SiteLogo } from "@/components/svg";
 import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -21,6 +14,17 @@ import { cn } from "@/lib/utils";
 
 import FormGrid from "./form-grid";
 import BasicAccordion from "./basic-accordion";
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const InvoicePreview = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -98,7 +102,7 @@ const InvoicePreview = () => {
         </div>
 
         <div className="p-4 flex gap-5 bg-white rounded-xl">
-          <div className="w-2/3">
+          <div className="w-4/5">
             <div className="mb-5">
               <h2 className="font-bold text-2xl">
                 Let's set up Website Speedy to automatically boost your website's loading speed.
@@ -142,7 +146,7 @@ const InvoicePreview = () => {
                 <div className="col-span-12 xl:col-span-9">
                   {activeStep === steps.length ? (
                     <React.Fragment>
-                      <div className="mt-2 mb-2 font-semibold text-center">
+                      <div className="my-3 pt-2 text-lg font-semibold text-center">
                         All steps completed - you&apos;re finished
                       </div>
                       <div className="flex pt-2">
@@ -234,12 +238,593 @@ const InvoicePreview = () => {
 
                           {activeStep === 2 && (
                             <>
-                              
+                              <div className="flex flex-col gap-3">
+                                <div className="">
+                                  <h3 className="text-m pb-5">
+                                    Congratulations, You have successfully implemented the script for Automatic speed optimisation. our script works instantly, it’s still a good idea to give it 30 seconds to work efficiently, You can analyse updated speed score when the timer reaches 00:00. 
+                                  </h3>
+                                  <Button> Analyse Updated Speed </Button>
+                                </div>
+
+                                <hr />
+
+                                <div className="flex flex-col items-center gap-6 mb-5">
+                                  <h3 className="text-2xl font-bold text-center"> Congrats you can see the updated speed score below - </h3>
+                                  <Tabs defaultValue="account" className="w-full border-2 rounded-xl overflow-hidden">
+                                    <TabsList className="grid w-full grid-cols-2">
+                                      <TabsTrigger value="desktop">Desktop</TabsTrigger>
+                                      <TabsTrigger value="mobile">Mobile</TabsTrigger>
+                                    </TabsList>
+                                    <TabsContent value="desktop">
+
+                                      <div className="flex">
+                                        <div className="border-green-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Boosted Speed URL1 -  </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> With website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div className="border-red-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Old Speed Score URL1 - </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> Without website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <hr />
+
+                                      <div className="flex">
+                                        <div className="border-green-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Boosted Speed URL2 -  </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> With website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div className="border-red-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Old Speed Score URL2 - </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> Without website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <hr />
+
+                                      <div className="flex">
+                                        <div className="border-green-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Boosted Speed URL3 - </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> With website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div className="border-red-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Old Speed Score URL3 - </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> Without website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                    </TabsContent>
+
+                                    <TabsContent value="mobile">
+
+                                      <div className="flex">
+                                        <div className="border-green-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Boosted Speed URL1 -  </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> With website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div className="border-red-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Old Speed Score URL1 - </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> Without website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <hr />
+
+                                      <div className="flex">
+                                        <div className="border-green-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Boosted Speed URL2 -  </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> With website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div className="border-red-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Old Speed Score URL2 - </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> Without website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <hr />
+
+                                      <div className="flex">
+                                        <div className="border-green-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Boosted Speed URL3 - </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> With website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div className="border-red-400 border-2 flex flex-col gap-1 w-1/2 items-center rounded-xl p-3 m-3">
+                                          <div className="flex flex-col items-center justify-center">
+                                            <h4 className="text-sm font-bold"> Old Speed Score URL3 - </h4>
+                                            <Link class="text-lg font-bold text-primary-500" href="https://www.peoniesandpetalsskincare.com"> https://www.peoniesandpetalsskincare.com </Link>
+                                          </div>
+                                          <h4 className="text-lg font-bold"> Without website speedy: </h4>
+
+                                          <div className="w-full">
+                                            <div className="rounded-xl shadow-sm flex flex-col overflow-hidden">
+                                              <div className="flex py-2 px-2 bg-primary-200 border-b border-white">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Page Speed </h3>
+                                                <h3 className="uppercase text-m text-center font-semibold w-3/4 pl-2"> Core Web Vital </h3>
+                                              </div>
+                                              <div className="flex py-2 px-2 bg-primary-200">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> Performance </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> FCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> LCP </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> CLS </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> TBT </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> SI </h3>
+                                                </div>
+                                              </div>
+                                              <div className="flex py-2 px-2">
+                                                <h3 className="uppercase text-m text-center border-r border-white font-semibold w-1/4"> 89/100 </h3>
+                                                <div className="flex w-3/4 pl-2">
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 775.80 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1713.03 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.05 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 0.00 </h3>
+                                                  <h3 className="w-1/5 text-center uppercase text-m font-semibold"> 1.9s </h3>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                    </TabsContent>
+                                  </Tabs>
+                                </div>
+
+                                <hr className="mb-5" />
+
+                                <h3 className="text-m text-lg font-bold text-primary-500">
+                                  Congrats! You have successfully set up Website Speedy.
+                                </h3>
+                                <p>To verify this data, you can visit <a className="text-primary-400" href="https://pagespeed.web.dev/">https://pagespeed.web.dev/</a>.There may be slight variations due to multiple factors, as explained by Google. Some of the significant factors include: Antivirus software, Browser extensions that inject JavaScript and alter network requests, Network firewalls, Server load, and DNS - Internet traffic routing changes. For more detailed information provided by Google, you can <a className="text-primary-400" href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/#fluctuations">click here</a>.</p>
+
+                                <div className="border-2 border-red-400 p-3 rounded-xl flex flex-col gap-5">
+                                  <div className="flex gap-5 px-5">
+                                    <Button> Upgrade Plan </Button>
+                                    <Button> Activate Expert Optimization (Go to Step 4) </Button>
+                                    <Button> Vibe Check? </Button>
+                                  </div>
+                                  <div className="px-5 flex">
+                                    <div className="w-1/2 flex flex-col gap-2">
+                                      <p>Your free plan will expire soon. </p>
+                                      <p>
+                                        <a className="text-primary-400 mr-1" href="./plans" target="_blank">Please update</a>
+                                         for uninterrupted service. 
+                                      </p>
+                                    </div>
+                                    <div className="w-1/2 flex flex-col gap-2">
+                                      <p>Help more people find us.</p>
+                                      <p>Leave a review and shape the future of our app!</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
                             </>
                           )}
                           {activeStep === 3 && (
                             <>
-                              
+                              <div className="flex flex-col gap-4">
+                                <div className="flex items-center justify-between">
+                                  <div>
+                                    <p> Your Ticket is submitted. </p>
+                                    <p> Your Ticket Number is - 1166, Our Experts will get in touch with you soon </p>
+                                  </div>
+                                  <div>
+                                    <Button> View Ticket </Button>
+                                  </div>
+                                </div>
+
+                                <div className="border-2 border-green-400 p-3 rounded-xl flex flex-col gap-5">
+                                  <div className="flex gap-5 px-5">
+                                    <Button> Request Submitted </Button>
+                                    <Button> Access Requested </Button>
+                                    <Button> Optimization in Progress </Button>
+                                    <Button> Optimization Completed </Button>
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h3 className="text-lg font-bold py-4"> FAQ's </h3>
+                                  <div className="flex flex-col gap-2">
+                                    <p className="font-semibold"> 1. What needs to be audited and what kind of optimizations will you make? </p>
+                                    <p> While website speedy Automatically improves loading time significantly. However, in some cases, it needs some updates are required depending on your website's platform, structure and code. Here are some samples - </p>
+                                    <div className="flex flex-col gap-3 ml-3">
+                                      <p className="font-semibold"> a) Adding parameters in code to meet latest performance standards - </p>
+                                      <p> The following parameters will be added to your javascript & CSS links, it will be updated by adding the “preload”, “pre-connect” or “dns-prefetch” depending on the requirement. For external scripts such as GTM, Analytics and other we will add “data-src” will be added instead of “src” or “data-href” instead of “href” to help WebsiteSpeedy identify and load the parameters correctly. Below is a before and after look of these codes. </p>
+                                      
+                                      <div className="gap-0 flex flex-col">
+                                        <p className="font-semibold capitalize"> Code before parameters update: </p>
+                                        <p className="text-red-400"> &lt;link href="https://fonts.googleapis.com/css2"&gt;</p>
+                                        <p className="text-red-400"> &lt;script async src="https://www.googletagmanager.com/gtag/js?id=AW-9289"&gt;&lt;script&gt;</p>
+                                        <p className="text-red-400"> &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font.min.css"&gt;</p>
+                                      </div>
+
+                                      <div className="gap-0 flex flex-col">
+                                        <p className="font-semibold capitalize"> Code After parameters update: </p>
+                                        <p className="text-green-400"> &lt;link rel="preconnect" href="https://fonts.googleapis.com/css2"&gt;</p>
+                                        <p className="text-green-400"> &lt;script async data-src="https://www.googletagmanager.com/gtag/js?id=AW-9289"&gt;&lt;script&gt;</p>
+                                        <p className="text-green-400"> &lt;link rel="stylesheet" data-href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font.min.css"&gt;</p>
+                                      </div>
+
+                                      <p className="font-semibold"> b) Review and update code for specific pages to make sure Specific pages or templates are not loading any scripts or code that is not required in that specific page. </p>
+                                      <p> Example if you have a Hero slider on homepage but its scripts are loading on other important pages like product page or request a quote page, that might make it slow. Our team will fix this. </p>
+
+                                      <p className="font-semibold"> c) Optimise any specific images, js or css that is not optimised automatically by our script. </p>
+
+                                      <p className="font-semibold"> d) More optimisations specific to platforms, servers or other 3rd party tool you might be using like google tag manager, outside scripts etc </p>
+                                    </div>
+
+                                    <p className="font-semibold"> 2. How much page speed can I expect after these optimizations ? </p>
+                                    <p> After completing step 4, you can achieve Google PageSpeed scores of 70 or higher on mobile and 90 or higher on desktop. The exact amount of speed improvement can vary depending on a variety of factors, including the size and complexity of your website, as well as your hosting environment. You can generally expect to see a significant improvement in your Google PageSpeed scores. For more information, click here (<a className="text-primary-400 font-semibold" href="https://websitespeedy.com/speed-guarantee.php"> https://websitespeedy.com/speed-guarantee.php</a>).</p>
+
+                                    <p className="font-semibold"> 3. Will you take a backup? </p>
+                                    <p> Yes, we will take a backup of your website. Our team will work on a duplicate theme if your platform allows it and we will connect with you before making changes live. This way, we can ensure that your website is backed up and that any changes we make are approved by you before going live.</p>
+
+                                    <p className="font-semibold"> 4. Does Website Speedy support all platforms for speed optimization? </p>
+                                    <p> Website Speedy is compatible with various popular platforms, including major CMS and e-commerce systems. Website Speedy currently does not work for WordPress and woocommerce. For other specific platform inquiries, please contact our support team. </p>
+                                  </div>
+                                </div>
+
+                              </div>
                             </>
                           )}
                         </div>
@@ -305,7 +890,7 @@ const InvoicePreview = () => {
             </Tabs>
             
           </div>
-          <div className="flex-1 lg:w-1/3 overflow-hidden rounded-2xl border min-h-fit">
+          <div className="flex-1 lg:w-1/5 overflow-hidden rounded-2xl border h-fit">
               <h3 className="font-bold bg-primary-400 text-lg py-4 px-4">FAQ's</h3>
               <BasicAccordion />
             </div>

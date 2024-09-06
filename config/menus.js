@@ -1010,22 +1010,12 @@ export const menusConfig = {
             href: "/visitors",
             icon: Cart,
           }
-        //   {
-        //     title: "project ",
-        //     href: "/project",
-        //     icon: ClipBoard,
-        //   },
         ],
       },
       {
         title: "Website Owners",
         icon: Application,
         child: [
-          // {
-          //   title: "Website Owners Details",
-          //   href: "/invoice-details",
-          //   icon: Files,
-          // },
           {
             title: "Website Owners List",
             href: "/invoice-list",
