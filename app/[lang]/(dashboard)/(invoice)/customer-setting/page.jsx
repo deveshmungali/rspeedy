@@ -4,7 +4,11 @@ import { SiteLogo } from "@/components/svg";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs";  
-import Link from "next/link";
+
+import ColumnSticky from "./invoice/column-sticky";
+import TeamSticky from "./teams/column-sticky";
+import PaymentSticky from "./payment/column-sticky";
+import SubscriptionSticky from "./payment/column-sticky";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Icon } from "@iconify/react";
@@ -83,12 +87,12 @@ const InvoicePreview = () => {
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="account">
+          <TabsContent value="subscriptions">
             <div className="rounded-xl flex flex-col gap-4">
-              <h3 className="bg-background p-4 text-center text-xl font-bold"> Edit Profile </h3>
+              <h3 className="bg-background p-4 text-center text-xl font-bold"> Your Payment Subscriptions </h3>
 
               <div className="flex gap-6">
-                <div className="w-1/3 rounded-xl bg-background p-4">
+                <div className="w-1/5 rounded-xl bg-background p-4">
                   <Card>
                     <CardContent className="p-6 flex flex-col items-center justify-center h-full">
                       <div className="w-[124px] h-[124px] relative rounded-full">
@@ -110,7 +114,49 @@ const InvoicePreview = () => {
                     </CardContent>
                   </Card>
                 </div>
-                <div className="w-2/3 rounded-xl bg-background p-4">
+
+                <div className="w-4/5 rounded-xl bg-background p-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-2xl font-bold">  </h3>
+                    <Button> Add New Website </Button>
+                  </div>
+                  <hr className="mt-2 mb-4" />
+
+                  <SubscriptionSticky />
+                </div>
+
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="account">
+            <div className="rounded-xl flex flex-col gap-4">
+              <h3 className="bg-background p-4 text-center text-xl font-bold"> Edit Profile </h3>
+
+              <div className="flex gap-6">
+                <div className="w-1/5 rounded-xl bg-background p-4">
+                  <Card>
+                    <CardContent className="p-6 flex flex-col items-center justify-center h-full">
+                      <div className="w-[124px] h-[124px] relative rounded-full">
+                        <Image src={avatar} alt="avatar" className="w-full h-full object-cover rounded-full" />
+                        <Button asChild
+                          size="icon"
+                          className="h-8 w-8 rounded-full cursor-pointer absolute bottom-0 right-0"
+                        >
+                          <Label
+                            htmlFor="avatar"
+                          >
+                            <Icon className="w-5 h-5 text-primary-foreground" icon="heroicons:pencil-square" />
+                          </Label>
+                        </Button>
+                        <Input type="file" className="hidden" id="avatar" />
+                      </div>
+                      <div className="mt-4 text-xl font-semibold text-default-900">Rishabh Saxena</div>
+                      <div className="mt-1.5 text-sm font-medium text-default-500">Full Stack Developer</div>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="w-4/5 rounded-xl bg-background p-4">
                   <form action="" method="post" className="flex flex-col gap-3">
                     <div className="flex gap-3">
                       <div className="w-1/2">
@@ -201,12 +247,12 @@ const InvoicePreview = () => {
             </div>
           </TabsContent>
 
-          <TabsContent value="security">
+          <TabsContent value="payment">
             <div className="rounded-xl flex flex-col gap-4">
-              <h3 className="bg-background p-4 text-center text-xl font-bold"> Change Password </h3>
+              <h3 className="bg-background p-4 text-center text-xl font-bold"> Manage Payment </h3>
 
               <div className="flex gap-6">
-                <div className="w-1/3 rounded-xl bg-background p-4">
+                <div className="w-1/5 rounded-xl bg-background p-4">
                   <Card>
                     <CardContent className="p-6 flex flex-col items-center justify-center h-full">
                       <div className="w-[124px] h-[124px] relative rounded-full">
@@ -228,7 +274,91 @@ const InvoicePreview = () => {
                     </CardContent>
                   </Card>
                 </div>
-                <div className="w-2/3 rounded-xl bg-background p-4">
+
+                <div className="w-4/5 rounded-xl bg-background p-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-2xl font-bold"> 2024 </h3>
+                    <Button> Add Member </Button>
+                  </div>
+                  <hr className="mt-2 mb-4" />
+
+                  <PaymentSticky />
+                </div>
+
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="teams">
+            <div className="rounded-xl flex flex-col gap-4">
+              <h3 className="bg-background p-4 text-center text-xl font-bold"> Add Members To Your Team </h3>
+
+              <div className="flex gap-6">
+                <div className="w-1/5 rounded-xl bg-background p-4">
+                  <Card>
+                    <CardContent className="p-6 flex flex-col items-center justify-center h-full">
+                      <div className="w-[124px] h-[124px] relative rounded-full">
+                        <Image src={avatar} alt="avatar" className="w-full h-full object-cover rounded-full" />
+                        <Button asChild
+                          size="icon"
+                          className="h-8 w-8 rounded-full cursor-pointer absolute bottom-0 right-0"
+                        >
+                          <Label
+                            htmlFor="avatar"
+                          >
+                            <Icon className="w-5 h-5 text-primary-foreground" icon="heroicons:pencil-square" />
+                          </Label>
+                        </Button>
+                        <Input type="file" className="hidden" id="avatar" />
+                      </div>
+                      <div className="mt-4 text-xl font-semibold text-default-900">Rishabh Saxena</div>
+                      <div className="mt-1.5 text-sm font-medium text-default-500">Full Stack Developer</div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="w-4/5 rounded-xl bg-background p-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-2xl font-bold">  </h3>
+                    <Button> Add Member </Button>
+                  </div>
+                  <hr className="mt-2 mb-4" />
+
+                  <TeamSticky />
+                </div>
+
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="security">
+            <div className="rounded-xl flex flex-col gap-4">
+              <h3 className="bg-background p-4 text-center text-xl font-bold"> Change Password </h3>
+
+              <div className="flex gap-6">
+                <div className="w-1/5 rounded-xl bg-background p-4">
+                  <Card>
+                    <CardContent className="p-6 flex flex-col items-center justify-center h-full">
+                      <div className="w-[124px] h-[124px] relative rounded-full">
+                        <Image src={avatar} alt="avatar" className="w-full h-full object-cover rounded-full" />
+                        <Button asChild
+                          size="icon"
+                          className="h-8 w-8 rounded-full cursor-pointer absolute bottom-0 right-0"
+                        >
+                          <Label
+                            htmlFor="avatar"
+                          >
+                            <Icon className="w-5 h-5 text-primary-foreground" icon="heroicons:pencil-square" />
+                          </Label>
+                        </Button>
+                        <Input type="file" className="hidden" id="avatar" />
+                      </div>
+                      <div className="mt-4 text-xl font-semibold text-default-900">Rishabh Saxena</div>
+                      <div className="mt-1.5 text-sm font-medium text-default-500">Full Stack Developer</div>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="w-4/5 rounded-xl bg-background p-4">
                   <form action="" method="post" className="flex flex-col gap-3 justify-center h-full">
                     <div className="flex flex-col gap-3">
                       <div className="w-full">
@@ -253,6 +383,48 @@ const InvoicePreview = () => {
                     </div>
                   </form>
                 </div>
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="invoices">
+            <div className="rounded-xl flex flex-col gap-4">
+              <h3 className="bg-background p-4 text-center text-xl font-bold"> Download Your Invoices </h3>
+
+              <div className="flex gap-6">
+                <div className="w-1/5 rounded-xl bg-background p-4">
+                  <Card>
+                    <CardContent className="p-6 flex flex-col items-center justify-center h-full">
+                      <div className="w-[124px] h-[124px] relative rounded-full">
+                        <Image src={avatar} alt="avatar" className="w-full h-full object-cover rounded-full" />
+                        <Button asChild
+                          size="icon"
+                          className="h-8 w-8 rounded-full cursor-pointer absolute bottom-0 right-0"
+                        >
+                          <Label
+                            htmlFor="avatar"
+                          >
+                            <Icon className="w-5 h-5 text-primary-foreground" icon="heroicons:pencil-square" />
+                          </Label>
+                        </Button>
+                        <Input type="file" className="hidden" id="avatar" />
+                      </div>
+                      <div className="mt-4 text-xl font-semibold text-default-900">Rishabh Saxena</div>
+                      <div className="mt-1.5 text-sm font-medium text-default-500">Full Stack Developer</div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="w-4/5 rounded-xl bg-background p-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-2xl font-bold"> 2024 </h3>
+                    <Button> Download CSV </Button>
+                  </div>
+                  <hr className="mt-2 mb-4" />
+
+                  <ColumnSticky />
+                </div>
+
               </div>
             </div>
           </TabsContent>
