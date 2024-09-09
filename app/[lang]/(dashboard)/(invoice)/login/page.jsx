@@ -737,12 +737,12 @@ const InvoicePreview = () => {
                                 <p>To verify this data, you can visit <a className="text-primary-400" href="https://pagespeed.web.dev/">https://pagespeed.web.dev/</a>.There may be slight variations due to multiple factors, as explained by Google. Some of the significant factors include: Antivirus software, Browser extensions that inject JavaScript and alter network requests, Network firewalls, Server load, and DNS - Internet traffic routing changes. For more detailed information provided by Google, you can <a className="text-primary-400" href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/#fluctuations">click here</a>.</p>
 
                                 <div className="border-2 border-red-400 p-3 rounded-xl flex flex-col gap-5">
-                                  <div className="flex gap-5 px-5">
+                                  <div className="flex gap-5">
                                     <Button> Upgrade Plan </Button>
                                     <Button> Activate Expert Optimization (Go to Step 4) </Button>
                                     <Button> Vibe Check? </Button>
                                   </div>
-                                  <div className="px-5 flex">
+                                  <div className="flex">
                                     <div className="w-1/2 flex flex-col gap-2">
                                       <p>Your free plan will expire soon. </p>
                                       <p>
