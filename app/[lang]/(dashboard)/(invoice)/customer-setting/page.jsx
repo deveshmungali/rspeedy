@@ -27,7 +27,6 @@ const InvoicePreview = () => {
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
         <BreadcrumbItem>Website Owners</BreadcrumbItem>
-        <BreadcrumbItem>Website Owners List</BreadcrumbItem>
         <BreadcrumbItem> Customer Setting</BreadcrumbItem>
       </Breadcrumbs>
 
