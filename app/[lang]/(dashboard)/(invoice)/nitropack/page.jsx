@@ -190,7 +190,7 @@ const InvoicePreview = () => {
               <div className="flex justify-between items-end">
                 <div>
                   <h3 className="text-lg font-semibold"> Free Subscription </h3>
-                  <p className="text-sm"> (ausdigital.agency) </p>
+                  <a href="https://ausdigital.agency" target="_blank" className="text-sm"> (ausdigital.agency) </a>
                 </div>
                 <p> 1 website </p>
               </div>
