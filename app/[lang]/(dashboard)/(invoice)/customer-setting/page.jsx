@@ -8,7 +8,7 @@ import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs";
 import ColumnSticky from "./invoice/column-sticky";
 import TeamSticky from "./teams/column-sticky";
 import PaymentSticky from "./payment/column-sticky";
-import SubscriptionSticky from "./payment/column-sticky";
+import SubscriptionSticky from "./subscription/column-sticky";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Icon } from "@iconify/react";
