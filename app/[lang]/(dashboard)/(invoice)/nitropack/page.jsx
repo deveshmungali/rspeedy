@@ -123,7 +123,7 @@ const InvoicePreview = () => {
           </div>
           
           <div className="w-2/5 flex flex-col gap-3">
-            <div className="flex flex-col gap-3 bg-background p-3 rounded-xl mt-2">
+            <div className="flex flex-col gap-3 bg-background p-3 rounded-xl">
               <h3 className="text-lg font-semibold"> Optimization Status </h3>
               <hr />
               <div className="flex justify-between rounded p-2 mt-2 bg-primary-200">
@@ -163,7 +163,7 @@ const InvoicePreview = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 bg-background p-3 rounded-xl mt-2">
+            <div className="flex flex-col gap-3 bg-background p-3 rounded-xl">
               <h3 className="text-lg font-semibold"> Quick Actions </h3>
               <hr />
               <div className="flex gap-2 flex-col">
@@ -185,7 +185,7 @@ const InvoicePreview = () => {
               <Button> Purge Cache </Button>
             </div>
 
-            <div className="flex flex-col gap-3 bg-background p-3 rounded-xl mt-2">
+            <div className="flex flex-col gap-3 bg-background p-3 rounded-xl">
               <div className="flex justify-between items-end">
                 <div>
                   <h3 className="text-lg font-semibold"> Free Subscription </h3>

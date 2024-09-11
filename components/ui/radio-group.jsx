@@ -78,7 +78,7 @@ const RadioGroupItem = React.forwardRef(
     return (
       <>
         {children ? (
-          <div className="flex items-center  gap-2">
+          <div className="flex items-center gap-2">
             <RadioGroupPrimitive.Item
               ref={ref}
               className={cn(
