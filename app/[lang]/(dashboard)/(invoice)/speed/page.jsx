@@ -18,7 +18,7 @@ const Speed = () => {
     <div>
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
-        <BreadcrumbItem>Nitro DashBoard</BreadcrumbItem>
+        <BreadcrumbItem>Wordpress DashBoard</BreadcrumbItem>
         <BreadcrumbItem>Speed Packages</BreadcrumbItem>
       </Breadcrumbs>
 
@@ -34,7 +34,7 @@ const Speed = () => {
       <div className="flex mt-6 flex-col gap-4">
         <div className="p-3 rounded-lg bg-primary-300 border-2 bg-primary-300">
           <div className="flex justify-between items-center">
-            <p> Connect With Your NitroPack Plugin in Wordpress. </p>
+            <p> Connect With Your WordPress Speedy Plugin in Wordpress. </p>
             <a href="./dats.js" download>
               <Button className="bg-primary-600"> Connect </Button>
             </a>
@@ -58,7 +58,7 @@ const Speed = () => {
       </div>
 
       <div className="flex flex-col items-center mt-6 gap-2 p-3">
-        <h3 className="text-2xl font-bold uppercase mb-3"> Nitro Speed Package </h3>
+        <h3 className="text-2xl font-bold uppercase mb-3"> WordPress Speed Package </h3>
 
         <div className="rounded-xl border-2 p-5 w-full bg-background">
           <div className="flex justify-between items-center mb-3">
@@ -127,8 +127,8 @@ const Speed = () => {
           <hr />
 
           <div className="flex flex-col mt-6">
-            <h3 className="text-lg font-bold"> NitroPack badge </h3>
-            <p className="text-md"> As a free plan user you get a NitroPack badge in the footer of your site.</p>
+            <h3 className="text-lg font-bold"> WordPress Speedy badge </h3>
+            <p className="text-md"> As a free plan user you get a WordPress Speedy badge in the footer of your site.</p>
 
             <div className="flex flex-col gap-3 mt-5">
               <p className="text-md"> Select badge theme: </p>

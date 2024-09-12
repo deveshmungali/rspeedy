@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "NitroPack Speed - Wordpress Speedy"
+  title: "Speed Index - Wordpress Speedy"
 }
 const SpeedLayout = ({ children }) => {
   return (

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Nitro Pack Dashboard - Wordpress Speedy"
+  title: "WordPress Speedy Dashboard"
 }
 const InvoiceLayout = ({ children }) => {
   return (

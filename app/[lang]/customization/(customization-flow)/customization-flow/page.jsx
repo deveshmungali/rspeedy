@@ -132,7 +132,7 @@ const CustomizationPage = () => {
             <Checkbox radius="xl" color="success" id="circle_2">Elementor</Checkbox>
             <Checkbox radius="xl" color="success" id="circle_3" >Contact Form 7</Checkbox>
             <Checkbox radius="xl" color="success" id="circle_4" >Wp Bakery Builder</Checkbox>
-            <Checkbox radius="xl" color="success" id="circle_5" >NitroPack</Checkbox>
+            <Checkbox radius="xl" color="success" id="circle_5" >WordPress Speedy</Checkbox>
             <Checkbox radius="xl" color="success" id="circle_7" >Custom Plugins</Checkbox>
             <Checkbox 
   radius="xl" 

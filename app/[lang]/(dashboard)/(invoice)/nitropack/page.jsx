@@ -19,7 +19,7 @@ const InvoicePreview = () => {
       <Breadcrumbs>
         <BreadcrumbItem>Pages</BreadcrumbItem>
         <BreadcrumbItem>Website Owners</BreadcrumbItem>
-        <BreadcrumbItem>Nitro Pack DashBoard</BreadcrumbItem>
+        <BreadcrumbItem>WordPress Speedy DashBoard</BreadcrumbItem>
       </Breadcrumbs>
 
       <div className="flex mt-6 flex-col gap-4">
@@ -34,7 +34,7 @@ const InvoicePreview = () => {
       <div className="flex mt-6 flex-col gap-4">
         <div className="p-3 rounded-lg bg-primary-300 border-2 bg-primary-300">
           <div className="flex justify-between items-center">
-            <p> Connect With Your NitroPack Plugin in Wordpress. </p>
+            <p> Connect With Your WordPress Speedy Plugin in Wordpress. </p>
             <a href="./dats.js" download>
               <Button className="bg-primary-600"> Connect </Button>
             </a>
