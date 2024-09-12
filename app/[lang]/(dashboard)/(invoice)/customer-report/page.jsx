@@ -15,7 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { SelectSeparator } from "@radix-ui/react-select";
-import LineColumnArea from "./line-column-area";
+import BasicLine from "./basic-line";
 import BasicDataTable from "./basic-table";
 
 const Bunnycdn = () => {
@@ -78,7 +78,7 @@ const Bunnycdn = () => {
           <div className="flex flex-col">
             <Select>
               <SelectTrigger>
-                <SelectValue className="ml-2" placeholder="Select a subject" />
+                <SelectValue className="ml-2" placeholder="Select a Date" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="today"> Today </SelectItem>
@@ -148,7 +148,7 @@ const Bunnycdn = () => {
             </div>
           </div>
           <div className="w-3/4">
-            <LineColumnArea />
+            <BasicLine />
           </div>
         </div>
 
