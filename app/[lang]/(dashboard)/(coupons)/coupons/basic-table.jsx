@@ -386,7 +386,7 @@ export function CouponTable() {
 
   return (
     <>
-      <div className="flex items-center flex-wrap gap-2 px-4 pb-6">
+      <div className="flex items-center flex-wrap gap-2 px-4 pt-3 pb-6">
         <Input
           placeholder="Filter emails..."
           value={table.getColumn("email")?.getFilterValue() || ""}

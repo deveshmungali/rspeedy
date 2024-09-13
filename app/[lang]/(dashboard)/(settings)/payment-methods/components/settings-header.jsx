@@ -19,7 +19,7 @@ const SettingsHeader = () => {
       </Breadcrumbs>
       <Card className="mt-6 rounded-2xl ">
         <CardContent className="p-0">
-          <div className="relative h-[210px] xl:h-[296px] rounded-2xl w-full object-cover bg-no-repeat"
+          <div className="relative h-[210px] xl:h-[296px] rounded-2xl w-full bg-cover object-cover bg-no-repeat"
             style={{ backgroundImage: `url(${coverImage.src})` }}
           >
             <Button  className="absolute bottom-5 right-6 rounded px-5" size="sm">
