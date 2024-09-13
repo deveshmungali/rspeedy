@@ -31,7 +31,7 @@ const ShoppingCart = () => {
               <Row>
                 <Column className="px-10 pt-10">
                   <Button className="border border-violet-500 font-medium text-violet-700 py-3 px-5 rounded" href="/">
-                   DASH TAIL
+                   WordPress Speedy
                   </Button>
                   <Text className="text-base font-medium text-gray-900 uppercase mt-5">Big Sale offer</Text>
                   <Text className="text-sm text-gray-700">

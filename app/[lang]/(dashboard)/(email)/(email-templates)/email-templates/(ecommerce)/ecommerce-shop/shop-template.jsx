@@ -34,7 +34,7 @@ import instagram from "@/public/images/email-template/instagram.png"
               <Row>
                 <Column className="pt-10 flex justify-center mb-8">
                   <Button className="border border-violet-500 font-medium text-violet-700 py-3 px-5 rounded" href="/">
-                   DASH TAIL
+                   WordPress Speedy
                   </Button>
                 </Column>
               </Row>

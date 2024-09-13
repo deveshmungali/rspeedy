@@ -54,7 +54,7 @@ const ValidateInputWithIcon = () => {
               <FormControl>
                 <>
                   <Input
-                    placeholder="DashTail"
+                    placeholder="WordPress Speedy"
                     {...field}
                     className={cn("", {
                       "border-destructive focus:border-destructive":
