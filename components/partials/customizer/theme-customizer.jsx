@@ -54,27 +54,25 @@ const ThemeCustomize = ({
           <div className=" space-y-8 mt-3">
             <SelectLayout />
             <SelectTheme />
-            <RtlSwitcher />
+            {/* <RtlSwitcher /> */}
             <ThemeChange />
             <SidebarChange />
             <SidebarImage />
-            <RadiusInit />
             <HeaderStyle />
-            <FooterStyle />
           </div>
         </ScrollArea>
         <SheetFooter className="py-4 gap-3 lg:flex justify-between hidden  ">
           <Button asChild className="w-full">
-            <Link href="https://1.envato.market/vNaJR3">Buy Now</Link>
+            <Link href="https://makkpress.com">Our Portfolio</Link>
           </Button>
-          <Button asChild className="w-full">
+          {/* <Button asChild className="w-full">
             <Link
               href="https://themeforest.net/user/codeshaperbd/portfolio"
               target="__blank"
             >
               Our Portfolio
             </Link>
-          </Button>
+          </Button> */}
         </SheetFooter>
       </SheetContent>
     </Sheet>

@@ -36,7 +36,7 @@ const AdvancedTemplate = () => (
             <Column className="pt-6 pl-5 ">
               <Img
                 src={logo.src}
-                alt="WordPress Speedy"
+                alt="DashTail"
               />
             </Column>
             <Column className="flex justify-end pt-10 pr-5   ">
@@ -52,13 +52,13 @@ const AdvancedTemplate = () => (
             <Row>
               <Column className="pl-5 w-1/2">
                 <Text className="text-xl font-medium text-slate-800 mt-6">Welcome to</Text>
-                <Text className="text-xl  font-semibold text-slate-900 -mt-3">WordPress Speedy</Text>
+                <Text className="text-xl  font-semibold text-slate-900 -mt-3">Wordpressspeedy</Text>
                 <Text className="text-sm text-slate-700">Dive into customization and thrive. Your journey starts now. </Text>
               </Column>
               <Column className="pr-5 w-1/2">
                 <Img
                   src={dashtail.src}
-                  alt="WordPress Speedy"
+                  alt="Wordpressspeedy"
                   className="w-full h-full object-cover pl-6"
                 />
               </Column>

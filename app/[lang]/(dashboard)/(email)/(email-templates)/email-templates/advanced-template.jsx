@@ -17,7 +17,7 @@ import * as React from "react";
 import { Tailwind } from "@react-email/tailwind";
 import logo from "@/public/images/logo/logo-2.png"
 import logo2 from "@/public/images/logo/logo-1.png"
-import dashtail from "@/public/images/all-img/dashtail-screenshot.png"
+import Wordpressspeedy from "@/public/images/all-img/dashtail-screenshot.png"
 import avatar from "@/public/images/avatar/avatar-3.jpg"
 import clock from "@/public/images/chart/clock.png"
 import blog1 from "@/public/images/all-img/email-blog-1.jpg"
@@ -36,13 +36,13 @@ const AdvancedTemplate = () => (
             <Column className="pt-6 pl-5 ">
               <Img
                 src={logo.src}
-                alt="WordPress Speedy"
+                alt="Wordpressspeedy"
               />
             </Column>
             <Column className="flex justify-end pt-10 pr-5   ">
               <Button
                 href="https://codeshaper.net/contact-us"
-                className="bg-violet-500 border border-violet-500 py-2 px-7 rounded-2xl font-medium text-white hover:bg-white hover:text-violet-500"
+                className="bg-primary-500 border border-primary-500 py-2 px-7 rounded-2xl font-medium text-white hover:bg-white hover:text-primary-500"
               >
                 Sign In
               </Button>
@@ -52,13 +52,13 @@ const AdvancedTemplate = () => (
             <Row>
               <Column className="pl-5 w-1/2">
                 <Text className="text-xl font-medium text-slate-800 mt-6">Welcome to</Text>
-                <Text className="text-xl  font-semibold text-slate-900 -mt-3">WordPress Speedy</Text>
+                <Text className="text-xl  font-semibold text-slate-900 -mt-3">Wordpressspeedy</Text>
                 <Text className="text-sm text-slate-700">Dive into customization and thrive. Your journey starts now. </Text>
               </Column>
               <Column className="pr-5 w-1/2">
                 <Img
-                  src={dashtail.src}
-                  alt="WordPress Speedy"
+                  src={Wordpressspeedy.src}
+                  alt="Wordpressspeedy"
                   className="w-full h-full object-cover pl-6"
                 />
               </Column>
@@ -76,7 +76,7 @@ const AdvancedTemplate = () => (
                 <Text className="text-sm  text-slate-700 mt-0">johndoe@example.com  </Text>
                 <Button
                   href="https://codeshaper.net/contact-us"
-                  className="bg-violet-500 border border-violet-500 py-2 px-7 rounded-full font-medium text-white hover:bg-white hover:text-violet-500"
+                  className="bg-primary-500 border border-primary-500 py-2 px-7 rounded-full font-medium text-white hover:bg-white hover:text-primary-500"
                 >
                   Start Now
                 </Button>
@@ -141,7 +141,7 @@ const AdvancedTemplate = () => (
           <Section className="flex justify-center mt-5">
             <Button
               href="https://codeshaper.net/contact-us"
-              className="bg-violet-500 border border-violet-500 py-2.5 px-7 rounded-full font-medium text-white hover:bg-white hover:text-violet-500"
+              className="bg-primary-500 border border-primary-500 py-2.5 px-7 rounded-full font-medium text-white hover:bg-white hover:text-primary-500"
             >
               See More
             </Button>
@@ -154,7 +154,7 @@ const AdvancedTemplate = () => (
               <Column className="text-end pr-5">
                 <Button
                   href="https://codeshaper.net/contact-us"
-                  className="border border-violet-500 text-violet-500 py-2 px-7 rounded font-medium hover:bg-violet-500 hover:text-white"
+                  className="border border-primary-500 text-primary-500 py-2 px-7 rounded font-medium hover:bg-primary-500 hover:text-white"
                 >
                   More Tutorials
                 </Button>
@@ -203,7 +203,7 @@ const AdvancedTemplate = () => (
                 </Text>
                 <Button
                   href="https://codeshaper.net/contact-us"
-                  className="bg-violet-500 border border-violet-500 py-2 px-7 rounded-full font-medium text-white hover:bg-white hover:text-violet-500"
+                  className="bg-primary-500 border border-primary-500 py-2 px-7 rounded-full font-medium text-white hover:bg-white hover:text-primary-500"
                 >
                   Book Now
                 </Button>
@@ -225,7 +225,7 @@ const AdvancedTemplate = () => (
 
             <Button
               href="https://codeshaper.net/contact-us"
-              className="border border-violet-500 text-violet-500 py-2 px-7 rounded font-medium hover:bg-violet-500 hover:text-white"
+              className="border border-primary-500 text-primary-500 py-2 px-7 rounded font-medium hover:bg-primary-500 hover:text-white"
             >
               Contact Us
             </Button>
