@@ -63,14 +63,14 @@ const ThemeCustomize = ({
         </ScrollArea>
         <SheetFooter className="py-4 gap-3 lg:flex justify-between hidden  ">
           <Button asChild className="w-full">
-            <Link href="https://makkpress.com">Our Portfolio</Link>
+            <Link href="https://makkpress.com">Profile</Link>
           </Button>
           {/* <Button asChild className="w-full">
             <Link
               href="https://themeforest.net/user/codeshaperbd/portfolio"
               target="__blank"
             >
-              Our Portfolio
+              Profile
             </Link>
           </Button> */}
         </SheetFooter>

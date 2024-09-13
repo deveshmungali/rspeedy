@@ -547,7 +547,7 @@ export const menusConfig = {
             },
             {
               title: "create invoice",
-              href: "/create-invoice",
+              href: "/add-website-owner",
             },
             {
               title: "iunvoice-details",
@@ -555,7 +555,7 @@ export const menusConfig = {
             },
             {
               title: "iunvoice-list",
-              href: "/invoice-list",
+              href: "/website-owners-list",
             },
           ],
         },
@@ -1018,12 +1018,12 @@ export const menusConfig = {
         child: [
           {
             title: "Website Owners List",
-            href: "/invoice-list",
+            href: "/website-owners-list",
             icon: Files,
           },
           {
             title: "Add Website Owners",
-            href: "/create-invoice",
+            href: "/add-website-owner",
             icon: Files,
           },
           {
@@ -1499,7 +1499,7 @@ export const menusConfig = {
         child: [
           {
             title: "Create invoice",
-            href: "/create-invoice",
+            href: "/add-website-owner",
           },
           {
             title: "invoice Details",
@@ -1507,7 +1507,7 @@ export const menusConfig = {
           },
           {
             title: "invoice List",
-            href: "/invoice-list",
+            href: "/website-owners-list",
           },
         ],
       },

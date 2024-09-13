@@ -68,7 +68,7 @@ export function DataTableToolbar({ table }) {
         )}
 
         <Button asChild>
-          <Link href="/create-invoice">
+          <Link href="/add-website-owner">
             <Plus className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
             Create Website Owners
           </Link>
