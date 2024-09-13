@@ -56,7 +56,7 @@ const ThemeCustomize = ({
             <SelectTheme />
             {/* <RtlSwitcher /> */}
             <ThemeChange />
-            <SidebarChange />
+            {/* <SidebarChange /> */}
             <SidebarImage />
             <HeaderStyle />
           </div>

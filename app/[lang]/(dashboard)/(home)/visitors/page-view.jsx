@@ -43,7 +43,7 @@ const DashboardPageView = ({ trans }) => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="dashtail-legend">
+            <div className="wordpressspeedy-legend">
               <UserDeviceReport />
             </div>
           </CardContent>

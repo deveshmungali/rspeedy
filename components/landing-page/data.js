@@ -450,7 +450,7 @@ export const menus = [
   },
   {
     title: "Why WordPress Speedy",
-    href: "#whyDashTail",
+    href: "#whywordpressspeedy",
   },
   {
     title: "Pricing",

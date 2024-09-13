@@ -60,7 +60,7 @@ const Footer = () => {
             <span className="text-3xl font-semibold">WordPress Speedy</span>
           </Link>
           <p className="text-base leading-7 text-default-200 dark:text-default-600 text-center mt-3">
-            DashTail is a developer-friendly, ready-to-use admin template designed for building attractive, scalable, and high-performing web applications, powered by the cutting-edge technologies of Next.js and Tailwind CSS.</p>
+            wordpressspeedy is a developer-friendly, ready-to-use admin template designed for building attractive, scalable, and high-performing web applications, powered by the cutting-edge technologies of Next.js and Tailwind CSS.</p>
           <div className="mt-9 flex justify-center flex-wrap gap-4">
             <Button asChild variant="outline" className="rounded text-primary-foreground border-primary">
               <Link href="/dashboard" target="__blank">View Demo</Link>
@@ -69,7 +69,7 @@ const Footer = () => {
               <Link href="/docs/introduction">View Documentation</Link>
             </Button>
             <Button asChild variant="outline" className="rounded text-primary-foreground border-primary">
-              <Link href="https://1.envato.market/dashtail-regular" target="__blank">Buy Now</Link>
+              <Link href="https://1.envato.market/wordpressspeedy-regular" target="__blank">Buy Now</Link>
             </Button>
           </div>
           <div className="mt-8 flex items-center justify-center flex-wrap gap-5">

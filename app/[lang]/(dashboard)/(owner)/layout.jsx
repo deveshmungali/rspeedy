@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Invoice"
+  title: "Owner"
 }
 const InvoiceLayout = ({ children }) => {
   return (

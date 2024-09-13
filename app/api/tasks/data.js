@@ -7,7 +7,7 @@ export const tasks = [
   {
     boardId: 1,
     id: 1,
-    title: "the dashtail template",
+    title: "the wordpressspeedy template",
     desc: "Create a Brand logo design for a Wordpress Speedy Admin.",
     status: "inprogress",
     tags: ["design", "planning"],
@@ -55,7 +55,7 @@ export const tasks = [
   {
     boardId: 2,
     id: 2,
-    title: "the dashtail template",
+    title: "the wordpressspeedy template",
     desc: "Create a Brand logo design for a Wordpress Speedy Admin.",
     status: "completed",
     tags: ["development", "planning"],
@@ -95,7 +95,7 @@ export const tasks = [
   {
     boardId: 3,
     id: 3,
-    title: "the dashtail template",
+    title: "the wordpressspeedy template",
     desc: "Create a Brand logo design for a Wordpress Speedy Admin.",
     status: "inprogress",
     tags: ["development", "planning"],

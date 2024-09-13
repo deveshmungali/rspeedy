@@ -17,7 +17,7 @@ import {
 import { Tailwind } from "@react-email/tailwind";
 import * as React from "react";
 
-import DashTailLogo from "@/public/images/logo/logo-2.png"
+import wordpressspeedyLogo from "@/public/images/logo/logo-2.png"
 export const ResetPassword = () => {
   return (
     <Html>
@@ -30,7 +30,7 @@ export const ResetPassword = () => {
               <Row>
                 <Column className="flex justify-center">
                   <Img
-                    src={DashTailLogo.src}
+                    src={wordpressspeedyLogo.src}
                     alt="Dropbox"
                     style={logo}
                   />
