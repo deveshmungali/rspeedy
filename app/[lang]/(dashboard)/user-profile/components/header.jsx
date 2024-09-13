@@ -25,7 +25,7 @@ const Header = () => {
       </Breadcrumbs>
       <Card className="mt-6 rounded-t-2xl ">
         <CardContent className="p-0">
-          <div className="relative h-[200px] lg:h-[296px] rounded-t-2xl w-full object-cover bg-no-repeat"
+          <div className="relative h-[200px] lg:h-[296px] rounded-t-2xl w-full bg-cover object-cover bg-no-repeat"
             style={{ backgroundImage: `url(${coverImage.src})` }}
           >
             <div className="flex justify-end pt-6 pr-6  divide-x divide-primary-foreground  gap-4">
