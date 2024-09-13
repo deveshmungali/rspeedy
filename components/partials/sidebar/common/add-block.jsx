@@ -11,15 +11,15 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 const AddBlock = ({
   className,
   image = thumbnail,
-  title = "Storage capacity",
-  desc = " Out of your total storage on Premium Plan, you have used up 40%.",
+  title = "Basic Plan",
+  desc = " You have choose a Basic Plan",
 }) => {
   const [openVideo, setOpenVideo] = useState(false);
   return (
     <>
       <div
         className={cn(
-          "bg-primary dark:bg-default-400 text-primary-foreground pt-5 pb-4 px-4  rounded  mx-3 hidden xl:block",
+          "bg-primary dark:bg-default-400 text-primary-foreground pt-5 pb-4 px-4 mt-3 rounded  mx-3 hidden xl:block",
           className
         )}
       >
@@ -27,9 +27,9 @@ const AddBlock = ({
           {" "}
           {title}
         </div>
-        <div className={cn(" text-sm text-primary-foreground")}>{desc}</div>
+        <div className={cn(" text-sm text-primary-foreground mt-2")}>{desc}</div>
         <div className="mt-4 relative">
-          <Image src={image} alt="footer-thumbnail" className="w-full h-full" />
+          <Image src={image} alt="footer-thumbnail" className="w-full h-1/2" />
           <Button
             size="icon"
             type="button"
