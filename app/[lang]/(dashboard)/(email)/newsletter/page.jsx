@@ -3,170 +3,389 @@
 import { SiteLogo } from "@/components/svg";
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs";  
-import Link from "next/link";
+import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs";
+import InputGroupsButton from "./input-groups-button";
 
-import { Switch } from "@/components/ui/switch";
-
+import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+
+import rd1 from "@/public/images/all-img/rd-1.jpg";
+import rd2 from "@/public/images/all-img/rd-2.png";
+import rd3 from "@/public/images/all-img/rd-3.png";
+import rd4 from "@/public/images/all-img/rd-4.png";
+import rd5 from "@/public/images/all-img/rd-5.png";
+import rd6 from "@/public/images/all-img/rd-6.png";
+import Image from "next/image";
 
 
-const Speed = () => {
+const Newsletter = () => {
+  const [selected, setSelected] = useState("rdc_1");
+  const handleValueChange = value => setSelected(value)
 
   return (
     <div>
       <Breadcrumbs>
-        <BreadcrumbItem>Pages</BreadcrumbItem>
-        <BreadcrumbItem>Wordpress DashBoard</BreadcrumbItem>
-        <BreadcrumbItem>Speed Packages</BreadcrumbItem>
+        <BreadcrumbItem>Email</BreadcrumbItem>
+        <BreadcrumbItem>Newsletter Template</BreadcrumbItem>
       </Breadcrumbs>
 
-      <div className="flex mt-6 flex-col gap-4">
-        <div className="p-3 rounded-lg bg-green-300 border-2 border-green-600">
-          <div className="flex justify-between items-center">
-            <p> Need assistance with Website Speedy? Schedule a 15-minute meeting with one of our experts.</p>
-            <Button className="bg-green-600"> Book An Appointment </Button>
+      <h2 className="flex justify-center mt-5 text-2xl font-bold"> Newsletter Template </h2>
+
+      <div className="flex bg-background flex-col gap-4 w-full mt-3 p-5 rounded-xl">
+        <div className="flex justify-between w-full items-center">
+          <div>
+            <InputGroupsButton />
           </div>
-        </div>
-      </div>
-
-      <div className="flex mt-6 flex-col gap-4">
-        <div className="p-3 rounded-lg bg-primary-300 border-2 bg-primary-300">
-          <div className="flex justify-between items-center">
-            <p> Connect With Your WordPress Speedy Plugin in Wordpress. </p>
-            <a href="./dats.js" download>
-              <Button className="bg-primary-600"> Connect </Button>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex mt-6 flex-col gap-4">
-        <div className="p-6 rounded-lg bg-primary-300 border-2 bg-primary-300">
-          <div className="flex justify-between items-center">
-            <div className="flex flex-col">
-              <h3 className="font-bold"> Cache purge required </h3>
-              <p> After you are done fine-tuning your settings, to apply your new settings configuration immediately, you must purge all your cache. </p>
-            </div>
-            <div className="flex gap-2">
-              <Button> Purge Now </Button>
-              <Button variant="outline"> Dismiss </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center mt-6 gap-2 p-3">
-        <h3 className="text-2xl font-bold uppercase mb-3"> WordPress Speed Package </h3>
-
-        <div className="rounded-xl border-2 p-5 w-full bg-background">
-          <div className="flex justify-between items-center mb-3">
-            <div>
-              <h3 className="text-lg font-bold"> Optimization Modes </h3>
-              <p className="text-md"> Select from our range of predefined optimization modes to boost your site's performance. </p>
-            </div>
-            <a className="text-primary-800" href=""> See modes comparison </a>
-          </div>
-
-          <hr />
-
-          <div className="flex mt-3 gap-3">
-            <div className="w-1/3 hover:bg-primary-200 hover:border-primary-600 rounded-xl flex flex-col gap-4 border-2 p-3">
-              <h3 className="font-bold text-lg"> Basic </h3>
-              <p> Standard optimization features enabled for your site. Ideal choice for maximum stability. </p>
-              <Button variant="outline"> Select Mode</Button>
-            </div>
-
-            <div className="w-1/3 hover:bg-primary-200 hover:border-primary-600 rounded-xl flex flex-col gap-4 border-2 p-3">
-              <h3 className="font-bold text-lg"> Advance </h3>
-              <p> Standard optimization features enabled for your site. Ideal choice for maximum stability. </p>
-              <Button variant="outline"> Select Mode</Button>
-            </div>
-
-            <div className="w-1/3 hover:bg-primary-200 hover:border-primary-600 rounded-xl flex flex-col gap-4 border-2 p-3">
-              <h3 className="font-bold text-lg"> Custom </h3>
-              <p> Standard optimization features enabled for your site. Ideal choice for maximum stability. </p>
-              <Button variant="outline"> Select Mode</Button>
-            </div>
+          <div>
+            <Button> Create Template </Button>
           </div>
         </div>
 
-        <div className="rounded-xl border-2 p-5 w-full bg-background">
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex flex-col">
-              <h3 className="text-lg font-bold"> Speed Insiders </h3>
-              <p className="text-md"> Sign up to be among the first to try new features before their public release.
-                <a className="text-primary-400" href=""> Learn more about our Speed Insiders Program. </a>
-              </p>
-            </div>
-            <Switch unChecked> </Switch>
-          </div>
+        <div className="grid grid-cols-5 gap-3">          
+          <div className="flex flex-col py-3 gap-2 w-full bg-primary-100 border-primary-500 border-t-4 rounded-xl">
+            <h4 className="text-md p-2 w-full font-semibold text-center"> Welcome </h4>
+            <hr className="w-full" />
 
-          <hr />
-
-          <div className="flex justify-between items-center mt-6">
-            <div className="flex flex-col">
-              <div className="flex gap-4 items-center">
-                <h3 className="text-lg font-bold"> Additional domains </h3>
-                <h6 className="bg-cyan-300 text-xs rounded px-2 py-1"> NEW </h6>
-              </div>
-              <p className="text-md"> Specify additional domain names pointing to the same website.
-                <a className="text-primary-400" href=""> Learn more </a>
-              </p>
-            </div>
-            <Switch unChecked> </Switch>
-          </div>
-          
-          <div className="mt-6 bg-cyan-200 p-3 rounded mb-6">
-            <p> This feature is available on Scale subscription. 
-              <a className="font-bold text-md text-primary-600" href=""> Upgrade Now </a>
-            </p>
-          </div>
-
-          <hr />
-
-          <div className="flex flex-col mt-6">
-            <h3 className="text-lg font-bold"> WordPress Speedy badge </h3>
-            <p className="text-md"> As a free plan user you get a WordPress Speedy badge in the footer of your site.</p>
-
-            <div className="flex flex-col gap-3 mt-5">
-              <p className="text-md"> Select badge theme: </p>
+            <div className="flex flex-col gap-3">
               <RadioGroup
-                className="flex flex-col gap-6"
-                defaultValue="disabled"
+                defaultValue="rdc_1"
+                onValueChange={handleValueChange}
+                className="mx-2"
               >
-                <RadioGroupItem value="light" id="light">
-                  <div className="flex gap-6 items-center">
-                    <p> Light </p>
-                    <div className="flex gap-3 rounded-lg border-2 py-3 px-5 rounded">
-                      <img src="" alt="" />
-                      <hr />
-                      <p> Automated page speed optimizations for fast site performance </p>
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Advance </h4>
+                  <Label htmlFor="rdc_1">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_1" })}>
+                      <RadioGroupItem value="rdc_1" id="rdc_1" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_1"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd1} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
                     </div>
-                  </div>
-                </RadioGroupItem>
-                <RadioGroupItem value="dark" id="dark">
-                <div className="flex gap-6 items-center">
-                    <p> Dark </p>
-                    <div className="flex gap-3 bg-primary-600 text-white rounded-lg py-3 px-5 rounded">
-                      <img src="" alt="" />
-                      <hr />
-                      <p> Automated page speed optimizations for fast site performance </p>
+                  </Label>
+                </div>
+              </div>
+
+
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Basic </h4>
+                  <Label htmlFor="rdc_2">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_2" })}>
+                      <RadioGroupItem value="rdc_2" id="rdc_2" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_2"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd2} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
                     </div>
-                  </div>
-                </RadioGroupItem>
-                <RadioGroupItem value="disabled" id="disabled"> Disabled </RadioGroupItem>
+                  </Label>
+                </div>
+              </div>
+
               </RadioGroup>
             </div>
+
           </div>
 
-          <Button className="mt-6"> Save </Button>
+          <div className="flex flex-col py-3 gap-2 w-full bg-primary-100 border-primary-500 border-t-4 rounded-xl">
+            <h4 className="text-md p-2 w-full font-semibold text-center"> Agency </h4>
+            <hr className="w-full" />
 
-        </div>  
+            <div className="flex flex-col gap-3">
+              <RadioGroup
+                defaultValue="rdc_3"
+                onValueChange={handleValueChange}
+                className="mx-2"
+              >
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Shop </h4>
+                  <Label htmlFor="rdc_3">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_3" })}>
+                      <RadioGroupItem value="rdc_3" id="rdc_3" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_3"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd3} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
+                    </div>
+                  </Label>
+                </div>
+              </div>
+
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Shopping Cart </h4>
+                  <Label htmlFor="rdc_4">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_4" })}>
+                      <RadioGroupItem value="rdc_4" id="rdc_4" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_4"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd1} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
+                    </div>
+                  </Label>
+                </div>
+              </div>
+
+              </RadioGroup>
+            </div>
+
+          </div>
+
+          <div className="flex flex-col py-3 gap-2 w-full bg-primary-100 border-primary-500 border-t-4 rounded-xl">
+            <h4 className="text-md p-2 w-full font-semibold text-center"> Corporate </h4>
+            <hr className="w-full" />
+
+            <div className="flex flex-col gap-3">
+              <RadioGroup
+                defaultValue="rdc_1"
+                onValueChange={handleValueChange}
+                className="mx-2"
+              >
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Advance </h4>
+                  <Label htmlFor="rdc_1">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_1" })}>
+                      <RadioGroupItem value="rdc_1" id="rdc_1" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_1"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd1} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
+                    </div>
+                  </Label>
+                </div>
+              </div>
+
+              </RadioGroup>
+            </div>
+
+          </div>
+
+          <div className="flex flex-col py-3 gap-2 w-full bg-primary-100 border-primary-500 border-t-4 rounded-xl">
+            <h4 className="text-md p-2 w-full font-semibold text-center"> Blog </h4>
+            <hr className="w-full" />
+
+            <div className="flex flex-col gap-3">
+              <RadioGroup
+                defaultValue="rdc_1"
+                onValueChange={handleValueChange}
+                className="mx-2"
+              >
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Advance </h4>
+                  <Label htmlFor="rdc_1">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_1" })}>
+                      <RadioGroupItem value="rdc_1" id="rdc_1" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_1"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd1} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
+                    </div>
+                  </Label>
+                </div>
+              </div>
+
+
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Basic </h4>
+                  <Label htmlFor="rdc_2">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_2" })}>
+                      <RadioGroupItem value="rdc_2" id="rdc_2" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_2"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd2} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
+                    </div>
+                  </Label>
+                </div>
+              </div>
+
+              </RadioGroup>
+            </div>
+
+          </div>
+
+          <div className="flex flex-col py-3 gap-2 w-full bg-primary-100 border-primary-500 border-t-4 rounded-xl">
+            <h4 className="text-md p-2 w-full font-semibold text-center"> Photography </h4>
+            <hr className="w-full" />
+
+            <div className="flex flex-col gap-3">
+              <RadioGroup
+                defaultValue="rdc_1"
+                onValueChange={handleValueChange}
+                className="mx-2"
+              >
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Advance </h4>
+                  <Label htmlFor="rdc_1">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_1" })}>
+                      <RadioGroupItem value="rdc_1" id="rdc_1" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_1"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd1} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
+                    </div>
+                  </Label>
+                </div>
+              </div>
+
+
+              <div className="border-2 rounded-xl border-transparent hover:border-primary-400">
+                <div className="bg-background rounded-xl">
+                  <h4 className="text-sm font-semibold text-center pt-4"> Basic </h4>
+                  <Label htmlFor="rdc_2">
+                    <div className={cn("flex flex-col justify-center items-center rounded-md py-2 relative ", { "": selected === "rdc_2" })}>
+                      <RadioGroupItem value="rdc_2" id="rdc_2" className={cn("absolute -top-8 right-3 opacity-0 invisible", {
+                        "visible opacity-100": selected === "rdc_2"
+                      })}> </RadioGroupItem>
+
+                      <div>
+                        <div className="h-auto w-full mb-2">
+                          <Image src={rd2} className="w-full h-full object-cover rounded-t-sm" alt="" />
+                        </div>
+                        <div className="p-2">
+                          <h4 className="text-sm font-semibold text-default-500">This is a banana. Banana is yellow</h4>
+                          <p className="mt-2 text-xs text-default-500">A banana is a curved, yellow fruit with a thick skin and soft sweet flesh.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-5 justify-between mx-3">
+                        <Button variant="outline"> View </Button>
+                        <Button> Send </Button>
+                      </div>
+                      
+                    </div>
+                  </Label>
+                </div>
+              </div>
+
+              </RadioGroup>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Speed;
+export default Newsletter;

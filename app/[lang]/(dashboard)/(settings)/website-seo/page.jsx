@@ -86,7 +86,7 @@ const WebsiteSeo = () => {
 
             <div className="flex flex-col justify-center w-1/2 border-4 rounded-xl p-3">
               <div className="flex gap-3 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="primary" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"/>
                   <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
                   <path d="M2 12h20"/>
@@ -147,7 +147,7 @@ const WebsiteSeo = () => {
             </div>
 
             <div className="w-1/4 hover:bg-primary-200 hover:border-primary-600 rounded-xl flex flex-col gap-4 border-2 p-3">
-              <h3 className="font-bold text-lg"> Custom </h3>
+              <h3 className="font-bold text-lg"> Premium </h3>
               <p> Standard optimization features enabled for your site. Ideal choice for maximum stability. </p>
               <Button variant="outline"> Select Mode</Button>
             </div>
