@@ -97,7 +97,7 @@ const WebsiteSeo = () => {
               <hr className="my-2" />
 
               <h4 className="text-primary-600 text-2xl font-bold"> Farm House in Lahore </h4>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam, accusamus expedita aliquam quaerat hic recusandae, modi unde eligendi rerum animi vel eos perspiciatis quis consequuntur! Quae, laborum eius. Voluptatem commodi eaque molestiae excepturi iure omnis adipisci minima neque optio exercitationem assumenda, a impedit facilis veritatis, molestias sed ab repellat, necessitatibus eius accusamus ipsa ullam hic! Repudiandae veniam fugiat nihil nostrum ut nam voluptatibus dolorem, deleniti doloribus nemo ipsum tempor... </p>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam, accusamus expedita aliquam quaerat hic recusandae, modi unde eligendi rerum animi vel eos perspiciatis quis consequuntur! Quae, laborum eius. Voluptatem commodi eaque molestiae excepturi iure omnis adipisci minima neque optio exercitationem assumenda, a impedit facilis veritatis, molestias sed ab repellat, necessitatibus eius accusamus ipsa ullam hic! Repudiandae veniam fugiat nihil nostrum ut nam voluptatibus dolorem, deleniti doloribus nemo ipsum tempor...  </p>
 
               <div className="flex justify-end gap-3 mt-5">
                 <div className="bg-primary-400 rounded-3xl p-2">
