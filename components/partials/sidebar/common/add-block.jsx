@@ -23,26 +23,26 @@ const AddBlock = ({
           className
         )}
       >
-        <div className={cn("text-base font-semibold text-primary-foreground")}>
+        <div className={cn("text-base font-semibold flex items-center justify-between text-primary-foreground")}>
           {" "}
           {title}
+          <div className="relative">
+            <Button
+              size="icon"
+              type="button"
+              color="secondary"
+              className="rounded-full opacity-60"
+              onClick={() => setOpenVideo(true)}
+            >
+              <Icon
+                icon="heroicons:play-16-solid"
+                className="w-5 h-5 text-black"
+              />
+            </Button>
+          </div>
         </div>
-        <div className={cn(" text-sm text-primary-foreground mt-2")}>{desc}</div>
-        <div className="mt-4 relative">
-          <Image src={image} alt="footer-thumbnail" className="w-full h-1/2" />
-          <Button
-            size="icon"
-            type="button"
-            color="secondary"
-            className="rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40"
-            onClick={() => setOpenVideo(true)}
-          >
-            <Icon
-              icon="heroicons:play-16-solid"
-              className="w-5 h-5 text-white"
-            />
-          </Button>
-        </div>
+        <div className={cn(" text-xs text-primary-foreground mt-2")}>{desc}</div>
+        
         {/* <div className="text-sm font-semibold  text-primary-foreground flex items-center gap-2 mt-4">
           Upgrade Now
           <Icon icon="heroicons:arrow-long-right" className="w-5 h-5" />{" "}
@@ -60,7 +60,7 @@ const AddBlock = ({
           <iframe
             width="100%"
             height="315"
-            src="https://www.youtube.com/embed/8D6b3McyhhU?si=zGOlY311c21dR70j"
+            src="https://www.youtube.com/embed/xznnxfg1srQ?si=4k40kPbo66Q4onvC&autoplay=1"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

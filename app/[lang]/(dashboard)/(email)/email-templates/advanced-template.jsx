@@ -17,7 +17,6 @@ import * as React from "react";
 import { Tailwind } from "@react-email/tailwind";
 import logo from "@/public/images/logo/logo-2.png"
 import logo2 from "@/public/images/logo/logo-1.png"
-import Wordpressspeedy from "@/public/images/all-img/wordpressspeedy-screenshot.png"
 import avatar from "@/public/images/avatar/avatar-3.jpg"
 import clock from "@/public/images/chart/clock.png"
 import blog1 from "@/public/images/all-img/email-blog-1.jpg"
@@ -57,7 +56,7 @@ const AdvancedTemplate = () => (
               </Column>
               <Column className="pr-5 w-1/2">
                 <Img
-                  src={Wordpressspeedy.src}
+                  src={logo.src}
                   alt="Wordpressspeedy"
                   className="w-full h-full object-cover pl-6"
                 />
