@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs"; 
 import Link from "next/link";
 import { CircularProgress} from "./progress";
+import { Progress } from "@/components/ui/progress";
 
 import { Switch } from "@/components/ui/switch";
 
@@ -52,12 +53,71 @@ const WebsiteSeo = () => {
 
           <hr />
 
-          <div className="flex mt-3 gap-3">
+          <div className="flex mt-3 gap-5">
             <div className="flex w-1/2 gap-4 items-center">
-             <CircularProgress value="80" showValue />
-             <div className="flex flex-col w-full gap-2 p-5 rounded-xl bg-primary-200">
+             <CircularProgress value="91" showValue />
 
+             <div className="flex flex-col w-full gap-4 p-5 rounded-xl bg-primary-200 border-2 border-transparent hover:border-primary-600 hover:bg-transparent transition ease-in-out duration-700">
+              <div>
+                  <div className="flex justify-between">
+                    <h6 className="text-sm font-semibold"> Passed Tests </h6>
+                    <h6 className="text-sm font-semibold"> 26 / 29 </h6>
+                  </div>
+                  <Progress value="85" color="primary" isStripe isAnimate />
+                </div>
+
+                <div>
+                  <div className="flex justify-between">
+                    <h6 className="text-sm font-semibold"> Warning Tests </h6>
+                    <h6 className="text-sm font-semibold"> 0 / 29 </h6>
+                  </div>
+                  <Progress value="0" color="warning" isStripe isAnimate />
+                </div>
+
+                <div>
+                  <div className="flex justify-between">
+                    <h6 className="text-sm font-semibold"> Failed Tests </h6>
+                    <h6 className="text-sm font-semibold"> 3 / 29 </h6>
+                  </div>
+                  <Progress value="11" color="destructive" isStripe isAnimate />
+                </div>
              </div>
+            </div>
+
+            <div className="flex flex-col justify-center w-1/2 border-4 rounded-xl p-3">
+              <div className="flex gap-3 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                  <path d="M2 12h20"/>
+                </svg>
+                <h6> https://wordpressspeedy.com </h6>
+              </div>
+
+              <hr className="my-2" />
+
+              <h4 className="text-primary-600 text-2xl font-bold"> Farm House in Lahore </h4>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam, accusamus expedita aliquam quaerat hic recusandae, modi unde eligendi rerum animi vel eos perspiciatis quis consequuntur! Quae, laborum eius. Voluptatem commodi eaque molestiae excepturi iure omnis adipisci minima neque optio exercitationem assumenda, a impedit facilis veritatis, molestias sed ab repellat, necessitatibus eius accusamus ipsa ullam hic! Repudiandae veniam fugiat nihil nostrum ut nam voluptatibus dolorem, deleniti doloribus nemo ipsum tempor... </p>
+
+              <div className="flex justify-end gap-3 mt-5">
+                <div className="bg-primary-400 rounded-3xl p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                </div>
+                <div className="bg-primary-400 rounded-3xl p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                  </svg>
+                </div>
+                <div className="bg-primary-400 rounded-3xl p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>

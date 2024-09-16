@@ -175,15 +175,15 @@ const CircularProgress = React.forwardRef(
             className="flex items-center justify-center gap-2 flex-col text-black"
             x="50"
             y="50"
-            fontSize="8"
-            fontWeight="semibold"
+            fontSize="10"
+            fontWeight="bold"
             textAnchor="middle"
             alignmentBaseline="middle"
             >
               {customContent ? customContent : value + `/100`}
               <tspan 
                 x="50"
-                dy="1.8em"
+                dy="2.2em"
                 fontSize="4"
                 fontWeight="bold"
               > SEO SCORE 
