@@ -16,8 +16,8 @@ export const useThemeStore = create(
         if (value === "semibox") {
           useSidebar.setState({ sidebarType: "popover" });
         }
-        if (value === "horizontal") {
-          useSidebar.setState({ sidebarType: "classic" });
+        if (value === "vertical") {
+          useSidebar.setState({ sidebarType: "module" });
         }
         //
         if (value === "horizontal") {
