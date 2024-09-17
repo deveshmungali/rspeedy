@@ -21,12 +21,23 @@ import {
     // StepDescription,
   } from "@/components/ui/steps";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { array } from "zod";
 const CustomizationPage = () => {
   const { theme } = useTheme();
   const[showsteps , setShowsteps]  = useState(false);
   const[showExtra , setShowExtra]  = useState(false);
   const steps = ["First Step", "Second Step"];
+
+  const [ country, setCountry ] = useState([]);
+  useEffect(() => {
+    fetch( 'https://api.first.org/data/v1/countries')
+      .then((res) => res.json())
+      .then((data) => {
+        setCountry(Object.values(data.data));
+      })
+  }, [])
+
   return (
     <div className='min-h-screen  overflow-y-auto flex justify-center items-center p-5'>
       <div className='w-full flex flex-col items-center'>
@@ -58,16 +69,19 @@ const CustomizationPage = () => {
         Select Country
       </Label>
       <Select className="w-[50%]">
-      <SelectTrigger>
-        <SelectValue placeholder="Select a subject" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectItem value="english">English</SelectItem>
-        <SelectItem value="mathmatics">Mathmatics</SelectItem>
-        <SelectItem value="physics">Physics</SelectItem>
-        <SelectItem value="chemistry">Chemistry</SelectItem>
-        <SelectItem value="biology">Biology</SelectItem>
-      </SelectContent>
+
+        <SelectTrigger>
+          <SelectValue placeholder="Select a Country" />
+        </SelectTrigger>
+
+        <SelectContent className="max-h-[200px] overflow-y-scroll">
+        {Array.isArray(country) && country.map((it) => (
+          <SelectItem key={it.country} value={it.country}>
+            {it.country}
+          </SelectItem>
+        ))}
+        </SelectContent>
+
     </Select>
     </div>
     <div className="selc-dropdown w-[50%] text-left">
