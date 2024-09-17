@@ -33,6 +33,7 @@ const CustomizationPage = () => {
   const [showsteps, setShowsteps] = useState(false);
   const [showExtra, setShowExtra] = useState(false);
   const [websiteUrl, setWebsiteUrl] = useState('');
+  const [websiteName, setWebsiteName] = useState('');
   const steps = ["First Step", "Second Step"];
 
   const [country, setCountry] = useState([]);
@@ -59,7 +60,7 @@ const CustomizationPage = () => {
       OptimizerEnabled: true,
       OptimizerImageQuality: 85,
       OptimizerEnableWebP: true,
-      Name: 'abhishek-zuber',
+      Name: websiteName.trim(),
     };
   
     try {
@@ -154,28 +155,28 @@ const CustomizationPage = () => {
                   Which of The Following describes you/your company?
                 </p>
                 <div className="optionList mt-[20px] flex flex-wrap items-center gap-[20px]">
-                  <Checkbox radius="xl" color="success" id="circle_1">
+                  <Checkbox radius="xl" color="success" id="circle_www1">
                     Ecommerce & retail website
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_2">
+                  <Checkbox radius="xl" color="success" id="circleueue2">
                     B2B Website
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_3">
+                  <Checkbox radius="xl" color="success" id="circle77373">
                     Agency
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_4">
+                  <Checkbox radius="xl" color="success" id="circle6737">
                     Consultant / Freelancer
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_5">
+                  <Checkbox radius="xl" color="success" id="circle667375">
                     Lead Generation website
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_7">
+                  <Checkbox radius="xl" color="success" id="circlehghjjj">
                     Non-ecommerce content website
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_7">
+                  <Checkbox radius="xl" color="success" id="circleggg">
                     Directories /Portals/Blogs
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_7">
+                  <Checkbox radius="xl" color="success" id="circledhhd">
                     Company / Enterprise
                   </Checkbox>
                 </div>
@@ -185,16 +186,16 @@ const CustomizationPage = () => {
                   What is your Role in your company?
                 </p>
                 <div className="optionList mt-[20px] flex flex-wrap items-center gap-[20px]">
-                  <Checkbox radius="xl" color="success" id="circle_1">
+                  <Checkbox radius="xl" color="success" id="circle_1dere">
                     Owner/Founder
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_2">
+                  <Checkbox radius="xl" color="success" id="circle2233">
                     Developer
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_3">
+                  <Checkbox radius="xl" color="success" id="circle6377e3">
                     Marketing
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_7">
+                  <Checkbox radius="xl" color="success" id="circle_ddff7">
                     Other
                   </Checkbox>
                 </div>
@@ -222,7 +223,7 @@ const CustomizationPage = () => {
                   What is your website platforms
                 </p>
                 <div className="optionList mt-[20px] flex flex-wrap items-center gap-[20px]">
-                  <Checkbox radius="xl" color="success" id="circle_1">
+                  <Checkbox radius="xl" color="success" id="circledd_1">
                     Woocommerce
                   </Checkbox>
                   <Checkbox radius="xl" color="success" id="circle_2">
@@ -237,13 +238,13 @@ const CustomizationPage = () => {
                   <Checkbox radius="xl" color="success" id="circle_5">
                     WordPress Speedy
                   </Checkbox>
-                  <Checkbox radius="xl" color="success" id="circle_7">
+                  <Checkbox radius="xl" color="success" id="circle_dhghd7">
                     Custom Plugins
                   </Checkbox>
                   <Checkbox
                     radius="xl"
                     color="success"
-                    id="circle_7"
+                    id="circle_8"
                     value={showExtra}
                     //   checked={showExtra}
                     onChange={() => setShowExtra(!showExtra)}
@@ -260,6 +261,13 @@ const CustomizationPage = () => {
                   <Input type="text" placeholder="other platform" />
                 </div>
               }
+               <div>
+                  <div className="formOption mt-[20px] mb-[10px] text-lg font-semibold">
+                     Name
+                  </div>
+                  <Input type="text" placeholder="website name " value={websiteName}
+              onChange={(e) => setWebsiteName(e.target.value)} />
+                </div>
               <div className="formOption mt-[20px] mb-[10px] text-lg font-semibold">
                 Add Website URL
               </div>
