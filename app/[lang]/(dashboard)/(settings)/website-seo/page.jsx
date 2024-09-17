@@ -46,8 +46,20 @@ const WebsiteSeo = () => {
               </div>
             </div>
             <div className="flex gap-3">
-              <Button variant="outline"> Print </Button>
-              <Button> Download </Button>
+              <Button className="flex gap-2" variant="outline"> 
+                Print
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/>
+                  <rect x="6" y="14" width="12" height="8" rx="1"/>
+                </svg>
+              </Button>
+              <Button className="flex gap-2"> 
+                Download
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+                </svg>
+              </Button>
             </div>
           </div>
 
