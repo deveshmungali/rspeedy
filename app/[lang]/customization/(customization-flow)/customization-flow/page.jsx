@@ -21,12 +21,26 @@ import {
     // StepDescription,
   } from "@/components/ui/steps";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+// import { useState } from "react";
 const CustomizationPage = () => {
   const { theme } = useTheme();
   const[showsteps , setShowsteps]  = useState(false);
   const[showExtra , setShowExtra]  = useState(false);
   const steps = ["First Step", "Second Step"];
+    const [countries, setCountries] = useState([]);
+const [selectedCountry, setSelectedCountry] = useState("");
+ useEffect(() => {
+  fetch('https://restcountries.com/v3.1/all')
+    .then(response => response.json())
+    .then(data => {
+      // Sort the countries alphabetically by their common name
+      const sortedCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+      setCountries(sortedCountries);
+    })
+    .catch(error => console.error('Error fetching countries:', error));
+}, []);
+
   return (
     <div className='min-h-screen  overflow-y-auto flex justify-center items-center p-5'>
       <div className='w-full flex flex-col items-center'>
@@ -57,35 +71,45 @@ const CustomizationPage = () => {
       <Label htmlFor="sub1" className="mb-3">
         Select Country
       </Label>
-      <Select className="w-[50%]">
-      <SelectTrigger>
-        <SelectValue placeholder="Select a subject" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectItem value="english">English</SelectItem>
-        <SelectItem value="mathmatics">Mathmatics</SelectItem>
-        <SelectItem value="physics">Physics</SelectItem>
-        <SelectItem value="chemistry">Chemistry</SelectItem>
-        <SelectItem value="biology">Biology</SelectItem>
-      </SelectContent>
-    </Select>
+    
+
+
+<Select className="w-[50%]" onValueChange={(value) => setSelectedCountry(value)}>
+  <SelectTrigger>
+    <SelectValue placeholder="Select a country" />
+  </SelectTrigger>
+  <SelectContent>
+    {countries.map((country, index) => (
+      <SelectItem key={index} value={country.cca2}>
+        {country.name.common}
+      </SelectItem>
+    ))}
+  </SelectContent>
+</Select>
+
     </div>
     <div className="selc-dropdown w-[50%] text-left">
-    <Label htmlFor="sub1" className="mb-3">
-        Industry Type:
-      </Label>
-    <Select className="w-[50%]">
-      <SelectTrigger>
-        <SelectValue placeholder="Select a subject" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectItem value="english">English</SelectItem>
-        <SelectItem value="mathmatics">Mathmatics</SelectItem>
-        <SelectItem value="physics">Physics</SelectItem>
-        <SelectItem value="chemistry">Chemistry</SelectItem>
-        <SelectItem value="biology">Biology</SelectItem>
-      </SelectContent>
-    </Select>
+    <Label htmlFor="industry" className="mb-3">
+  Industry Type:
+</Label>
+<Select className="w-[50%]">
+  <SelectTrigger>
+    <SelectValue placeholder="Select an industry type" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="technology">Technology</SelectItem>
+    <SelectItem value="finance">Finance</SelectItem>
+    <SelectItem value="healthcare">Healthcare</SelectItem>
+    <SelectItem value="education">Education</SelectItem>
+    <SelectItem value="manufacturing">Manufacturing</SelectItem>
+    <SelectItem value="retail">Retail</SelectItem>
+    <SelectItem value="consulting">Consulting</SelectItem>
+    <SelectItem value="hospitality">Hospitality</SelectItem>
+    <SelectItem value="media">Media & Entertainment</SelectItem>
+    <SelectItem value="realestate">Real Estate</SelectItem>
+  </SelectContent>
+</Select>
+
     </div>
       </div>
       <div className="tectoverOptions mt-[20px]">
