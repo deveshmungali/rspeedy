@@ -93,12 +93,17 @@ const CustomizationPage = () => {
         <SelectValue placeholder="Select a subject" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="english">English</SelectItem>
-        <SelectItem value="mathmatics">Mathmatics</SelectItem>
-        <SelectItem value="physics">Physics</SelectItem>
-        <SelectItem value="chemistry">Chemistry</SelectItem>
-        <SelectItem value="biology">Biology</SelectItem>
-      </SelectContent>
+    <SelectItem value="technology">Technology</SelectItem>
+    <SelectItem value="finance">Finance</SelectItem>
+    <SelectItem value="healthcare">Healthcare</SelectItem>
+    <SelectItem value="education">Education</SelectItem>
+    <SelectItem value="manufacturing">Manufacturing</SelectItem>
+    <SelectItem value="retail">Retail</SelectItem>
+    <SelectItem value="consulting">Consulting</SelectItem>
+    <SelectItem value="hospitality">Hospitality</SelectItem>
+    <SelectItem value="media">Media & Entertainment</SelectItem>
+    <SelectItem value="realestate">Real Estate</SelectItem>
+  </SelectContent>
     </Select>
     </div>
       </div>
