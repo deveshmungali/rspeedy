@@ -58,6 +58,29 @@ const CustomizationPage = () => {
         Select Country
       </Label>
       <Select className="w-[50%]">
+<<<<<<< HEAD
+
+        <SelectTrigger>
+          <SelectValue placeholder="Select a Country" />
+        </SelectTrigger>
+
+        <SelectContent className="max-h-[250px] overflow-y-scroll">
+        {Array.isArray(country) && country.map((it) => (
+          <SelectItem key={it.country} value={it.country}>
+            {it.country}
+          </SelectItem>
+        ))}
+        </SelectContent>
+
+    </Select>
+    </div>
+    <div className="selc-dropdown w-[50%] text-left">
+    <Label htmlFor="sub1" className="mb-3">
+        Industry Type:
+      </Label>
+    <Select className="w-[50%]">
+=======
+>>>>>>> 3c7e0963b363faf8129c14b43efd005408c47524
       <SelectTrigger>
         <SelectValue placeholder="Select a subject" />
       </SelectTrigger>

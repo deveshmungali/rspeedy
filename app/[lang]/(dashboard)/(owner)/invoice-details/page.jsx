@@ -90,7 +90,7 @@ const InvoicePreview = () => {
               <div className="mt-6 border border-default-300 rounded-[10px] bg-gray-100">
                 <div className="p-5 flex gap-12 border-b border-gray-500 justify-between">
                   <span className="text-base text-m font-semibold text-default-900 text-primary">#93034</span>
-                  <Link className="text-m font-semibold text-default-900 text-primary capitalize"
+                  <Link className="text-m font-semibold text-default-900 text-primary"
                         href="https://aromaticgardenessence.com">
                           aromaticgardenessence.com
                   </Link>
@@ -159,13 +159,16 @@ const InvoicePreview = () => {
                   <div className="my-6 border border-default-300 rounded-[10px] bg-gray-200">
                     <div className="p-3 flex">
                       <div className="w-1/2 flex flex-col">
-                        <span> <b>Current View:</b> 0/100 ( 0% ) </span>
-                        <span className="pt-2"> <b>Add More Views:</b>
-                          <input 
-                            type="number" 
-                            className="ml-4 p-2 border border-gray-300 rounded-md" 
-                            placeholder="Enter number of views"
-                          />
+                        <span className="flex justify-between w-full"> <b>Current View: </b> 0/100 ( 0% ) </span>
+                        <span className="pt-2 flex gap-2 justify-between items-center"> <b>Add More Views:</b>
+                          <div className="flex gap-2 ">
+                            <input 
+                              type="number" 
+                              className="ml-4 p-2 border border-gray-300 rounded-md" 
+                              placeholder="Enter number of views"
+                            />
+                            <Button className="h-9"> Add Views </Button>
+                          </div>
                         </span>
                         <span> (Don't increment the view count if the goal is only to regenerate the script.) </span>
                       </div>

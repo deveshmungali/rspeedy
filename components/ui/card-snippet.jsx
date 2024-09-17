@@ -60,7 +60,7 @@ const CardSnippet = ({ title, code, children }) => {
           <CollapsibleContent className="CollapsibleContent">
             <SyntaxHighlighter
               language="javascript"
-              className=" rounded-md  text-sm mt-6 "
+              className=" rounded-md text-sm mt-6 "
               style={atomOneDark}
               customStyle={{
                 padding: "24px",
