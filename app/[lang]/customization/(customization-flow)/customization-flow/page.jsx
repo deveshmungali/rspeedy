@@ -74,7 +74,7 @@ const CustomizationPage = () => {
           <SelectValue placeholder="Select a Country" />
         </SelectTrigger>
 
-        <SelectContent className="max-h-[200px] overflow-y-scroll">
+        <SelectContent className="max-h-[250px] overflow-y-scroll">
         {Array.isArray(country) && country.map((it) => (
           <SelectItem key={it.country} value={it.country}>
             {it.country}

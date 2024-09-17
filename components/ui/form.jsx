@@ -114,7 +114,7 @@ const FormMessage = React.forwardRef(
       <p
         ref={ref}
         id={formMessageId}
-        className={cn("text-xs text-destructive leading-none px-1.5 py-2  rounded-0.5", className, {
+        className={cn("text-xs text-destructive leading-none px-1.5 py-2 rounded-0.5", className, {
           " bg-destructive text-destructive-foreground  inline-block":
             tooltip,
         })}
