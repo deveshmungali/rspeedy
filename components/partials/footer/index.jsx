@@ -83,7 +83,7 @@ const FooterContent = () => {
   return (
     <div className="block md:flex md:justify-between text-muted-foreground">
       <p className="sm:mb-0 text-xs md:text-sm">
-        COPYRIGHT © {new Date().getFullYear()} Wordpress Speddy All rights Reserved
+        COPYRIGHT © {new Date().getFullYear()} Wordpress Speedy All rights Reserved
       </p>
       <p className="mb-0 text-xs md:text-sm">
          Made by{" "}
@@ -92,7 +92,7 @@ const FooterContent = () => {
           target="__blank"
           href="https://codeshaper.net"
         >
-         Wordpress Speddy 
+         Wordpress Speedy 
         </a>
       </p>
     </div>
