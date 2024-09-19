@@ -48,7 +48,7 @@ const LogInForm = () => {
     resolver: zodResolver(schema),
     mode: "all",
     defaultValues: {
-      email: "WebsiteSpeedy@WordpressSpeedy.net",
+      email: "Websitespeddy@WordpressSpeedy.net",
       password: "password",
     },
   });

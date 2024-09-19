@@ -5,7 +5,7 @@ export const user = [
     name: "WordPress Speedy",
     image: avatar3,
     password: "password",
-    email: "WebsiteSpeedy@WordpressSpeedy.net",
+    email: "Websitespeddy@WordpressSpeedy.net",
     resetToken: null,
     resetTokenExpiry: null,
     profile: null,
