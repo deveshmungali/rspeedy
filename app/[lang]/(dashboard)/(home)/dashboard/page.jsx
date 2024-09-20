@@ -7,3 +7,4 @@ const Dashboard = async ({ params: { lang } }) => {
 };
 
 export default Dashboard;
+ 

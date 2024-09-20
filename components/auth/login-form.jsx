@@ -52,10 +52,9 @@ const LogInForm = () => {
       password: "password",
     },
   });
+
   const [isVisible, setIsVisible] = React.useState(false);
-
   const toggleVisibility = () => setIsVisible(!isVisible);
-
   const onSubmit = (data) => {
     startTransition(async () => {
       let response = await signIn("credentials", {
@@ -72,6 +71,7 @@ const LogInForm = () => {
       }
     });
   };
+  
   return (
     <div className="w-full py-10">
       <Link href="/dashboard" className="inline-block">
