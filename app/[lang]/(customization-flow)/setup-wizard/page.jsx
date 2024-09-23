@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@iconify/react";
 import { Checkbox } from "@/components/ui/checkbox";
+// import { useSession } from "next-auth/react";
 import {
   Select,
   SelectContent,
@@ -25,6 +26,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 // import { useState } from 'react';
 import { array } from "zod";
+import { useSession } from "next-auth/react";
 
 
 
@@ -45,41 +47,127 @@ const CustomizationPage = () => {
       });
   }, []);
 
-  const handleSubmit = async () => {
-    const postData = {
-      OriginUrl: websiteUrl,
-      EnableGeoZoneUS: true,
-      EnableGeoZoneEU: true,
-      BlockRootPathAccess: true,
-      EnableCacheSlice: true,
-      ZoneSecurityEnabled: true,
-      CacheControlMaxAgeOverride: 3600,
-      EnableAccessControlOriginHeader: true,
-      EnableTLS1: true,
-      VerifyOriginSSL: true,
-      OptimizerEnabled: true,
-      OptimizerImageQuality: 85,
-      OptimizerEnableWebP: true,
-      Name: websiteName.trim(),
-    };
+  const { data: session, status } = useSession();
+
+  if (status === "loading") {
+    return <p>Loading...</p>;
+  }
+
+  if (!session || !session.user) {
+    return <p>You are not logged in</p>;
+  }
+
+  const userEmail = session.user.email;
+  const selectedPlanId = session.user.selectedPlanId; 
+  const selectedWebsite = session.user.website_1;
+  console.log('user email', userEmail);
+  console.log('plan ', selectedPlanId);
+
+
   
+
+    const handleSubmit = async () => {
+    // setLoadingSubmit(true); // Start loading state
+
+    // Basic and Advanced plan settings
+    const basicSettings = {
+        EnableGeoZoneUS: true,
+        EnableGeoZoneEU: true,
+        BlockRootPathAccess: false,
+        EnableCacheSlice: true,
+        ZoneSecurityEnabled: false,
+        CacheControlMaxAgeOverride: 3600,
+        EnableAccessControlOriginHeader: true,
+        EnableTLS1: true,
+        VerifyOriginSSL: true,
+        // EnableSmartCache: true,
+        OptimizerEnabled: true,
+        OptimizerImageQuality: 85,
+        OptimizerEnableWebP: true,
+        StorageType: 'Pull', // Use pull zones for storage
+        DNSRecord: {
+            type: 'CNAME',
+            target: websiteUrl,
+            ttl: 3600,
+        },
+    };
+
+    const advancedSettings = {
+        ...basicSettings,
+        EnableImageOptimization: true,
+        EnableMinification: true,
+        EnableHTTP2: true,
+        EnableSmartCache: true,
+        CustomCacheRules: [
+            {
+                urlPattern: '/api/*',
+                duration: 30,
+            },
+            {
+                urlPattern: '/assets/*',
+                duration: 60,
+            },
+        ],
+        EnableContentCompression: true,
+        EnableLogging: true,
+        EnableAdvancedSecurity: true,
+        EnableRealTimeAnalytics: true,
+        StorageType: 'Storage', // Use storage zones for direct file storage
+        DNSRecord: {
+            type: 'CNAME',
+            target: websiteUrl,
+            ttl: 1800,
+        },
+        CustomDNSConfig: {
+            useCustomDNS: true,
+            primaryDNS: '1.1.1.1',
+            secondaryDNS: '1.0.0.1',
+        },
+    };
+
+    const settingsToUse = selectedPlanId === 1 ? basicSettings : advancedSettings;
+
+    const postData = {
+        OriginUrl: websiteUrl,
+        Name: websiteName.trim(),
+        ...settingsToUse, // Merge settings based on the selected plan
+    };
+
     try {
-      const response = await axios.post(
-        'https://api.bunny.net/pullzone',
-        postData,
-        {
-          headers: {
-            'Accesskey': '60757867-fa0e-4219-b0b8-30d831bc6e676ade6da9-471a-49fe-bb27-f1eb9509d061',
-            accept: 'application/json',
-            'content-type': 'application/json',
-          },
+        // Create Pull Zone
+        const pullZoneResponse = await axios.post(
+            'https://api.bunny.net/pullzone',
+            postData,
+            {
+                headers: {
+                    'AccessKey': 'dd348fd4-cd97-4d4a-92b8-cd4daedb9bbadce1d376-176c-4ab6-9406-8389bd522815', // Replace with your actual API key
+                    'Content-Type': 'application/json',
+                },
+            }
+        );
+        console.log('Pull Zone Response:', pullZoneResponse.data);
+
+        // Create Storage Zone if needed
+        if (selectedPlanId === 2) { // Example: create a storage zone for advanced plan
+            const storageZoneResponse = await axios.post(
+                'https://api.bunny.net/storagezone',
+                { name: websiteName.trim() },
+                {
+                    headers: {
+                        'AccessKey': 'dd348fd4-cd97-4d4a-92b8-cd4daedb9bbadce1d376-176c-4ab6-9406-8389bd522815', // Replace with your actual API key
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
+            console.log('Storage Zone Response:', storageZoneResponse.data);
         }
-      );
-      console.log('Response:', response.data);
+
+        // Handle success (navigate or show success message)
     } catch (error) {
-      console.error('Error posting data:', error);
-    }
-  };
+        console.error('Error posting data:', error);
+        
+    } 
+};
 
   return (
     <div className="min-h-screen  overflow-y-auto flex justify-center items-center p-5">
@@ -324,7 +412,7 @@ const CustomizationPage = () => {
                   <a>Previous</a>
                 </Button>
                 <Button asChild className="mt-9  md:min-w-[150px]" size="lg" onClick={handleSubmit}>
-                  <Link href="/dashboard">Submit</Link>
+                  <Link href="/speed">Submit</Link>
                 </Button>
               </div>
             </div>

@@ -15,30 +15,34 @@ function getLocale(request) {
 }
 
 export function middleware(request) {
-  // Check if there is any supported locale in the pathname
   const pathname = request.nextUrl.pathname;
-
+  
+  // Step 1: Check if the request is missing a locale in the URL
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
-  // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);
-
-    // e.g. incoming request is /products
-    // The new URL is now /en-US/products
-    return NextResponse.redirect(
-      new URL(`/${locale}/${pathname}`, request.url)
-    );
+    return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url));
   }
+
+  // Step 2: Handle authentication
+  const token = request.cookies.get('authToken'); // Assumes you store a token in a cookie called 'authToken'
+  
+  // If the user is not authenticated and they are trying to access a restricted page
+  if (!token && pathname === '/auth/logout') {
+    // Redirect to the logout page with the correct locale
+    const locale = getLocale(request);
+    return NextResponse.redirect(new URL(`/${locale}/panel/wordpressspeedy/en`, request.url));
+  }
+
+  // Additional redirection logic can be added here if necessary
 }
 
 export const config = {
   matcher: [
     // Skip all internal paths (_next, assets, api)
-    //"/((?!api|assets|.*\\..*|_next).*)",
     "/((?!api|assets|docs|.*\\..*|_next).*)",
-    // Optional: only run on root (/) URL
   ],
 };

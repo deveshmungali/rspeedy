@@ -1,7 +1,7 @@
 "use client"
 
 import { SiteLogo } from "@/components/svg";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbItem, Breadcrumbs } from "@/components/ui/breadcrumbs";  
 import Link from "next/link";
@@ -13,6 +13,23 @@ import { Input } from "@/components/ui/input";
 
 
 const Speed = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const cardData = [
+    { title: "Basic", description: "Standard optimization features enabled for your site. Ideal choice for maximum stability." },
+    { title: "Advance", description: "Standard optimization features enabled for your site. Ideal choice for maximum stability." },
+    { title: "Custom", description: "Standard optimization features enabled for your site. Ideal choice for maximum stability." },
+  ];
+
+  const handleToggle = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(null); // Toggle off if already active
+    } else {
+      setActiveIndex(index); // Set the active index
+      console.log(`Selected plan: ${cardData[index].title}`); // Log the selected plan
+      console.log(`Selected plan: ${[index]}`); // Log the selected plan
+    }
+  };
 
   return (
     <div>
@@ -66,28 +83,45 @@ const Speed = () => {
               <h3 className="text-lg font-bold"> Optimization Modes </h3>
               <p className="text-md"> Select from our range of predefined optimization modes to boost your site's performance. </p>
             </div>
-            <a className="text-primary-800" href=""> See modes comparison </a>
+            <a className="text-primary-800 text-end" href=""> See modes comparison </a>
           </div>
 
           <hr />
 
           <div className="flex mt-3 gap-3">
-            <div className="w-1/3 hover:bg-primary-200 hover:border-primary-600 rounded-xl flex flex-col gap-4 border-2 p-3">
-              <h3 className="font-bold text-lg"> Basic </h3>
-              <p> Standard optimization features enabled for your site. Ideal choice for maximum stability. </p>
-              <Button variant="outline"> Select Mode</Button>
-            </div>
-
-            <div className="w-1/3 hover:bg-primary-200 hover:border-primary-600 rounded-xl flex flex-col gap-4 border-2 p-3">
-              <h3 className="font-bold text-lg"> Advance </h3>
-              <p> Standard optimization features enabled for your site. Ideal choice for maximum stability. </p>
-              <Button variant="outline"> Select Mode</Button>
-            </div>
-
-            <div className="w-1/3 hover:bg-primary-200 hover:border-primary-600 rounded-xl flex flex-col gap-4 border-2 p-3">
-              <h3 className="font-bold text-lg"> Custom </h3>
-              <p> Standard optimization features enabled for your site. Ideal choice for maximum stability. </p>
-              <Button variant="outline"> Select Mode</Button>
+            <div className="flex gap-4">
+              {cardData.map((card, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleToggle(index)} // Pass the index to toggle
+                  className={`w-1/3 rounded-xl flex flex-col gap-4 border-2 p-3 ${
+                    activeIndex === index ? 'bg-primary-200 border-primary-600' : 'hover:bg-primary-200 hover:border-primary-600'
+                  }`}
+                >
+                  <h3 className="font-bold text-lg">{card.title}</h3>
+                  <p>{card.description}</p>
+                  <Button
+                    variant="outline"
+                    className={`${
+                      activeIndex === index ? 'bg-primary-600 text-white' : 'hover:bg-primary-200 hover:border-primary-600'
+                    }`}
+                  >
+                    {activeIndex === index ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      "Select Mode"
+                    )}
+                  </Button>
+                </div>
+              ))}
             </div>
           </div>
         </div>

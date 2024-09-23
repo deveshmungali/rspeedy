@@ -16,6 +16,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import MenuOverlayPortal from "./MenuOverlayPortal";
 import { ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useSession } from "next-auth/react";
 
 const ModuleSidebar = ({ trans }) => {
   const menus = menusConfig?.sidebarNav?.modern || [];
@@ -140,6 +141,23 @@ const ModuleSidebar = ({ trans }) => {
       setSubmenu(true);
     }
   }, [locationName, isDesktop]);
+
+  const { data: session, status } = useSession();
+
+  if (status === "loading") {
+    return <p>Loading...</p>;
+  }
+
+  if (!session) {
+    return <p>You are not logged in</p>;
+  }
+
+  // Access user credentials from the session
+  const userEmail = session.user.email;
+  const selectedPlanId = session.user.selectedPlanId; 
+  console.log('user email ', userEmail);
+  console.log('plan id ', selectedPlanId);
+  // console.log("abhishek");
 
   return (
     <>
